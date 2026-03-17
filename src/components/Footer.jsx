@@ -1,10 +1,10 @@
 import React from "react";
-import { Building2, Globe, Mail, MapPin } from "lucide-react";
+import { Globe, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
+    <footer className="bg-green-900 text-white py-16 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-4 gap-12 mb-16">
           {/* Brand & Description */}
@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-3">
                <img
-                  src="/vlogo.png"   //  logo in public folder
+                  src="/f1.png"   //  logo in public folder
                   alt="Logo"
                   width={80}
                   height={80}
@@ -23,7 +23,7 @@ export default function Footer() {
                 <h2 className="text-2xl font-bold tracking-tight text-white">
                   Bharatx Ventures
                 </h2>
-                <span className="text-xs text-green-600 font-semibold tracking-widest uppercase block mt-0.5">
+                <span className="text-xs text-green-400 font-semibold tracking-widest uppercase block mt-0.5">
                   PRIVATE LIMITED
                 </span>
               </div>
@@ -37,21 +37,21 @@ export default function Footer() {
 
             <div className="flex gap-4">
               <a
-                className="size-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200"
+                className="size-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-green-400 hover:border-green-400 hover:text-white transition-all duration-200"
                 href="#"
                 aria-label="Website"
               >
                 <Globe size={18} />
               </a>
               <a
-                className="size-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200"
+                className="size-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-green-400 hover:border-green-400 hover:text-white transition-all duration-200"
                 href="#"
                 aria-label="Email"
               >
                 <Mail size={18} />
               </a>
               <a
-                className="size-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200"
+                className="size-10 rounded-full border border-white flex items-center justify-center text-white hover:bg-green-400 hover:border-green-400 hover:text-white transition-all duration-200"
                 href="#"
                 aria-label="Location"
               >
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Regulatory Identity */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-bold text-blue-400 uppercase tracking-widest text-sm">
+            <h4 className="font-bold text-green-400 uppercase tracking-widest text-sm">
               Regulatory Identity
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-gray-400">
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Registered Office */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-bold text-blue-400 uppercase tracking-widest text-sm">
+            <h4 className="font-bold text-green-400 uppercase tracking-widest text-sm">
               Registered Office
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-gray-400">
@@ -102,6 +102,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500">
           <p>
+
             © {new Date().getFullYear()} Bharatx Ventures Private Limited. All
             Rights Reserved.
           </p>
