@@ -164,10 +164,10 @@ export default function Header() {
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="size-10 bg-blue-600 flex items-center justify-center rounded-lg">
+                    <div className="size-10 bg-green-600 flex items-center justify-center rounded-lg">
                       <Building2 className="text-white" size={24} />
                     </div>
-                    <h1 className="text-blue-700 text-xl font-bold">Bharatx</h1>
+                    <h1 className="text-green-700 text-xl font-bold">Bharatx</h1>
                   </div>
                   <button onClick={toggleMobileMenu} aria-label="Close menu">
                     <X size={28} className="text-gray-700" />
@@ -185,7 +185,7 @@ export default function Header() {
                       href={link.path}
                       onClick={toggleMobileMenu}
                       className={`flex items-center justify-between text-lg font-medium ${
-                        active ? "text-blue-600" : "text-gray-800"
+                        active ? "text-green-600" : "text-gray-800"
                       }`}
                     >
                       {link.name}
@@ -205,7 +205,7 @@ export default function Header() {
                       href={link.path}
                       onClick={toggleMobileMenu}
                       className={`flex items-center justify-between text-lg font-medium ${
-                        active ? "text-blue-600" : "text-gray-800"
+                        active ? "text-green-600" : "text-gray-800"
                       }`}
                     >
                       {link.name}
