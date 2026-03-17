@@ -4,29 +4,35 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16 border-t border-gray-800">
+    <footer className="bg-green-400 text-white py-16 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-4 gap-12 mb-16">
           {/* Brand & Description */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="size-10 bg-blue-600 flex items-center justify-center rounded-lg shadow-md shadow-blue-900/30">
-                <Building2 className="text-white" size={24} strokeWidth={1.8} />
-              </div>
+              <div className="flex items-center gap-3">
+               <img
+                  src="/vlogo.png"   //  logo in public folder
+                  alt="Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+            </div>
               <div>
                 <h2 className="text-2xl font-bold tracking-tight text-white">
                   Bharatx Ventures
                 </h2>
-                <span className="text-xs text-blue-400 font-semibold tracking-widest uppercase block mt-0.5">
+                <span className="text-xs text-green-600 font-semibold tracking-widest uppercase block mt-0.5">
                   PRIVATE LIMITED
                 </span>
               </div>
             </div>
 
             <p className="text-gray-400 max-w-md leading-relaxed">
-              A premier venture development firm committed to institutional
+              {`A premier venture development firm committed to institutional
               excellence and scaling India's industrial backbone through
-              strategic innovation and capital.
+              strategic innovation and capital.`}
             </p>
 
             <div className="flex gap-4">
