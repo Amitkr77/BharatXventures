@@ -8,6 +8,9 @@ import {
   Lightbulb,
   Rocket,
   Sprout,
+  CheckCircle, 
+  Settings, 
+  DollarSign,
   Cpu,
   Quote,
   ArrowRight,
@@ -76,11 +79,11 @@ export default function Home() {
               <motion.div
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border border-green-100"
               >
-                <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-                <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
-                  India's Premier Venture Builder
+                <span className="w-2 h-2 rounded-full bg-green-600"></span>
+                <span className="text-xs font-bold text-green-700 uppercase tracking-wider">
+                  {`India's Premier Venture Builder`} 
                 </span>
               </motion.div>
 
@@ -90,17 +93,17 @@ export default function Home() {
                 className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight"
               >
                 Building Scalable{" "}
-                <span className="text-blue-600 italic">Enterprises</span> for
+                <span className="text-green-600 italic">Enterprises</span> for
                 the Future of India
               </motion.h2>
 
               <motion.p
                 variants={fadeInUp}
                 transition={{ delay: 0.3 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-xl"
+                className="text-xl text-gray-600 font-bold leading-relaxed max-w-xl"
               >
-                Bharatx Ventures partners with entrepreneurs, industries, and
-                institutions to build, fund, and scale high-growth ventures.
+                We partner with entrepreneurs, industries, and institutions to build, fund, and scale businesses from 
+                idea to ₹100 Crore+ enterprises through capital enablement, strategic consulting, and technology-driven execution.
               </motion.p>
 
               <motion.div
@@ -113,9 +116,9 @@ export default function Home() {
                     whileHover="hover"
                     whileTap="tap"
                     variants={buttonVariants}
-                    className="px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-200/50 hover:shadow-xl hover:shadow-blue-300/40 hover:-translate-y-0.5 transition-all duration-300"
+                    className="px-8 py-4 bg-green-400 text-white rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
                   >
-                    Explore Services
+                    Explore Our Capabilities
                   </motion.button>
                 </Link>
 
@@ -133,7 +136,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={imageReveal} className="relative">
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-blue-100/40 rounded-full blur-3xl"></div>
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-100/40 rounded-full blur-3xl"></div>
 
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -147,11 +150,11 @@ export default function Home() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-gray-900/85 to-transparent text-white">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-blue-600 rounded-lg">
+                    <div className="p-3 bg-green-600 rounded-lg">
                       <TrendingUp size={24} />
                     </div>
                     <div>
-                      <p className="text-xs uppercase font-bold tracking-widest text-blue-300">
+                      <p className="text-xs uppercase font-bold tracking-widest text-green-300">
                         Excellence
                       </p>
                       <p className="text-lg font-bold">
@@ -183,9 +186,9 @@ export default function Home() {
               variants={fadeInUp}
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
             >
-              Our Strategic Verticals
+              Our Core Verticals
             </motion.h2>
-            <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
+            <div className="h-1.5 w-24 bg-green-500 rounded-full"></div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -220,9 +223,9 @@ export default function Home() {
                 key={index}
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
               >
-                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all mb-6">
+                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
                   <vertical.icon size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
@@ -238,7 +241,7 @@ export default function Home() {
             <motion.div
               variants={cardHover}
               whileHover="hover"
-              className="group p-8 rounded-2xl bg-blue-600 text-white flex flex-col justify-center items-center text-center shadow-xl hover:bg-blue-700 transition-all duration-300"
+              className="group p-8 rounded-2xl bg-green-600 text-white flex flex-col justify-center items-center text-center shadow-xl hover:bg-green-500 transition-all duration-300"
             >
               <h3 className="text-2xl font-bold mb-4">Ready to Innovate?</h3>
               <p className="text-white/90 text-sm mb-6">
@@ -249,7 +252,7 @@ export default function Home() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="px-6 py-3 bg-white text-blue-700 rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors"
+                  className="px-6 py-3 bg-white text-green-700 rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors"
                 >
                   Become a Partner
                 </motion.button>
@@ -259,6 +262,141 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Venture Development Framework */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={staggerContainer}
+        className="py-5 bg-green-600"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+
+          <motion.div
+            variants={fadeInUp}
+            className="mb-16 flex flex-col items-center text-center"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Venture Development Framework
+            </h2>
+            <div className="h-1 w-120 bg-white rounded-full"></div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            {[
+              {
+                icon: Lightbulb,
+                title: "Identification",
+                desc: "Market gap analysis and thesis development",
+              },
+              {
+                icon: Settings,
+                title: "Architecting",
+                desc: "Strategic blueprinting and team formation",
+              },
+              {
+                icon: DollarSign,
+                title: "Capitalization",
+                desc: "Direct investment and institutional funding",
+              },
+              {
+                icon: TrendingUp,
+                title: "Scale-Up",
+                desc: "Operational excellence and market dominance",
+              },
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                variants={cardHover}
+                whileHover="hover"
+                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+              >
+                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
+                  <step.icon size={28} />
+                </div>
+
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                  {step.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+
+          </div>
+
+        </div>
+      </motion.section>
+
+      {/* Our Approach */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={staggerContainer}
+        className="py-5 bg-green-600">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            variants={fadeInUp}
+            className="mb-16 flex flex-col items-center text-center"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Our Approach
+            </h2>
+            <div className="h-1 w-40 bg-white rounded-full"></div>
+          </motion.div>
+
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            {[
+              { title: "Idea", icon: Lightbulb },
+              { title: "Validation", icon: CheckCircle },
+              { title: "Structuring", icon: Settings },
+              { title: "Capital", icon: DollarSign },
+              { title: "Scale", icon: TrendingUp },
+            ].map((step, index) => (
+              <React.Fragment key={index}>
+
+                {/* Card */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group px-8 py-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center min-w-[170px]"
+                >
+                  {/* Icon */}
+                  <div className="size-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-5 mx-auto">
+                    <step.icon size={26} />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-base font-semibold text-gray-900">
+                    {step.title}
+                  </h3>
+                </motion.div>
+
+                {/* Arrow */}
+                {index !== 4 && (
+                  <span className="text-white text-2xl font-bold hidden md:block">
+                    →
+                  </span>
+                )}
+
+              </React.Fragment>
+            ))}
+
+          </div>
+          {/* Bottom Text */}
+          <motion.p
+            variants={fadeInUp}
+            className="text-center text-white font-bold mt-8"
+          >
+            Delivering measurable, scalable outcomes through a structured model.
+          </motion.p>
+        </div>
+      </motion.section>
+    
       {/* Leadership Message */}
       <motion.section
         initial="hidden"
@@ -277,21 +415,20 @@ export default function Home() {
 
               <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-2xl max-w-[420px] w-full mx-auto">
 
-    <motion.img
-      variants={imageReveal}
-      alt="Pradeep Kumar, Founder & CEO of Bharatx Ventures"
-      className="w-full h-[460px] object-cover object-top"
-      src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
-    />
+              <motion.img
+                variants={imageReveal}
+                alt="Pradeep Kumar, Founder & CEO of Bharatx Ventures"
+                className="w-full h-[460px] object-cover object-top"
+                src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
+              />
 
-    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-700/90 to-transparent p-6 text-white">
-      <h3 className="text-2xl font-bold">Pradeep Kumar</h3>
-      <p className="text-blue-200 text-sm font-bold uppercase tracking-widest">
-        Founder & CEO
-      </p>
-    </div>
-
-  </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-700/90 to-transparent p-6 text-white">
+                <h3 className="text-2xl font-bold">Pradeep Kumar</h3>
+                <p className="text-green-300 text-sm font-bold uppercase tracking-widest">
+                  Founder & CEO
+                </p>
+              </div>
+            </div>
             </motion.div>
 
             <motion.div
@@ -303,8 +440,8 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="inline-flex items-center gap-2"
               >
-                <span className="h-px w-12 bg-blue-600"></span>
-                <span className="text-xs font-bold text-blue-600 uppercase tracking-[0.2em]">
+                <span className="h-px w-12 bg-green-600"></span>
+                <span className="text-xs font-bold text-green-600 uppercase tracking-[0.2em]">
                   Leadership Message
                 </span>
               </motion.div>
@@ -324,9 +461,7 @@ export default function Home() {
               >
                 <Quote className="absolute -top-4 -left-6 text-6xl text-gray-200 -z-10" />
                 <p className="text-xl text-gray-600 leading-relaxed italic">
-                  "At Bharatax Ventures, our mission is to empower businesses through data, technology, and innovation. With over a decade of experience in building enterprise data platforms and AI-driven solutions, we focus on transforming complex data into actionable insights that drive business growth.
-
-Our vision is to help organizations unlock the true potential of data by combining advanced analytics, scalable technology, and strategic thinking. We believe that the future belongs to companies that can harness data intelligently and turn it into competitive advantage.."
+                  {`Our mission is to build the backbone of India's future economy by combining deep sector expertise with institutional rigor`}
                 </p>
               </motion.div>
 
@@ -346,72 +481,79 @@ Our vision is to help organizations unlock the true potential of data by combini
                 transition={{ delay: 0.5 }}
                 className="flex gap-4"
               >
-                <div className="h-12 w-0.5 bg-blue-600"></div>
+                <div className="h-20 w-1 bg-green-600"></div>
                 <p className="text-sm text-gray-500 max-w-sm">
-                  Over 10 years of experience in building scalable data platforms, AI-powered products, and enterprise analytics solutions.
+                  With over 15 years of experience in strategic consulting and industrial scale-up, Pradeep Kumar leads Bharatx Ventures with a vision for operational excellence and sustainable impact.
                 </p>
               </motion.div>
+              <a class="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
+                  Our Core Team <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
             </motion.div>
           </div>
         </div>
+        
       </motion.section>
-
+      
       {/* Stats Section */}
       <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={staggerContainer}
-        className="py-20 bg-blue-600 relative overflow-hidden"
+        className="py-20 bg-gray-200 relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-navy-600 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-navy-600 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <motion.div variants={fadeInUp} className="flex flex-col gap-2">
-              <p className="text-blue-200 text-sm font-bold tracking-widest uppercase">
+            <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
+              <p className="text-navy-600 text-sm font-bold tracking-widest uppercase">
                 Cumulative Scale
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-white">
+              <h3 className="text-5xl lg:text-6xl font-black text-green-400">
                 100Cr+
               </h3>
-              <p className="text-white/80 font-medium">
+              <p className="text-green-400 font-medium">
                 Enterprise Value Generated
               </p>
             </motion.div>
 
             <motion.div
               variants={fadeInUp}
-              className="flex flex-col gap-2 border-x border-white/15 px-6"
+              className="flex flex-col gap-4 border-l-2 border-primary pl-8"
             >
-              <p className="text-blue-200 text-sm font-bold tracking-widest uppercase">
+              <p className="text-navy-600 text-sm font-bold tracking-widest uppercase">
                 Ecosystem Impact
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-white">
+              <h3 className="text-5xl lg:text-6xl font-black text-green-400">
                 50+
               </h3>
-              <p className="text-white/80 font-medium">
+              <p className="text-green-400 font-medium">
                 Ventures Supported Globally
               </p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex flex-col gap-2">
-              <p className="text-blue-200 text-sm font-bold tracking-widest uppercase">
+            <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
+              <p className="text-navy-600 text-sm font-bold tracking-widest uppercase">
                 Cross-Sector Expertise
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-white">
+              <h3 className="text-5xl lg:text-6xl font-black text-green-400">
                 10+
               </h3>
-              <p className="text-white/80 font-medium">
+              <p className="text-green-400 font-medium">
                 Core Industries Served
               </p>
             </motion.div>
           </div>
         </div>
       </motion.section>
+      
     </main>
   );
 }
