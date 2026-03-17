@@ -34,18 +34,24 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="size-10 bg-blue-600 flex items-center justify-center rounded-lg shadow-lg shadow-blue-200/40">
-              <Building2 className="text-white" size={24} strokeWidth={1.8} />
+            <div className="flex items-center gap-3">
+               <img
+                  src="/vlogo.png"   //  logo in public folder
+                  alt="Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
             </div>
 
-            <div className="flex flex-col">
-              <h1 className="text-blue-700 text-xl font-bold leading-none tracking-tight">
+            {/*<div className="flex flex-col">
+              <h1 className="text-green-700 text-xl font-bold leading-none tracking-tight">
                 Bharatx Ventures
               </h1>
-              <span className="text-[10px] text-blue-500 font-semibold tracking-[0.25em] uppercase mt-0.5">
+              <span className="text-[10px] text-green-700 font-bold tracking-[0.25em] uppercase mt-0.5">
                 Private Limited
               </span>
-            </div>
+            </div>*/}
           </div>
 
           {/* Desktop Navigation */}
@@ -56,17 +62,17 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative text-sm font-medium transition-colors duration-200 ${
+                  className={`relative text-sm font-bold transition-colors duration-200 ${
                     active
-                      ? "text-blue-600 font-semibold"
-                      : "text-gray-700 hover:text-blue-600"
+                      ? "text-green-700 font-bold"
+                      : "text-gray-700 hover:text-green-500"
                   }`}
                 >
                   {link.name}
                   {active && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute left-0 bottom-[-6px] w-full h-0.5 bg-blue-600 rounded-full"
+                      className="absolute left-0 bottom-[-6px] w-full h-0.5 bg-green-700 rounded-full"
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
@@ -97,14 +103,26 @@ export default function Header() {
             })}
           </div> */}
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3"> 
             <Link href="/governance">
-              <button className="hidden md:flex items-center justify-center px-5 h-10 rounded-lg bg-gray-100 text-gray-700 text-sm font-semibold hover:bg-gray-200 transition-colors duration-200">
+              <button
+                className={`hidden md:flex items-center justify-center px-5 h-10 rounded-lg text-sm font-bold transition-colors duration-200 ${
+                  pathname === "/governance"
+                    ? "bg-green-600 text-white"
+                    : "bg-gray-200 text-gray-700 hover:bg-green-400"
+                }`}
+              >
                 Governance
               </button>
             </Link>
             <Link href="/contact-us">
-              <button className="flex items-center justify-center px-6 h-10 rounded-lg bg-blue-600 text-white text-sm font-semibold shadow-md shadow-blue-200/40 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+              <button
+                className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
+                  pathname === "/contact-us"
+                    ? "bg-green-600 text-white shadow-md shadow-green-200/40"
+                    : "bg-gray-200 text-gray-700 hover:bg-green-400"
+                }`}
+              >
                 Contact
               </button>
             </Link>
