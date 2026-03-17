@@ -106,7 +106,7 @@ export default function IndustriesPage() {
             transition={{ delay: 0.3 }}
             className="max-w-3xl mx-auto text-xl text-gray-200 font-light leading-relaxed tracking-wide"
           >
-            Strategic partnership and institutional-grade support across India's
+            Strategic partnership and institutional-grade support across India
             core economic sectors. We drive growth through capital, network, and
             operational excellence.
           </motion.p>
@@ -154,7 +154,7 @@ export default function IndustriesPage() {
                     Market Context
                   </p>
                   <p className="text-xs text-gray-200 italic font-light">
-                    Leveraging India's position as a global food basket through
+                    Leveraging India position as a global food basket through
                     tech-driven export readiness.
                   </p>
                 </div>
@@ -230,7 +230,7 @@ export default function IndustriesPage() {
                     Market Context
                   </p>
                   <p className="text-xs text-gray-200 italic font-light">
-                    Transitioning towards 'Make in India' excellence with global
+                    Transitioning towards `Make in India` excellence with global
                     supply chain resiliency.
                   </p>
                 </div>

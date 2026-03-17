@@ -25,7 +25,7 @@ export default function Footer() {
 
             <p className="text-gray-400 max-w-md leading-relaxed">
               A premier venture development firm committed to institutional
-              excellence and scaling India's industrial backbone through
+              excellence and scaling India industrial backbone through
               strategic innovation and capital.
             </p>
 

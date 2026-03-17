@@ -80,7 +80,7 @@ export default function Home() {
               >
                 <span className="w-2 h-2 rounded-full bg-blue-600"></span>
                 <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
-                  India's Premier Venture Builder
+                  India Premier Venture Builder
                 </span>
               </motion.div>
 
@@ -324,9 +324,8 @@ export default function Home() {
               >
                 <Quote className="absolute -top-4 -left-6 text-6xl text-gray-200 -z-10" />
                 <p className="text-xl text-gray-600 leading-relaxed italic">
-                  "At Bharatax Ventures, our mission is to empower businesses through data, technology, and innovation. With over a decade of experience in building enterprise data platforms and AI-driven solutions, we focus on transforming complex data into actionable insights that drive business growth.
-
-Our vision is to help organizations unlock the true potential of data by combining advanced analytics, scalable technology, and strategic thinking. We believe that the future belongs to companies that can harness data intelligently and turn it into competitive advantage.."
+                  At Bharatax Ventures, our mission is to empower businesses through data, technology, and innovation. With over a decade of experience in building enterprise data platforms and AI-driven solutions, we focus on transforming complex data into actionable insights that drive business growth.
+                  Our vision is to help organizations unlock the true potential of data by combining advanced analytics, scalable technology, and strategic thinking. We believe that the future belongs to companies that can harness data intelligently and turn it into competitive advantage..
                 </p>
               </motion.div>
 
