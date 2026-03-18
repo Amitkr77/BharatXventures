@@ -65,3 +65,6 @@
   display: none;
   /* Chrome, Safari, Edge */
 }
+.text-gold {
+  color: var(--color-accent);
+}

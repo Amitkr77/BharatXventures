@@ -13,6 +13,9 @@ import {
   DollarSign,
   Cpu,
   Quote,
+  HardHat,
+  Factory,
+  Truck,
   ArrowRight,
 } from "lucide-react";
 
@@ -292,11 +295,11 @@ export default function Home() {
           />
 
           {/* ✅ Better Overlay (more premium) */}
-          <div className="absolute inset-0 bg-green-900/70 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-green-900/40 backdrop-blur-[2px]"></div>
         </div>
 
         {/* ✅ Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 pt-10 pb-5 max-w-7xl mx-auto px-6">
 
           <motion.div
             variants={fadeInUp}
@@ -364,10 +367,10 @@ export default function Home() {
           </div>
         </div>
         {/* Our Approach */}
-        <div className="relative z-10 pt-0 pb-5 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 pt-10 pb-5 max-w-7xl mx-auto px-6">
           <motion.div
             variants={fadeInUp}
-            className="mb-8 flex flex-col items-center text-center"
+            className="mb-6 flex flex-col items-center text-center"
           >
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -510,13 +513,13 @@ export default function Home() {
              <a class="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
                 Our Core Team
                 <svg
-                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </a>
             </motion.div>
@@ -531,23 +534,23 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={staggerContainer}
-        className="py-20 bg-gray-200 relative overflow-hidden"
+        className="py-20 bg-green-800 relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-navy-600 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-navy-600 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
-              <p className="text-navy-600 text-sm font-bold tracking-widest uppercase">
+              <p className="text-gold text-sm font-bold tracking-widest uppercase">
                 Cumulative Scale
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-green-400">
+              <h3 className="text-5xl lg:text-6xl font-black text-gold">
                 100Cr+
               </h3>
-              <p className="text-green-400 font-medium">
+              <p className="text-gold font-medium">
                 Enterprise Value Generated
               </p>
             </motion.div>
@@ -556,32 +559,151 @@ export default function Home() {
               variants={fadeInUp}
               className="flex flex-col gap-4 border-l-2 border-primary pl-8"
             >
-              <p className="text-navy-600 text-sm font-bold tracking-widest uppercase">
+              <p className="text-gold text-sm font-bold tracking-widest uppercase">
                 Ecosystem Impact
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-green-400">
+              <h3 className="text-5xl lg:text-6xl font-black text-gold">
                 50+
               </h3>
-              <p className="text-green-400 font-medium">
+              <p className="text-gold font-medium">
                 Ventures Supported Globally
               </p>
             </motion.div>
 
             <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
-              <p className="text-navy-600 text-sm font-bold tracking-widest uppercase">
+              <p className="text-gold text-sm font-bold tracking-widest uppercase">
                 Cross-Sector Expertise
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-green-400">
+              <h3 className="text-5xl lg:text-6xl font-black text-gold">
                 10+
               </h3>
-              <p className="text-green-400 font-medium">
+              <p className="text-gold font-medium">
                 Core Industries Served
               </p>
             </motion.div>
+            
           </div>
         </div>
       </motion.section>
-      
+      {/* We Serve Section */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        variants={staggerContainer}
+        className="py-24 bg-gray-50"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            variants={fadeInUp}
+            className="mb-16 flex flex-col items-center text-center"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+            >
+              Industries We Serve
+            </motion.h2>
+            <div className="h-1.5 w-24 bg-green-500 rounded-full"></div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Sprout,
+                title: "Agriculture ",
+                desc: " ",
+              },
+              {
+                icon: Factory,
+                title: "Manufacturing",
+                desc: " ",
+              },
+              {
+                icon: Rocket,
+                title: "MSMEs",
+                desc: " ",
+              },
+              {
+                icon: HardHat,
+                title: "Infrastructure",
+                desc: " ",
+              },
+              {
+                icon: Cpu,
+                title: "Technology",
+                desc: " ",
+              },
+              {
+                icon: Truck,
+                title: "Export Businesses",
+                desc: " ",
+              },
+            ].map((vertical, index) => (
+              <motion.div
+                key={index}
+                variants={cardHover}
+                whileHover="hover"
+                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+              >
+                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
+                  <vertical.icon size={28} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                  {vertical.title}
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  {vertical.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+           {/* CTA Card */}
+            <section className="relative py-24 overflow-hidden rounded-2xl bg-green-800 text-white">
+              {/* Background Decorative Element */}
+              <div className="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4 pointer-events-none">
+                <svg width="600" height="600" viewBox="0 0 100 100" fill="none">
+                  <rect width="100" height="100" fill="white" />
+                </svg>
+              </div>
+              {/* Content */}
+              <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+                {/* Accent Line */}
+                <div className="w-12 h-[2px] bg-[var(--color-accent)] mx-auto mb-10"></div>
+                {/* Heading */}
+                <h2 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tight">
+                  Ready to Scale Your <br />
+                  <span className="text-[var(--color-accent)]">
+                    Institutional Impact?
+                  </span>
+                </h2>
+                {/* Description */}
+                <p className="text-lg md:text-xl text-gray-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                  Partner with Bharatx Ventures to leverage world-class operational
+                  expertise, strategic capital, and a legacy of governance excellence.
+                </p>
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+                  {/* Primary CTA */}
+                  <a
+                    href="/contact-us"
+                    className="px-10 py-4 border border-green-500 bg-green-500 text-[var(--color-primary)] font-bold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-300"
+                  >
+                    Contact Partnership
+                  </a>
+                  {/* Secondary CTA */}
+                  <a
+                    href="#"
+                    className="px-10 py-4 border border-green-500 bg-green-500 text-[var(--color-primary)] font-bold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-300"
+                  >
+                    Download Capabilities
+                  </a>
+                </div>
+              </div>
+            </section>    
     </main>
   );
 }
