@@ -71,7 +71,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative w-full overflow-hidden py-10"
+          className="relative w-full min-h-screen flex items-center overflow-hidden"
         >
           {/* ✅ Background Image */}
           <div className="absolute inset-0 z-0">
@@ -86,13 +86,13 @@ export default function Home() {
           </div>
 
           {/* ✅ Content (kept above background) */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div className="grid justify-center">
               <motion.div variants={fadeInUp} className="flex flex-col gap-8">
                 <motion.div
                   variants={fadeInUp}
                   transition={{ delay: 0.1 }}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border border-green-100"
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border border-green-100 mx-auto"
                 >
                   <span className="w-2 h-2 rounded-full bg-green-600"></span>
                   <span className="text-xs font-bold text-green-700 uppercase tracking-wider">
@@ -103,7 +103,7 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight"
+                  className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight item-center"
                 >
                   Building Scalable{" "}
                   <span className="text-green-600 italic">Enterprises</span> for
@@ -113,7 +113,7 @@ export default function Home() {
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-xl text-gray-600 font-bold leading-relaxed max-w-xl"
+                  className="text-xl text-gray-600 font-bold leading-relaxed max-w-xl item-center mx-auto"
                 >
                   We partner with entrepreneurs, industries, and institutions to build, fund, and scale businesses from 
                   idea to ₹100 Crore+ enterprises through capital enablement, strategic consulting, and technology-driven execution.
@@ -122,14 +122,14 @@ export default function Home() {
                 <motion.div
                   variants={fadeInUp}
                   transition={{ delay: 0.4 }}
-                  className="flex flex-wrap gap-4"
+                  className="flex flex-wrap gap-4 justify-center items-center"
                 >
                   <Link href="/service">
                     <motion.button
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
-                      className="px-8 py-4 bg-green-400 text-white rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
+                      className="px-8 py-4 bg-green-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Explore Our Capabilities
                     </motion.button>
@@ -140,7 +140,7 @@ export default function Home() {
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
-                      className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300"
+                      className="px-8 py-4 border-2 border-gray-400 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300"
                     >
                       Partner With Us
                     </motion.button>
@@ -148,7 +148,7 @@ export default function Home() {
                 </motion.div>
               </motion.div>
 
-              <motion.div variants={imageReveal} className="relative">
+              {/*<motion.div variants={imageReveal} className="relative">
                 <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-100/40 rounded-full blur-3xl"></div>
 
                 <motion.div
@@ -177,7 +177,7 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
-              </motion.div>
+              </motion.div>*/}
             </div>
           </div>
         </motion.section>
@@ -281,13 +281,13 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={staggerContainer}
-        className="py-5 bg-green-600"
+        className="py-2 bg-green-600"
       >
         <div className="max-w-7xl mx-auto px-6">
 
           <motion.div
             variants={fadeInUp}
-            className="mb-16 flex flex-col items-center text-center"
+            className="mb-8 flex flex-col items-center text-center"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Venture Development Framework
@@ -333,7 +333,7 @@ export default function Home() {
                   {step.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   {step.desc}
                 </p>
               </motion.div>
@@ -350,11 +350,11 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={staggerContainer}
-        className="py-5 bg-green-600">
+        className="pt-0 pb-5 bg-green-600">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             variants={fadeInUp}
-            className="mb-16 flex flex-col items-center text-center"
+            className="mb-8 flex flex-col items-center text-center"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Approach
@@ -362,7 +362,7 @@ export default function Home() {
             <div className="h-1 w-40 bg-white rounded-full"></div>
           </motion.div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             {[
               { title: "Idea", icon: Lightbulb },
               { title: "Validation", icon: CheckCircle },
@@ -376,7 +376,7 @@ export default function Home() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="group w-[150px] h-[160px] flex flex-col items-center justify-center rounded-full bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center font-bold"
+                className="group w-[180px] h-[180px] flex flex-col items-center justify-center rounded-full bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center font-bold"
               >
                 {/* Icon */}
                 <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-3">
@@ -384,7 +384,7 @@ export default function Home() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-sm font-bold text-gray-700 leading-tight px-2">
+                <h3 className="text-lg font-bold text-gray-700 leading-tight px-2">
                   {step.title}
                 </h3>
               </motion.div>
