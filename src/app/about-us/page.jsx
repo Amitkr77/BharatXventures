@@ -523,14 +523,14 @@ export default function AboutPage() {
                 src: pradeep,
               },
               {
-                name: "Kushi kumari",
-                role: "Co-Founder & Head of Business Operation",
-                src: khushi,
-              },
-              {
                 name: "Vandana Bharti",
                 role: "Co-Founder & MD",
                 src: vandana,
+              },
+              {
+                name: "Kushi kumari",
+                role: "Co-Founder & Head of Business Operation",
+                src: khushi,
               },
             ].map((leader, index) => (
               <motion.div
