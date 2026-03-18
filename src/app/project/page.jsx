@@ -155,10 +155,10 @@ export default function FeaturedInitiativesPage() {
                 </h1>
 
                 <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
-                  Driving measurable impact and sustainable growth across
+                  {`Driving measurable impact and sustainable growth across
                   India's diverse industrial landscape through strategic
                   intervention, institutional capital, and technological
-                  excellence.
+                  excellence.`}
                 </p>
               </motion.div>
             </div>
