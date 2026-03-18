@@ -281,22 +281,41 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={staggerContainer}
-        className="py-2 bg-green-600"
+        className="relative py-2 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-6">
+        {/* ✅ Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/h1.png"
+            alt="Background"
+            className="w-full h-full object-cover scale-105"
+          />
+
+          {/* ✅ Better Overlay (more premium) */}
+          <div className="absolute inset-0 bg-green-900/70 backdrop-blur-[2px]"></div>
+        </div>
+
+        {/* ✅ Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
 
           <motion.div
             variants={fadeInUp}
             className="mb-8 flex flex-col items-center text-center"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl lg:text-4xl font-bold text-white mb-4"
+            >
               Venture Development Framework
-            </h2>
-            <div className="h-1 w-120 bg-white rounded-full"></div>
+            </motion.h2>
+
+            {/* ✅ FIXED width */}
+            <div className="h-1 w-40 bg-white/80 rounded-full"></div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
             {[
               {
                 icon: Lightbulb,
@@ -322,10 +341,14 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={cardHover}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover="hover"
-                className="group p-10 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+                className="group p-10 rounded-2xl bg-white/90 backdrop-blur-md border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-2"
               >
-                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
+                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white group-hover:rotate-6 transition-all mb-6">
                   <step.icon size={28} />
                 </div>
 
@@ -338,28 +361,24 @@ export default function Home() {
                 </p>
               </motion.div>
             ))}
-
           </div>
-
         </div>
-      </motion.section>
-
-      {/* Our Approach */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
-        variants={staggerContainer}
-        className="pt-0 pb-5 bg-green-600">
-        <div className="max-w-7xl mx-auto px-6">
+        {/* Our Approach */}
+        <div className="relative z-10 pt-0 pb-5 max-w-7xl mx-auto px-6">
           <motion.div
             variants={fadeInUp}
             className="mb-8 flex flex-col items-center text-center"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl lg:text-4xl font-bold text-white mb-4"
+            >
               Our Approach
-            </h2>
-            <div className="h-1 w-40 bg-white rounded-full"></div>
+            </motion.h2>
+
+            <div className="h-1 w-40 bg-white/80 rounded-full"></div>
           </motion.div>
 
           <div className="flex flex-wrap items-center justify-center gap-2">
@@ -372,37 +391,38 @@ export default function Home() {
             ].map((step, index) => (
               <React.Fragment key={index}>
 
-              {/* Card */}
-              <motion.div
-                variants={cardHover}
-                whileHover="hover"
-                className="group w-[180px] h-[180px] flex flex-col items-center justify-center rounded-full bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center font-bold"
-              >
-                {/* Icon */}
-                <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-3">
-                  <step.icon size={26} />
-                </div>
+                {/* Card */}
+                <motion.div
+                  variants={cardHover}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover="hover"
+                  className="group w-[180px] h-[180px] flex flex-col items-center justify-center rounded-full bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 text-center font-bold"
+                >
+                  <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-3">
+                    <step.icon size={26} />
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-bold text-gray-700 leading-tight px-2">
-                  {step.title}
-                </h3>
-              </motion.div>
+                  <h3 className="text-lg font-bold text-gray-700 leading-tight px-2">
+                    {step.title}
+                  </h3>
+                </motion.div>
 
-              {/* Arrow */}
-              {index !== 4 && (
-                <span className="text-gray-100 text-2xl font-bold hidden md:block mx-4">
-                  →
-                </span>
-              )}
+                {/* ✅ Modern Arrow */}
+                {index !== 4 && (
+                  <span className="text-gray-100 text-2xl font-bold hidden md:block mx-4">
+                    →
+                  </span>
+                )}
               </React.Fragment>
             ))}
-
           </div>
           {/* Bottom Text */}
           <motion.p
             variants={fadeInUp}
-            className="text-center text-white font-bold mt-8"
+            className="text-center text-white font-bold mt-4"
           >
             Delivering measurable, scalable outcomes through a structured model.
           </motion.p>
