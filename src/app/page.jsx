@@ -323,7 +323,7 @@ export default function Home() {
                 key={index}
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+                className="group p-10 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
               >
                 <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
                   <step.icon size={28} />
@@ -362,7 +362,7 @@ export default function Home() {
             <div className="h-1 w-40 bg-white rounded-full"></div>
           </motion.div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             {[
               { title: "Idea", icon: Lightbulb },
               { title: "Validation", icon: CheckCircle },
@@ -372,30 +372,29 @@ export default function Home() {
             ].map((step, index) => (
               <React.Fragment key={index}>
 
-                {/* Card */}
-                <motion.div
-                  variants={cardHover}
-                  whileHover="hover"
-                  className="group px-8 py-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center font-bold min-w-[170px]"
-                >
-                  {/* Icon */}
-                  <div className="size-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-5 mx-auto">
-                    <step.icon size={26} />
-                  </div>
+              {/* Card */}
+              <motion.div
+                variants={cardHover}
+                whileHover="hover"
+                className="group w-[150px] h-[160px] flex flex-col items-center justify-center rounded-full bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center font-bold"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-3">
+                  <step.icon size={26} />
+                </div>
 
-                  {/* Title */}
-                  <h3 className="text-base font-bold text-gray-900">
-                    {step.title}
-                  </h3>
-                </motion.div>
+                {/* Title */}
+                <h3 className="text-sm font-bold text-gray-700 leading-tight px-2">
+                  {step.title}
+                </h3>
+              </motion.div>
 
-                {/* Arrow */}
-                {index !== 4 && (
-                  <span className="text-white text-2xl font-bold hidden md:block">
-                    →
-                  </span>
-                )}
-
+              {/* Arrow */}
+              {index !== 4 && (
+                <span className="text-gray-100 text-2xl font-bold hidden md:block mx-4">
+                  →
+                </span>
+              )}
               </React.Fragment>
             ))}
 
@@ -501,7 +500,6 @@ export default function Home() {
               </motion.div>
               <a class="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
                   Our Core Team <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                   </svg>
                 </a>
             </motion.div>
