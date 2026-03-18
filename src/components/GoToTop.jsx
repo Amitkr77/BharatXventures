@@ -29,7 +29,7 @@ export default function GoToTop() {
         }}
         transition={{ duration: 0.3 }}
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-300"
         aria-label="Back to top"
       >
         <ArrowUp size={24} />

@@ -67,107 +67,120 @@ export default function Home() {
   return (
     <main className="flex-1 bg-gray-50 text-gray-900 min-h-screen">
       {/* Hero Section */}
-      <motion.section
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        className="relative w-full overflow-hidden bg-white py-10"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div variants={fadeInUp} className="flex flex-col gap-8">
-              <motion.div
-                variants={fadeInUp}
-                transition={{ delay: 0.1 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border border-green-100"
-              >
-                <span className="w-2 h-2 rounded-full bg-green-600"></span>
-                <span className="text-xs font-bold text-green-700 uppercase tracking-wider">
-                  {`India's Premier Venture Builder`} 
-                </span>
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          className="relative w-full overflow-hidden py-10"
+        >
+          {/* ✅ Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/hero1.png" // 👉 replace with your image path
+              alt="Background"
+              className="w-full h-full object-cover object-top"
+            />
+            
+            {/* Optional dark overlay for better text visibility */}
+            <div className="absolute inset-0 bg-white/60"></div>
+          </div>
+
+          {/* ✅ Content (kept above background) */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <motion.div variants={fadeInUp} className="flex flex-col gap-8">
+                <motion.div
+                  variants={fadeInUp}
+                  transition={{ delay: 0.1 }}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border border-green-100"
+                >
+                  <span className="w-2 h-2 rounded-full bg-green-600"></span>
+                  <span className="text-xs font-bold text-green-700 uppercase tracking-wider">
+                    {`India's Premier Venture Builder`} 
+                  </span>
+                </motion.div>
+
+                <motion.h2
+                  variants={fadeInUp}
+                  transition={{ delay: 0.2 }}
+                  className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight"
+                >
+                  Building Scalable{" "}
+                  <span className="text-green-600 italic">Enterprises</span> for
+                  the Future of India
+                </motion.h2>
+
+                <motion.p
+                  variants={fadeInUp}
+                  transition={{ delay: 0.3 }}
+                  className="text-xl text-gray-600 font-bold leading-relaxed max-w-xl"
+                >
+                  We partner with entrepreneurs, industries, and institutions to build, fund, and scale businesses from 
+                  idea to ₹100 Crore+ enterprises through capital enablement, strategic consulting, and technology-driven execution.
+                </motion.p>
+
+                <motion.div
+                  variants={fadeInUp}
+                  transition={{ delay: 0.4 }}
+                  className="flex flex-wrap gap-4"
+                >
+                  <Link href="/service">
+                    <motion.button
+                      whileHover="hover"
+                      whileTap="tap"
+                      variants={buttonVariants}
+                      className="px-8 py-4 bg-green-400 text-white rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      Explore Our Capabilities
+                    </motion.button>
+                  </Link>
+
+                  <Link href="/contact-us">
+                    <motion.button
+                      whileHover="hover"
+                      whileTap="tap"
+                      variants={buttonVariants}
+                      className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300"
+                    >
+                      Partner With Us
+                    </motion.button>
+                  </Link>
+                </motion.div>
               </motion.div>
 
-              <motion.h2
-                variants={fadeInUp}
-                transition={{ delay: 0.2 }}
-                className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight"
-              >
-                Building Scalable{" "}
-                <span className="text-green-600 italic">Enterprises</span> for
-                the Future of India
-              </motion.h2>
+              <motion.div variants={imageReveal} className="relative">
+                <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-100/40 rounded-full blur-3xl"></div>
 
-              <motion.p
-                variants={fadeInUp}
-                transition={{ delay: 0.3 }}
-                className="text-xl text-gray-600 font-bold leading-relaxed max-w-xl"
-              >
-                We partner with entrepreneurs, industries, and institutions to build, fund, and scale businesses from 
-                idea to ₹100 Crore+ enterprises through capital enablement, strategic consulting, and technology-driven execution.
-              </motion.p>
-
-              <motion.div
-                variants={fadeInUp}
-                transition={{ delay: 0.4 }}
-                className="flex flex-wrap gap-4"
-              >
-                <Link href="/service">
-                  <motion.button
-                    whileHover="hover"
-                    whileTap="tap"
-                    variants={buttonVariants}
-                    className="px-8 py-4 bg-green-400 text-white rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    Explore Our Capabilities
-                  </motion.button>
-                </Link>
-
-                <Link href="/contact-us">
-                  <motion.button
-                    whileHover="hover"
-                    whileTap="tap"
-                    variants={buttonVariants}
-                    className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300"
-                  >
-                    Partner With Us
-                  </motion.button>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            <motion.div variants={imageReveal} className="relative">
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-100/40 rounded-full blur-3xl"></div>
-
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white"
-              >
-                <motion.img
-                  variants={imageReveal}
-                  alt="Modern high-end glass office building symbolizing institutional growth and innovation"
-                  className="w-full aspect-[4/5] object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkrkWWCfxoDZz8Nmguty2texTmWEicNiLRxw3MRAN3k1ieeu0ssWiH9B6mCY4C4On6iKIMcwd8iwNNRDYRRIYFAiVajuvlNzAXADvoxTuQbGox8_1AuP_Bcfmgt_etBE3DZQUxDMuH-UEpribC-h7Jzc96BpFdomCqR2jloAJI0Olg9u3BPyy0z__NB1p5ypjNM2cghJgePfcyeftshZjYQX_VF1-M2DFl2v8BB7YIcUxj8elEgJ9eW9kpPloEU_mgpb8zpXAwfZzj"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-gray-900/85 to-transparent text-white">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-green-600 rounded-lg">
-                      <TrendingUp size={24} />
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase font-bold tracking-widest text-green-300">
-                        Excellence
-                      </p>
-                      <p className="text-lg font-bold">
-                        Institutional Standards
-                      </p>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Modern high-end glass office building symbolizing institutional growth and innovation"
+                    className="w-full aspect-[4/5] object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkrkWWCfxoDZz8Nmguty2texTmWEicNiLRxw3MRAN3k1ieeu0ssWiH9B6mCY4C4On6iKIMcwd8iwNNRDYRRIYFAiVajuvlNzAXADvoxTuQbGox8_1AuP_Bcfmgt_etBE3DZQUxDMuH-UEpribC-h7Jzc96BpFdomCqR2jloAJI0Olg9u3BPyy0z__NB1p5ypjNM2cghJgePfcyeftshZjYQX_VF1-M2DFl2v8BB7YIcUxj8elEgJ9eW9kpPloEU_mgpb8zpXAwfZzj"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-gray-900/85 to-transparent text-white">
+                    <div className="flex items-center gap-4">
+                      <div className="p-3 bg-green-600 rounded-lg">
+                        <TrendingUp size={24} />
+                      </div>
+                      <div>
+                        <p className="text-xs uppercase font-bold tracking-widest text-green-300">
+                          Excellence
+                        </p>
+                        <p className="text-lg font-bold">
+                          Institutional Standards
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
       {/* Verticals Section */}
       <motion.section
@@ -363,7 +376,7 @@ export default function Home() {
                 <motion.div
                   variants={cardHover}
                   whileHover="hover"
-                  className="group px-8 py-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center min-w-[170px]"
+                  className="group px-8 py-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl text-center font-bold min-w-[170px]"
                 >
                   {/* Icon */}
                   <div className="size-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-5 mx-auto">
@@ -371,7 +384,7 @@ export default function Home() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base font-semibold text-gray-900">
+                  <h3 className="text-base font-bold text-gray-900">
                     {step.title}
                   </h3>
                 </motion.div>

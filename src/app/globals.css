@@ -50,7 +50,7 @@
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-blue-600) #f1f5f9;
+  scrollbar-color: var(--color-green-500) #f1f5f9;
 }
 
 /* Optional: Completely hide scrollbar but keep scrolling functionality */
