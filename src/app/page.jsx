@@ -258,7 +258,7 @@ export default function Home() {
             >
               <h3 className="text-2xl font-bold mb-4">Ready to Innovate?</h3>
               <p className="text-white/90 text-lg mb-6">
-                Partner with us to redefine industrial standards across India.
+                Partner with Bharatx Ventures to build and scale the next generation of enterprises.
               </p>
               <Link href="/contact-us">
                 <motion.button
@@ -405,7 +405,7 @@ export default function Home() {
                     <step.icon size={26} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-gray-700 leading-tight px-2">
+                  <h3 className="text-xl font-extrabold text-green-600 leading-tight px-2">
                     {step.title}
                   </h3>
                 </motion.div>
@@ -489,8 +489,9 @@ export default function Home() {
               <motion.div
                 variants={fadeInUp}
                 transition={{ delay: 0.3 }}
-                className="relative"
+                className="flex gap-4"
               >
+                <div className="h-20 w-1 bg-green-600"></div>
                 <Quote className="absolute -top-4 -left-6 text-6xl text-gray-200 -z-10" />
                 <p className="text-xl text-gray-600 leading-relaxed italic">
                   {`Our mission is to build the backbone of India's future economy by combining deep sector expertise with institutional rigor`}
@@ -499,29 +500,25 @@ export default function Home() {
 
               <motion.div
                 variants={fadeInUp}
-                transition={{ delay: 0.4 }}
-                className="flex flex-col gap-1"
-              >
-                <p className="font-bold text-lg text-gray-900">Pradeep Kumar</p>
-                <p className="text-gray-500 text-sm">
-                  CEO & Data Product Leader
-                </p>
-              </motion.div>
-
-              <motion.div
-                variants={fadeInUp}
                 transition={{ delay: 0.5 }}
                 className="flex gap-4"
-              >
-                <div className="h-20 w-1 bg-green-600"></div>
+              >               
                 <p className="text-sm text-gray-500 max-w-sm">
                   With over 15 years of experience in strategic consulting and industrial scale-up, Pradeep Kumar leads Bharatx Ventures with a vision for operational excellence and sustainable impact.
                 </p>
               </motion.div>
-              <a class="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
-                  Our Core Team <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  </svg>
-                </a>
+             <a class="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
+                Our Core Team
+                <svg
+                  class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
             </motion.div>
           </div>
         </div>
