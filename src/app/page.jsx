@@ -208,28 +208,28 @@ export default function Home() {
             {[
               {
                 icon: Lightbulb,
-                title: "SME Growth Capital & Venture Building",
-                desc: "Strategic capital solutions and operational venture building designed to scale small and medium enterprises into market leaders.",
+                title: "SME Growth Capital ",
+                desc: "Enabling businesses with capital and scaling strategy.",
               },
               {
                 icon: Lightbulb,
-                title: "Strategic Business Consulting",
-                desc: "High-level advisory services focusing on long-term sustainability, organizational efficiency, and market entry strategies.",
+                title: "Strategic Consulting",
+                desc: "Legal, operational, and growth advisory.",
               },
               {
                 icon: Rocket,
-                title: "Venture Development & Acceleration",
-                desc: "Curated acceleration programs for high-growth potential startups and internal venture spin-offs across multiple sectors.",
+                title: "Venture Development",
+                desc: "Building ventures from concept to scale.",
               },
               {
                 icon: Sprout,
-                title: "Agri-Tech Manufacturing & Export",
-                desc: "Leveraging technology for sustainable agricultural manufacturing and global supply chain operations.",
+                title: "Agri-Tech Manufacturing",
+                desc: "Export-grade food processing and value chains.",
               },
               {
                 icon: Cpu,
-                title: "AI Tech Consultancy for Automation",
-                desc: "Engineering intelligence for industrial automation through bespoke AI solutions and digital transformation roadmaps.",
+                title: "AI Industrial Automation",
+                desc: "Smart manufacturing and AI-driven operations.",
               },
             ].map((vertical, index) => (
               <motion.div
@@ -241,10 +241,10 @@ export default function Home() {
                 <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
                   <vertical.icon size={28} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">
                   {vertical.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   {vertical.desc}
                 </p>
               </motion.div>
@@ -257,7 +257,7 @@ export default function Home() {
               className="group p-8 rounded-2xl bg-green-600 text-white flex flex-col justify-center items-center text-center shadow-xl hover:bg-green-500 transition-all duration-300"
             >
               <h3 className="text-2xl font-bold mb-4">Ready to Innovate?</h3>
-              <p className="text-white/90 text-sm mb-6">
+              <p className="text-white/90 text-lg mb-6">
                 Partner with us to redefine industrial standards across India.
               </p>
               <Link href="/contact-us">
