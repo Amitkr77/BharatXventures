@@ -82,7 +82,7 @@ export default function Home() {
             />
             
             {/* Optional dark overlay for better text visibility */}
-            <div className="absolute inset-0 bg-white/60"></div>
+            <div className="absolute inset-0 bg-white/40"></div>
           </div>
 
           {/* ✅ Content (kept above background) */}
@@ -106,14 +106,14 @@ export default function Home() {
                   className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight item-center"
                 >
                   Building Scalable{" "}
-                  <span className="text-green-600 italic">Enterprises</span> for
+                  <span className="text-green-500 italic">Enterprises</span> for
                   the Future of India
                 </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-xl text-gray-600 font-bold leading-relaxed max-w-xl item-center mx-auto"
+                  className="text-xl text-gray-900 font-bold leading-relaxed max-w-xl item-center mx-auto"
                 >
                   We partner with entrepreneurs, industries, and institutions to build, fund, and scale businesses from 
                   idea to ₹100 Crore+ enterprises through capital enablement, strategic consulting, and technology-driven execution.
@@ -129,7 +129,7 @@ export default function Home() {
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
-                      className="px-8 py-4 bg-green-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
+                      className="px-8 py-4 bg-white text-gray-900 rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:bg-green-500 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Explore Our Capabilities
                     </motion.button>
@@ -140,7 +140,7 @@ export default function Home() {
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
-                      className="px-8 py-4 border-2 border-gray-400 text-gray-900 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300"
+                      className="px-8 py-4 bg-white text-gray-900 rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:bg-green-500 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Partner With Us
                     </motion.button>
