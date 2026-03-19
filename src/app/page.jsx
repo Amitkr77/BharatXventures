@@ -605,7 +605,7 @@ export default function Home() {
                 >
                   Industries We Serve
                 </motion.h2>
-                <div className="h-1.5 w-24 bg-green-500 rounded-full"></div>
+                <div className="h-1 w-50 bg-green-500 rounded-full"></div>
               </motion.div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -619,7 +619,7 @@ export default function Home() {
                     variants={imageReveal}
                     alt="Modern agriculture and food processing facility showcasing sustainable value chains"
                     className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1500384066616-8a8d547abfc9?w=800&auto=format&fit=crop"
+                    src="/agro.png"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -733,7 +733,7 @@ export default function Home() {
                     variants={imageReveal}
                     alt="Urban infrastructure development project symbolizing national growth foundations"
                     className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92c91f9?w=800&auto=format&fit=crop"
+                    src="/infra.png"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -771,7 +771,7 @@ export default function Home() {
                     variants={imageReveal}
                     alt="Modern tech startup workspace fostering high-growth innovation"
                     className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop"
+                    src="tstar.png"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -809,7 +809,7 @@ export default function Home() {
                     variants={imageReveal}
                     alt="Precision engineering and industrial automation in a high-tech factory setting"
                     className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&auto=format&fit=crop"
+                    src="indauto.png"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
