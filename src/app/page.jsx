@@ -81,13 +81,13 @@ export default function Home() {
           {/* ✅ Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/hero1.png" // 👉 replace with your image path
+              src="/hero.png" // 👉 replace with your image path
               alt="Background"
               className="w-full h-full object-cover object-top"
             />
             
             {/* Optional dark overlay for better text visibility */}
-            <div className="absolute inset-0 bg-white/40"></div>
+            <div className="absolute inset-0 bg-black/10"></div>
           </div>
 
           {/* ✅ Content (kept above background) */}
@@ -108,20 +108,19 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-5xl lg:text-7xl font-black text-gray-900 leading-[1.1] tracking-tight item-center"
+                  className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center"
                 >
-                  Building Scalable{" "}
-                  <span className="text-green-500 italic">Enterprises</span> for
-                  the Future of India
+                  Building the{" "}
+                  <span className="text-green-700 italic"> Next Generation</span> of Indian Companies
+                  
                 </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-xl text-gray-900 font-bold leading-relaxed max-w-xl item-center mx-auto"
+                  className="text-xl text-white font-bold leading-relaxed max-w-xl item-center mx-auto"
                 >
-                  We partner with entrepreneurs, industries, and institutions to build, fund, and scale businesses from 
-                  idea to ₹100 Crore+ enterprises through capital enablement, strategic consulting, and technology-driven execution.
+                  BharatX Ventures partners with startups and SMEs to design, build, and scale high-impact businesses across India using AI, strategy, and execution
                 </motion.p>
 
                 <motion.div
@@ -512,13 +511,13 @@ export default function Home() {
                   With over 15 years of experience in strategic consulting and industrial scale-up, Pradeep Kumar leads Bharatx Ventures with a vision for operational excellence and sustainable impact.
                 </p>
               </motion.div>
-             <a class="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
+             <a className="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
                 Our Core Team
                 <svg
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
