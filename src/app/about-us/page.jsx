@@ -82,7 +82,7 @@ export default function AboutPage() {
               <motion.span
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 font-bold text-xs uppercase tracking-widest rounded-full mb-6"
+                className="inline-block px-4 py-1.5 bg-green-100 text-green-00 font-bold text-xs uppercase tracking-widest rounded-full mb-6"
               >
                 Established Growth Partner
               </motion.span>
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 className="text-5xl lg:text-7xl font-black text-gray-900 leading-tight tracking-tight mb-8"
               >
                 About <br />
-                <span className="text-blue-600">Bharatx Ventures</span>
+                <span className="text-green-800">Bharatx Ventures</span>
               </motion.h1>
 
               <motion.p
@@ -115,7 +115,7 @@ export default function AboutPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform duration-200"
+                  className="bg-green-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-colors duration-200"
                 >
                   Our Methodology
                 </motion.button>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="border-2 border-gray-200 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors duration-200"
+                  className="border-2 border-gray-200 px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-colors duration-200"
                 >
                   View Portfolio
                 </motion.button>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                   alt="Modern high-end office teamwork meeting representing collaborative growth strategy"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxiXMXjp1ysBRm7A1Hm0XwKPmZet7DVeJ3JW0Ek41K95pdOIKW5LPhLig-6nGahWh4ZpgXDo5lJbpz5ucf5hM6B51f92CALsh7CTTQuT22P4HUZUp4zEn-NuSNFlu6GELXoGm8ONfktMXRGlALzDeCzbQbtPZzLSNnxJwFSa14ntIybU2CgXTyj6djYvN63PFIAHyrEauT49aHbyiSENFc4PWJPJ27Vvg6l5QVQBte8mXT1r6sv7-N3L15UHidj-h-tHrSIiIpOgcJ"
                 />
-                <div className="absolute inset-0 bg-blue-600/20 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-green-600/20 mix-blend-multiply"></div>
               </motion.div>
 
               <motion.div
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.7, duration: 0.8 }}
                 className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-xl hidden md:block max-w-[240px]"
               >
-                <p className="text-4xl font-black text-blue-600 mb-2">100Cr+</p>
+                <p className="text-4xl font-black text-green-800 mb-2">100Cr+</p>
                 <p className="text-sm font-semibold text-gray-500">
                   Pioneering sustainable industrial practices, Ananya has over
                   15 years of experience in transforming the agriculture and
@@ -173,7 +173,7 @@ export default function AboutPage() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
         variants={staggerContainer}
-        className="py-24 bg-blue-600 text-white"
+        className="py-24 bg-green-800 text-white"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid md:grid-cols-2 gap-8">
@@ -182,7 +182,7 @@ export default function AboutPage() {
               whileHover="hover"
               className="bg-white/10 border border-white/20 p-12 rounded-3xl hover:bg-white/15 transition-colors duration-300"
             >
-              <Eye className="text-blue-200 mb-6" size={48} strokeWidth={1.5} />
+              <Eye className="text-green-200 mb-6" size={48} strokeWidth={1.5} />
               <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
               <p className="text-blue-100 text-lg leading-relaxed">
                 {`To be India's leading venture developer scaling local
@@ -197,7 +197,7 @@ export default function AboutPage() {
               className="bg-white/10 border border-white/20 p-12 rounded-3xl hover:bg-white/15 transition-colors duration-300"
             >
               <Target
-                className="text-blue-200 mb-6"
+                className="text-green-200 mb-6"
                 size={48}
                 strokeWidth={1.5}
               />
@@ -231,7 +231,7 @@ export default function AboutPage() {
             >
               Leadership Philosophy
             </motion.h2>
-            <div className="h-1 w-20 bg-blue-600 mx-auto mb-8 rounded-full"></div>
+            <div className="h-1 w-20 bg-green-800 mx-auto mb-8 rounded-full"></div>
             <motion.p
               variants={fadeInUp}
               transition={{ delay: 0.1 }}
@@ -249,7 +249,7 @@ export default function AboutPage() {
               whileHover="hover"
               className="text-center group p-4 rounded-xl shadow-2xl"
             >
-              <div className="size-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="size-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                 <ShieldCheck size={32} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -268,7 +268,7 @@ export default function AboutPage() {
               whileHover="hover"
               className="text-center group p-4 rounded-xl shadow-2xl"
             >
-              <div className="size-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="size-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                 <Building2 size={32} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -287,7 +287,7 @@ export default function AboutPage() {
               whileHover="hover"
               className="text-center group p-4 rounded-xl shadow-2xl"
             >
-              <div className="size-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="size-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                 <TrendingUp size={32} strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -320,12 +320,12 @@ export default function AboutPage() {
                 className="text-4xl font-black text-gray-900 mb-8 leading-tight"
               >
                 Our Venture Building <br />
-                <span className="text-blue-600">Methodology</span>
+                <span className="text-green-600">Methodology</span>
               </motion.h2>
 
               <div className="space-y-10">
                 <motion.div variants={fadeInUp} className="flex gap-6 group">
-                  <div className="text-blue-600 font-black text-5xl opacity-30 group-hover:opacity-100">
+                  <div className="text-green-600 font-black text-5xl opacity-30 group-hover:opacity-100">
                     01
                   </div>
                   <div>
@@ -340,7 +340,7 @@ export default function AboutPage() {
                 </motion.div>
 
                 <motion.div variants={fadeInUp} className="flex gap-6 group">
-                  <div className="text-blue-600 font-black text-5xl opacity-30 group-hover:opacity-100">
+                  <div className="text-green-600 font-black text-5xl opacity-30 group-hover:opacity-100">
                     02
                   </div>
                   <div>
@@ -355,7 +355,7 @@ export default function AboutPage() {
                 </motion.div>
 
                 <motion.div variants={fadeInUp} className="flex gap-6 group">
-                  <div className="text-blue-600 font-black text-5xl opacity-30 group-hover:opacity-100 transition-colors duration-300">
+                  <div className="text-green-600 font-black text-5xl opacity-30 group-hover:opacity-100 transition-colors duration-300">
                     03
                   </div>
                   <div>
@@ -372,7 +372,7 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div variants={imageReveal} className="lg:w-1/2">
-              <div className="relative p-2 bg-gradient-to-tr from-blue-500 to-blue-700 rounded-[2.5rem]">
+              <div className="relative p-2 bg-gradient-to-tr from-green-300 to-green-700 rounded-[2.5rem]">
                 <motion.img
                   variants={imageReveal}
                   className="rounded-[2.2rem] w-full object-cover aspect-[4/5] shadow-inner"
@@ -407,9 +407,9 @@ export default function AboutPage() {
                   className="w-full aspect-[4/5] object-cover"
                   src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600/95 to-transparent p-8 text-white">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-600/95 to-transparent p-8 text-white">
                   <h3 className="text-2xl font-bold">Pradeep Kumar</h3>
-                  <p className="text-blue-200 text-sm font-bold uppercase tracking-[0.2em]">
+                  <p className="text-green-200 text-sm font-bold uppercase tracking-[0.2em]">
                     Founder & CEO
                   </p>
                 </div>
@@ -425,8 +425,8 @@ export default function AboutPage() {
                 transition={{ delay: 0.1 }}
                 className="inline-flex items-center gap-3"
               >
-                <span className="h-px w-12 bg-blue-600"></span>
-                <span className="text-xs font-bold text-blue-600 uppercase tracking-[0.3em]">
+                <span className="h-px w-12 bg-green-600"></span>
+                <span className="text-xs font-bold text-green-600 uppercase tracking-[0.3em]">
                   Executive Leadership
                 </span>
               </motion.div>
@@ -472,7 +472,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.5 }}
                 className="flex gap-4 mt-4"
               >
-                <div className="h-16 w-0.5 bg-blue-600"></div>
+                <div className="h-23 w-1 bg-green-600"></div>
                 <p className="text-sm text-gray-500 max-w-md leading-relaxed">
                   Pioneering sustainable industrial practices, Ananya has over
                   15 years of experience in transforming the agriculture and
@@ -550,7 +550,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
                     {leader.name}
                   </h3>
-                  <p className="text-blue-600 text-xs font-bold uppercase tracking-wider mb-4">
+                  <p className="text-green-600 text-sm font-bold uppercase tracking-wider mb-4">
                     {leader.role}
                   </p>
                   
@@ -570,8 +570,8 @@ export default function AboutPage() {
         className="py-24"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="bg-blue-600 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-gradient-to-r from-blue-400 via-transparent to-transparent"></div>
+          <div className="bg-green-600 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-gradient-to-r from-green-400 via-transparent to-transparent"></div>
 
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -581,13 +581,13 @@ export default function AboutPage() {
                   className="text-4xl lg:text-5xl font-black text-white mb-8"
                 >
                   Commitment to <br />
-                  <span className="text-blue-200">SME Growth in India</span>
+                  <span className="text-green-200">SME Growth in India</span>
                 </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-blue-100 text-lg mb-8 leading-relaxed"
+                  className="text-green-100 text-lg mb-8 leading-relaxed"
                 >
                   We are more than just investors; we are builders. Our
                   impact-driven initiatives focus on transforming the landscape
@@ -603,21 +603,21 @@ export default function AboutPage() {
                     variants={fadeInUp}
                     className="flex items-center gap-3 text-white font-medium"
                   >
-                    <CheckCircle2 className="text-blue-200" size={24} />
+                    <CheckCircle2 className="text-green-200" size={24} />
                     Technological Modernization
                   </motion.li>
                   <motion.li
                     variants={fadeInUp}
                     className="flex items-center gap-3 text-white font-medium"
                   >
-                    <CheckCircle2 className="text-blue-200" size={24} />
+                    <CheckCircle2 className="text-green-200" size={24} />
                     Strategic Talent Pipeline
                   </motion.li>
                   <motion.li
                     variants={fadeInUp}
                     className="flex items-center gap-3 text-white font-medium"
                   >
-                    <CheckCircle2 className="text-blue-200" size={24} />
+                    <CheckCircle2 className="text-green-200" size={24} />
                     Global Market Readiness
                   </motion.li>
                 </motion.ul>
@@ -627,7 +627,7 @@ export default function AboutPage() {
                     whileHover="hover"
                     whileTap="tap"
                     variants={buttonVariants}
-                    className="bg-white text-blue-700 px-10 py-4 rounded-xl font-black hover:bg-gray-100 transition-colors duration-200 uppercase tracking-wider text-sm"
+                    className="bg-white text-green-700 px-10 py-4 rounded-xl font-black hover:bg-gray-100 transition-colors duration-200 uppercase tracking-wider text-sm"
                   >
                     Join Our Ecosystem
                   </motion.button>
@@ -649,10 +649,10 @@ export default function AboutPage() {
                     variants={fadeInUp}
                     className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20"
                   >
-                    <p className="text-4xl font-black text-blue-200 mb-2">
+                    <p className="text-4xl font-black text-green-200 mb-2">
                       {stat.value}
                     </p>
-                    <p className="text-blue-100 text-sm font-bold uppercase tracking-tighter">
+                    <p className="text-green-100 text-sm font-bold uppercase tracking-tighter">
                       {stat.label}
                     </p>
                   </motion.div>

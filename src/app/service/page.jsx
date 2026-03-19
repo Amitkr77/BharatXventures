@@ -73,7 +73,7 @@ export default function ServicesPage() {
           variants={fadeInUp}
           className="relative py-24 px-6 overflow-hidden"
         >
-          <div className="absolute inset-0 bg-blue-900 z-0">
+          <div className="absolute inset-0 bg-green-900 z-0">
             <div
               className="absolute inset-0 opacity-20"
               style={{
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                 backgroundPosition: "center",
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900/90 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-green-900 via-green-900/90 to-transparent" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-amber-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-amber-300 transition-all duration-300 shadow-lg"
+                  className="bg-amber-500 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-amber-300 transition-all duration-300 shadow-lg"
                 >
                   Explore Verticals
                 </motion.button>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="border border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all duration-300"
+                  className="border border-white/30 bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-amber-300 hover:text-gray-900 transition-all duration-300"
                 >
                   Our Impact
                 </motion.button>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-blue-600 text-sm font-bold uppercase tracking-[0.2em]"
+                  className="text-green-600 text-sm font-bold uppercase tracking-[0.2em]"
                 >
                   01. Growth Capital
                 </motion.h2>
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 border border-gray-100 rounded-xl"
                 >
-                  <Rocket className="text-blue-600" size={24} />
+                  <Rocket className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">
                       Startup Incubation
@@ -203,7 +203,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 border border-gray-100 rounded-xl"
                 >
-                  <HandCoins className="text-blue-600" size={24} />
+                  <HandCoins className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">Capital Access</h4>
                     <p className="text-sm text-gray-600">
@@ -215,9 +215,9 @@ export default function ServicesPage() {
 
               <motion.div
                 variants={fadeInUp}
-                className="bg-blue-50 p-6 rounded-2xl border-l-4 border-amber-500"
+                className="bg-green-50 p-6 rounded-2xl border-l-4 border-amber-500"
               >
-                <h4 className="text-blue-700 font-bold mb-2">
+                <h4 className="text-green-700 font-bold mb-2">
                   Benefits to Clients
                 </h4>
                 <p className="text-gray-700 text-sm">
@@ -257,7 +257,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-blue-600 text-sm font-bold uppercase tracking-[0.2em]"
+                  className="text-green-600 text-sm font-bold uppercase tracking-[0.2em]"
                 >
                   02. Advisory
                 </motion.h2>
@@ -287,7 +287,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 bg-white rounded-xl shadow-sm"
                 >
-                  <Gavel className="text-blue-600" size={24} />
+                  <Gavel className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">
                       Regulatory Advisory
@@ -303,7 +303,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 bg-white rounded-xl shadow-sm"
                 >
-                  <Scale className="text-blue-600" size={24} />
+                  <Scale className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">
                       Corporate Structuring
@@ -317,9 +317,9 @@ export default function ServicesPage() {
 
               <motion.div
                 variants={fadeInUp}
-                className="bg-blue-50 p-6 rounded-2xl border-l-4 border-amber-500"
+                className="bg-green-50 p-6 rounded-2xl border-l-4 border-amber-500"
               >
-                <h4 className="text-blue-700 font-bold mb-2">
+                <h4 className="text-green-700 font-bold mb-2">
                   Benefits to Clients
                 </h4>
                 <p className="text-gray-700 text-sm">
@@ -331,7 +331,7 @@ export default function ServicesPage() {
 
             <motion.div variants={imageReveal} className="w-full md:w-1/2">
               <div className="relative">
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-amber-500"></div>
+                <div className="absolute -bottom-10 -right-1 w-24 h-24 border-b-2 border-r-2 border-amber-500"></div>
                 <motion.img
                   variants={imageReveal}
                   alt="Business professional analyzing financial charts and regulatory documents on a modern desk"
@@ -359,7 +359,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-blue-600 text-sm font-bold uppercase tracking-[0.2em]"
+                  className="text-green-600 text-sm font-bold uppercase tracking-[0.2em]"
                 >
                   03. Acceleration
                 </motion.h2>
@@ -388,7 +388,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 border border-gray-100 rounded-xl"
                 >
-                  <Rocket className="text-blue-600" size={24} />
+                  <Rocket className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">Market Entry</h4>
                     <p className="text-sm text-gray-600">
@@ -402,7 +402,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 border border-gray-100 rounded-xl"
                 >
-                  <Cpu className="text-blue-600" size={24} />
+                  <Cpu className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">
                       Digital Transformation
@@ -416,9 +416,9 @@ export default function ServicesPage() {
 
               <motion.div
                 variants={fadeInUp}
-                className="bg-blue-50 p-6 rounded-2xl border-l-4 border-amber-500"
+                className="bg-green-50 p-6 rounded-2xl border-l-4 border-amber-500"
               >
-                <h4 className="text-blue-700 font-bold mb-2">
+                <h4 className="text-green-700 font-bold mb-2">
                   Benefits to Clients
                 </h4>
                 <p className="text-gray-700 text-sm">
@@ -429,11 +429,15 @@ export default function ServicesPage() {
             </motion.div>
 
             <motion.div variants={imageReveal} className="w-full md:w-1/2">
-              <img
-                alt="Agile team meeting in a bright modern workspace discussing venture acceleration strategies"
-                className="rounded-2xl shadow-2xl border border-gray-200"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL2EVBJaADw_d0se4CXwqDLeftqIZQ7DM3m1HZp60fgRetcWHXFwwOXyhcwihGwGILf3xomf0SA6PF4Y8LJyfETAB5kzm_AIfGBx0Sh9ltcP3lzFC0UKfypRH0YjQ_GFi3kNeQcYZtTQSaXUIWBgIc4wv0mXO069_k5giCAGpoQdT-Mfrw1GO3LOoX84LMx6hnpGtkYGpY0nc_bf_5Y7xfzFQ4h0dDlIHbwah-bN_INnF7Ne2_QL8fOxF2kOB7MkHKxwshYIt7jkI4"
+            <div className="relative">
+                <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-500"></div>
+              <motion.img
+                  variants={imageReveal}
+                  alt="Executive team collaborating around a modern office table during strategic planning"
+                  className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL2EVBJaADw_d0se4CXwqDLeftqIZQ7DM3m1HZp60fgRetcWHXFwwOXyhcwihGwGILf3xomf0SA6PF4Y8LJyfETAB5kzm_AIfGBx0Sh9ltcP3lzFC0UKfypRH0YjQ_GFi3kNeQcYZtTQSaXUIWBgIc4wv0mXO069_k5giCAGpoQdT-Mfrw1GO3LOoX84LMx6hnpGtkYGpY0nc_bf_5Y7xfzFQ4h0dDlIHbwah-bN_INnF7Ne2_QL8fOxF2kOB7MkHKxwshYIt7jkI4"
               />
+            </div>  
             </motion.div>
           </div>
         </motion.section>
@@ -444,7 +448,7 @@ export default function ServicesPage() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
           variants={staggerContainer}
-          className="py-24 bg-blue-600 text-white px-6"
+          className="py-24 bg-green-600 text-white px-6"
         >
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse gap-16 items-center">
             <motion.div
@@ -522,11 +526,15 @@ export default function ServicesPage() {
             </motion.div>
 
             <motion.div variants={imageReveal} className="w-full md:w-1/2">
-              <img
-                alt="Vast green agricultural landscape with modern irrigation and processing technology"
-                className="rounded-2xl shadow-2xl brightness-90 hover:brightness-100 transition-all duration-700"
+              <div className="relative">
+                <div className="absolute -bottom-10 right-0 w-24 h-24 border-b-2 border-r-2 border-amber-500"></div>
+                <motion.img
+                  variants={imageReveal}
+                  alt="Business professional analyzing financial charts and regulatory documents on a modern desk"
+                  className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1iAWU-RQGI4CpnH6X_LiS1z9bTCbhnofVZEJIfyjX7thvtX6KqsQopdxca7jt1VXuqT4T8JdFME9OvNtn2-FuUazHudfWt1jeZn3fkWUmR73GSOG9v9LOq7awnhj82Cy6t8ZEi6kp8zIXwuh_j9Dt1q0GlSw0N-H5k0F-ubf2E54aMaEAt9fXyVPwGXGYmRSuuUuQPnaBUBki670ssTfZ11Pmd7UTrXd2UhWPixF_AOx5bQHbvKxMnGYVxQJiTxNXabmu4OrP6QfI"
               />
+              </div>
             </motion.div>
           </div>
         </motion.section>
@@ -547,7 +555,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <motion.h2
                   variants={fadeInUp}
-                  className="text-blue-600 text-sm font-bold uppercase tracking-[0.2em]"
+                  className="text-green-600 text-sm font-bold uppercase tracking-[0.2em]"
                 >
                   05. Industry 4.0
                 </motion.h2>
@@ -576,7 +584,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 border border-gray-100 rounded-xl"
                 >
-                  <Cpu className="text-blue-600" size={24} />
+                  <Cpu className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">Industrial IoT</h4>
                     <p className="text-sm text-gray-600">
@@ -590,7 +598,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   className="flex gap-4 p-4 border border-gray-100 rounded-xl"
                 >
-                  <BarChart3 className="text-blue-600" size={24} />
+                  <BarChart3 className="text-green-600" size={24} />
                   <div>
                     <h4 className="font-bold text-gray-900">
                       Predictive Analytics
@@ -604,9 +612,9 @@ export default function ServicesPage() {
 
               <motion.div
                 variants={fadeInUp}
-                className="bg-blue-50 p-6 rounded-2xl border-l-4 border-amber-500"
+                className="bg-green-50 p-6 rounded-2xl border-l-4 border-amber-500"
               >
-                <h4 className="text-blue-700 font-bold mb-2">
+                <h4 className="text-green-700 font-bold mb-2">
                   Benefits to Clients
                 </h4>
                 <p className="text-gray-700 text-sm">
@@ -617,11 +625,15 @@ export default function ServicesPage() {
             </motion.div>
 
             <motion.div variants={imageReveal} className="w-full md:w-1/2">
-              <img
-                alt="High-tech robotic arm and automation systems operating in a modern clean factory environment"
-                className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+            <div className="relative">
+                <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-500"></div>
+              <motion.img
+                  variants={imageReveal}
+                  alt="Executive team collaborating around a modern office table during strategic planning"
+                  className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtGdEnAblW6Of4dowdt9NlGY50uhcqPbAqyr5JIufSfXKgINx_PVbvUwcrW_obr3lNcniD6UpQGXG8ALbi7vv4bWw9p7vLLWyKV0Rrpu1IZ0WhsIOx_F5TQ9auzupjKJcMCjBoBaCsVa-V9bD99JEfaLlSGKJjSf8hH2v_cEQ9dqc7qsVbirlkppId4ytGwaVfwGXwNAoO3vU70zrnhkoY6JkDwbnDWOnhAGEZnRO5HyMgR937TjJwqpsEWmPRYojb9EfO4hdxo1BH"
               />
+            </div>  
             </motion.div>
           </div>
         </motion.section>
@@ -634,7 +646,7 @@ export default function ServicesPage() {
           variants={fadeInUp}
           className="py-24 px-6"
         >
-          <div className="max-w-5xl mx-auto bg-blue-600 rounded-3xl p-12 text-center relative overflow-hidden shadow-2xl">
+          <div className="max-w-5xl mx-auto bg-green-600 rounded-3xl p-12 text-center relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400 opacity-10 rounded-full -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full -ml-24 -mb-24"></div>
 
@@ -666,7 +678,7 @@ export default function ServicesPage() {
                     whileHover="hover"
                     whileTap="tap"
                     variants={buttonVariants}
-                    className="bg-amber-400 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-xl shadow-amber-400/20"
+                    className="bg-amber-500 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-400 hover:scale-100 transition-all duration-300 shadow-xl shadow-amber-400/20"
                   >
                     Book a Consultation
                   </motion.button>
@@ -676,7 +688,7 @@ export default function ServicesPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-white/10 text-white border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300"
+                  className="bg-green-500 text-gray-900 border border-white/20 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-400 hover:scale-100 transition-all duration-300"
                 >
                   Download Services Brochure
                 </motion.button>

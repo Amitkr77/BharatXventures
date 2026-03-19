@@ -127,7 +127,7 @@ export default function FeaturedInitiativesPage() {
       <section className="bg-gray-50 text-gray-900">
         <main className="flex-grow">
           {/* Hero Section */}
-          <section className="relative py-20 overflow-hidden bg-blue-900">
+          <section className="relative py-20 overflow-hidden bg-green-900">
             <div className="absolute inset-0 opacity-10">
               <div
                 className="absolute inset-0"
@@ -247,15 +247,15 @@ export default function FeaturedInitiativesPage() {
                         <p className="text-gray-600 mt-1">{study.approach}</p>
                       </div>
 
-                      <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                        <h4 className="font-bold text-blue-700 mb-3 flex items-center gap-2">
+                      <div className="bg-green-50 p-6 rounded-xl border border-green-100">
+                        <h4 className="font-bold text-green-700 mb-3 flex items-center gap-2">
                           <TrendingUp size={20} />
                           The Impact
                         </h4>
                         <div className="grid grid-cols-2 gap-4">
                           {study.impact.map((item, i) => (
                             <div key={i}>
-                              <p className="text-3xl font-black text-blue-700">
+                              <p className="text-3xl font-black text-green-700">
                                 {item.value}
                               </p>
                               <p className="text-xs text-gray-600 uppercase font-bold tracking-tight">
@@ -346,7 +346,7 @@ export default function FeaturedInitiativesPage() {
                         .getElementById("contact-form")
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
-                    className="w-full sm:w-auto bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
+                    className="w-full sm:w-auto bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-all duration-300 shadow-lg"
                   >
                     Start Your Partnership
                   </button>
@@ -358,7 +358,7 @@ export default function FeaturedInitiativesPage() {
                     (window.location.href =
                       "mailto:hello@bharatx.vc?subject=Request%20Case%20Study%20Details")
                   }
-                  className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300"
+                  className="w-full sm:w-auto border-2 border-green text-green-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-700 hover:text-white transition-all duration-300"
                 >
                   Request Case Detail
                 </button>

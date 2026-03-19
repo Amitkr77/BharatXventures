@@ -83,7 +83,7 @@ export default function GovernancePage() {
               <motion.div
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6"
               >
                 <ShieldCheck size={16} />
                 Institutional Standards
@@ -94,7 +94,7 @@ export default function GovernancePage() {
                 transition={{ delay: 0.2 }}
                 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] mb-6"
               >
-                Institutional <span className="text-blue-600">Governance</span>
+                Institutional <span className="text-green-600">Governance</span>
               </motion.h1>
 
               <motion.p
@@ -117,7 +117,7 @@ export default function GovernancePage() {
                     whileHover="hover"
                     whileTap="tap"
                     variants={buttonVariants}
-                    className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-200/40 transition-all duration-300"
+                    className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-green-200/40 transition-all duration-300"
                   >
                     View Framework
                     <ArrowRight size={18} />
@@ -139,7 +139,7 @@ export default function GovernancePage() {
               variants={imageReveal}
               className="relative lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
             >
-              <div className="absolute inset-0 bg-blue-600/10 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-green-600/10 mix-blend-multiply"></div>
               <motion.img
                 variants={imageReveal}
                 alt="Modern high-rise corporate architecture symbolizing institutional stability and trust"
@@ -169,7 +169,7 @@ export default function GovernancePage() {
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
                   Company Name
                 </span>
-                <p className="text-sm font-semibold text-blue-600">
+                <p className="text-sm font-semibold text-green-600">
                   Bharatx Ventures Private Limited
                 </p>
               </motion.div>
@@ -181,7 +181,7 @@ export default function GovernancePage() {
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
                   CIN
                 </span>
-                <p className="text-sm font-semibold text-blue-600">
+                <p className="text-sm font-semibold text-green-600">
                   U01139BR2026PTC083018
                 </p>
               </motion.div>
@@ -193,7 +193,7 @@ export default function GovernancePage() {
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
                   PAN
                 </span>
-                <p className="text-sm font-semibold text-blue-600">
+                <p className="text-sm font-semibold text-green-600">
                   AAOCB4970H
                 </p>
               </motion.div>
@@ -226,7 +226,7 @@ export default function GovernancePage() {
                 whileHover="hover"
                 className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+                <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-green-600 mb-6">
                   <Eye size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -243,7 +243,7 @@ export default function GovernancePage() {
                 whileHover="hover"
                 className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+                <div className="size-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6">
                   <Gavel size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -260,7 +260,7 @@ export default function GovernancePage() {
                 whileHover="hover"
                 className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+                <div className="size-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6">
                   <TrendingUp size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -277,7 +277,7 @@ export default function GovernancePage() {
                 whileHover="hover"
                 className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6">
+                <div className="size-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6">
                   <Settings size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -381,9 +381,9 @@ export default function GovernancePage() {
               >
                 <motion.div
                   variants={fadeInUp}
-                  className="bg-blue-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center aspect-square"
+                  className="bg-green-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center aspect-square"
                 >
-                  <FileText className="text-blue-600 mb-4" size={36} />
+                  <FileText className="text-green-600 mb-4" size={36} />
                   <span className="text-sm font-bold text-gray-800">
                     MCA Compliance
                   </span>
@@ -411,9 +411,9 @@ export default function GovernancePage() {
 
                 <motion.div
                   variants={fadeInUp}
-                  className="bg-blue-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center aspect-square"
+                  className="bg-green-50 rounded-2xl p-6 flex flex-col items-center justify-center text-center aspect-square"
                 >
-                  <ShieldCheck className="text-blue-600 mb-4" size={36} />
+                  <ShieldCheck className="text-green-600 mb-4" size={36} />
                   <span className="text-sm font-bold text-gray-800">
                     Data Protection
                   </span>
@@ -429,7 +429,7 @@ export default function GovernancePage() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="py-24 bg-blue-600 text-white"
+          className="py-24 bg-green-600 text-white"
         >
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.div variants={fadeInUp} transition={{ delay: 0.1 }}>
@@ -441,7 +441,7 @@ export default function GovernancePage() {
               <h2 className="text-4xl font-bold mb-6">
                 Investor & Partner Trust
               </h2>
-              <p className="text-lg text-blue-100 opacity-90 leading-relaxed mb-10">
+              <p className="text-lg text-green-100 opacity-90 leading-relaxed mb-10">
                 Our governance standards are designed to protect the interests
                 of our stakeholders. By implementing rigorous oversight and
                 ethical frameworks, we ensure that Bharatx Ventures remains a
@@ -506,7 +506,7 @@ export default function GovernancePage() {
                 whileHover="hover"
                 whileTap="tap"
                 variants={buttonVariants}
-                className="text-blue-600 font-bold flex items-center gap-2 group hover:text-blue-800 transition-colors"
+                className="text-green-600 font-bold flex items-center gap-2 group hover:text-green-800 transition-colors"
               >
                 View All Archives
                 <ArrowRight
@@ -532,7 +532,7 @@ export default function GovernancePage() {
                   key={index}
                   variants={cardHover}
                   whileHover="hover"
-                  className="group flex items-center justify-between p-6 bg-gray-50 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300"
+                  className="group flex items-center justify-between p-6 bg-gray-50 rounded-xl hover:bg-green-600 hover:text-white transition-all duration-300"
                   href="#"
                 >
                   <div className="flex items-center gap-4">

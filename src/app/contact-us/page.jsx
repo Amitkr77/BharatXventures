@@ -70,14 +70,14 @@ export default function ContactPage() {
           variants={fadeInUp}
           className="relative bg-white pt-16 pb-24 overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50 -skew-x-12 translate-x-1/2"></div>
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-green-50 -skew-x-12 translate-x-1/2"></div>
 
           <div className="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
             <motion.div variants={fadeInUp} className="max-w-3xl">
               <motion.span
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6"
+                className="inline-block px-4 py-1.5 bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest rounded-full mb-6"
               >
                 Connect with us
               </motion.span>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 transition={{ delay: 0.2 }}
                 className="text-5xl lg:text-7xl font-black text-gray-900 leading-tight tracking-tight mb-8"
               >
-                Get in <span className="text-blue-600 italic">Touch</span>
+                Get in <span className="text-green-600 italic">Touch</span>
               </motion.h1>
 
               <motion.p
@@ -110,7 +110,7 @@ export default function ContactPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-blue-200/40 hover:-translate-y-0.5 transition-all duration-300"
+                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-green-200/40 hover:-translate-y-0.5 transition-all duration-300"
                   href="#contact-form"
                 >
                   Submit Inquiry
@@ -145,9 +145,9 @@ export default function ContactPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 group hover:border-blue-400/50 transition-colors duration-300"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 group hover:border-green-400/50 transition-colors duration-300"
               >
-                <div className="size-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                <div className="size-14 rounded-xl bg-green-50 text-green-600 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                   <MapPin size={28} strokeWidth={1.8} />
                 </div>
                 <div>
@@ -163,7 +163,7 @@ export default function ContactPage() {
                 <motion.a
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-auto text-blue-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
+                  className="mt-auto text-green-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
                   href="#"
                 >
                   View on Map
@@ -175,9 +175,9 @@ export default function ContactPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 group hover:border-blue-400/50 transition-colors duration-300"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 group hover:border-green-400/50 transition-colors duration-300"
               >
-                <div className="size-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                <div className="size-14 rounded-xl bg-green-50 text-green-600 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                   <Mail size={28} strokeWidth={1.8} />
                 </div>
                 <div>
@@ -187,14 +187,14 @@ export default function ContactPage() {
                   <p className="text-gray-600 leading-relaxed text-sm">
                     For general queries and partnerships:
                   </p>
-                  <p className="text-blue-600 font-bold mt-2">
+                  <p className="text-green-600 font-bold mt-2">
                     hello@bharatx.vc
                   </p>
                 </div>
                 <motion.a
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-auto text-blue-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
+                  className="mt-auto text-green-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
                   href="mailto:hello@bharatx.vc"
                 >
                   Send Email
@@ -206,9 +206,9 @@ export default function ContactPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 group hover:border-blue-400/50 transition-colors duration-300"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-6 group hover:border-green-400/50 transition-colors duration-300"
               >
-                <div className="size-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                <div className="size-14 rounded-xl bg-green-50 text-green-600 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                   <Phone size={28} strokeWidth={1.8} />
                 </div>
                 <div>
@@ -218,14 +218,14 @@ export default function ContactPage() {
                   <p className="text-gray-600 leading-relaxed text-sm">
                     Available Mon-Fri, 9:00 AM - 6:00 PM IST:
                   </p>
-                  <p className="text-blue-600 font-bold mt-2">
+                  <p className="text-green-600 font-bold mt-2">
                     +91 22 4567 8900
                   </p>
                 </div>
                 <motion.a
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-auto text-blue-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
+                  className="mt-auto text-green-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all duration-200"
                   href="tel:+912245678900"
                 >
                   Call Now
@@ -277,7 +277,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="fullName"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
                       placeholder="John Doe"
                       type="text"
                     />
@@ -292,7 +292,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="organization"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
                       placeholder="Company Name"
                       type="text"
                     />
@@ -307,7 +307,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
                       placeholder="john@company.com"
                       type="email"
                     />
@@ -322,7 +322,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="phone"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
                       placeholder="+91 00000 00000"
                       type="tel"
                     />
@@ -337,7 +337,7 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       id="message"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200 resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200 resize-none"
                       placeholder="How can we collaborate?"
                       rows={4}
                     />
@@ -349,7 +349,7 @@ export default function ContactPage() {
                       whileTap="tap"
                       variants={buttonVariants}
                       type="submit"
-                      className="w-full md:w-auto px-10 py-4 bg-blue-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-blue-200/40 hover:bg-blue-700 transition-all duration-300"
+                      className="w-full md:w-auto px-10 py-4 bg-green-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-green-200/40 hover:bg-green-700 transition-all duration-300"
                     >
                       Submit Institutional Inquiry
                     </motion.button>
@@ -377,9 +377,9 @@ export default function ContactPage() {
                   <motion.div
                     variants={fadeInUp}
                     transition={{ delay: 0.3 }}
-                    className="absolute bottom-6 left-6 right-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 border-l-4 border-blue-500"
+                    className="absolute bottom-6 left-6 right-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 border-l-4 border-green-500"
                   >
-                    <Pin className="text-blue-600" size={20} />
+                    <Pin className="text-green-600" size={20} />
                     <div>
                       <p className="text-xs font-bold text-gray-500 uppercase tracking-tighter">
                         Office Location
@@ -394,9 +394,9 @@ export default function ContactPage() {
                 <motion.div
                   variants={fadeInUp}
                   transition={{ delay: 0.4 }}
-                  className="bg-blue-50 p-6 rounded-xl border border-blue-100"
+                  className="bg-green-50 p-6 rounded-xl border border-green-100"
                 >
-                  <h4 className="text-blue-700 font-bold mb-2 flex items-center gap-2">
+                  <h4 className="text-green-700 font-bold mb-2 flex items-center gap-2">
                     <ShieldCheck size={18} />
                     Compliance & Trust
                   </h4>
@@ -409,7 +409,7 @@ export default function ContactPage() {
                     <motion.span
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.3 }}
-                      className="text-blue-600 text-xs font-bold mt-3 inline-block hover:underline"
+                      className="text-green-600 text-xs font-bold mt-3 inline-block hover:underline"
                     >
                       View Governance Highlights →
                     </motion.span>

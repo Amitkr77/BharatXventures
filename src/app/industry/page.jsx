@@ -79,8 +79,8 @@ export default function IndustriesPage() {
             className="w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&auto=format&fit=crop"
           />
-          <div className="absolute inset-0 bg-blue-900/85 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-900/70 to-blue-900"></div>
+          <div className="absolute inset-0 bg-green-900/85 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-green-900/40 via-green-900/70 to-green-900"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -106,9 +106,9 @@ export default function IndustriesPage() {
             transition={{ delay: 0.3 }}
             className="max-w-3xl mx-auto text-xl text-gray-200 font-light leading-relaxed tracking-wide"
           >
-            Strategic partnership and institutional-grade support across India's
+            {`Strategic partnership and institutional-grade support across India's
             core economic sectors. We drive growth through capital, network, and
-            operational excellence.
+            operational excellence.`}
           </motion.p>
         </div>
       </motion.section>
@@ -154,8 +154,8 @@ export default function IndustriesPage() {
                     Market Context
                   </p>
                   <p className="text-xs text-gray-200 italic font-light">
-                    Leveraging India's position as a global food basket through
-                    tech-driven export readiness.
+                    {`Leveraging India's position as a global food basket through
+                    tech-driven export readiness.`}
                   </p>
                 </div>
               </div>
@@ -230,8 +230,8 @@ export default function IndustriesPage() {
                     Market Context
                   </p>
                   <p className="text-xs text-gray-200 italic font-light">
-                    Transitioning towards 'Make in India' excellence with global
-                    supply chain resiliency.
+                    {`Transitioning towards 'Make in India' excellence with global
+                    supply chain resiliency.`}
                   </p>
                 </div>
               </div>
@@ -502,7 +502,7 @@ export default function IndustriesPage() {
               <motion.a
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.3 }}
-                className="group inline-flex items-center gap-3 text-blue-600 font-black uppercase text-xs tracking-[0.2em] hover:text-blue-800 transition-colors"
+                className="group inline-flex items-center gap-3 text-green-600 font-black uppercase text-xs tracking-[0.2em] hover:text-green-800 transition-colors"
                 href="#"
               >
                 Discover our Strategic Methodology
@@ -522,7 +522,7 @@ export default function IndustriesPage() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
-        className="py-20 bg-blue-600 text-white"
+        className="py-20 bg-green-600 text-white"
       >
         <div className="max-w-5xl mx-auto px-4 text-center">
           <motion.h2
@@ -564,7 +564,7 @@ export default function IndustriesPage() {
                 whileHover="hover"
                 whileTap="tap"
                 variants={buttonVariants}
-                className="w-full sm:w-auto px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-black rounded-xl transition-colors uppercase tracking-widest text-sm border border-white/20"
+                className="w-full sm:w-auto px-10 py-4 bg-green-400 hover:bg-amber-300 text-gray-900 font-black rounded-xl transition-colors uppercase tracking-widest text-sm border border-white/20"
               >
                 View Portfolio
               </motion.button>

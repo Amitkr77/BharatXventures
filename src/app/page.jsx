@@ -12,6 +12,8 @@ import {
   Settings, 
   DollarSign,
   Cpu,
+  Building2,
+  Wheat,
   Quote,
   HardHat,
   Factory,
@@ -586,6 +588,260 @@ export default function Home() {
         </div>
       </motion.section>
       {/* We Serve Section */}
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+            className="py-32 bg-white"
+          >
+            <div className="max-w-7xl mx-auto px-6">
+              <motion.div
+                variants={fadeInUp}
+                className="mb-16 flex flex-col items-center text-center"
+              >
+                <motion.h2
+                  variants={fadeInUp}
+                  className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+                >
+                  Industries We Serve
+                </motion.h2>
+                <div className="h-1.5 w-24 bg-green-500 rounded-full"></div>
+              </motion.div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {/* Agriculture & Food Processing */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group relative h-[500px] overflow-hidden group p-8 rounded-2xl border border-white hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Modern agriculture and food processing facility showcasing sustainable value chains"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1500384066616-8a8d547abfc9?w=800&auto=format&fit=crop"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <Wheat
+                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      size={48}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      Agriculture & Food Processing
+                    </h3>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                      Transforming agrarian backbones into global powerhouses
+                      through modernized value-chains.
+                    </p>
+                    <div className="pt-4 border-t border-white/15">
+                      <p className="text-[14px] text-amber-400 uppercase font-black tracking-widest group-hover:text-green-600 mb-2">
+                        Market Context
+                      </p>
+                      <p className="text-sm text-gray-200 italic font-light">
+                        {`Leveraging India's position as a global food basket through
+                        tech-driven export readiness.`}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* MSMEs */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group relative h-[500px] overflow-hidden group p-8 rounded-2xl border border-white hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Modern office hub empowering MSMEs with scalable operations and institutional support"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1497366811353-11d2b7b3d0e5?w=800&auto=format&fit=crop"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <Building2
+                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      size={48}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      MSMEs
+                    </h3>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                      Empowering the engine of the Indian economy by scaling
+                      operations into resilient enterprises.
+                    </p>
+                    <div className="pt-4 border-t border-white/15">
+                      <p className="text-[14px] text-amber-400 uppercase font-black tracking-widest group-hover:text-green-600 mb-2">
+                        Impact Statement
+                      </p>
+                      <p className="text-sm text-gray-200 italic font-light">
+                        Bridging the institutional credit gap to unlock massive
+                        latent economic potential.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Manufacturing */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group relative h-[500px] overflow-hidden rounded-2xl shadow-2xl border border-white hover:border-green-500 transition-all duration-300"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Advanced manufacturing facility driving industrial excellence and productivity"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <Factory
+                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      size={48}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      Manufacturing
+                    </h3>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                      Driving industrial excellence through systematic improvements
+                      in productivity and quality.
+                    </p>
+                    <div className="pt-4 border-t border-white/15">
+                      <p className="text-[14px] text-amber-400 uppercase font-black tracking-widest group-hover:text-green-600 mb-2">
+                        Market Context
+                      </p>
+                      <p className="text-sm text-gray-200 italic font-light">
+                        {`Transitioning towards 'Make in India' excellence with global
+                        supply chain resiliency.`}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Infrastructure */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group relative h-[500px] overflow-hidden rounded-2xl shadow-2xl border border-white hover:border-green-500 transition-all duration-300"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Urban infrastructure development project symbolizing national growth foundations"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92c91f9?w=800&auto=format&fit=crop"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <HardHat
+                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      size={48}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      Infrastructure
+                    </h3>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                      Laying foundations for national growth through expert
+                      management of complex developments.
+                    </p>
+                    <div className="pt-4 border-t border-white/15">
+                      <p className="text-[14px] text-amber-400 uppercase font-black tracking-widest group-hover:text-green-600 mb-2">
+                        Impact Statement
+                      </p>
+                      <p className="text-sm text-gray-200 italic font-light">
+                        Navigating Public-Private Synergy to build sustainable urban
+                        and rural assets.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Technology Startups */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group relative h-[500px] overflow-hidden rounded-2xl shadow-2xl border border-white hover:border-green-500 transition-all duration-300"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Modern tech startup workspace fostering high-growth innovation"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <Rocket
+                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      size={48}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      Technology Startups
+                    </h3>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                      Incubating high-growth ventures through mentorship, capital,
+                      and strategic access.
+                    </p>
+                    <div className="pt-4 border-t border-white/15">
+                      <p className="text-[14px] text-amber-400 uppercase font-black tracking-widest group-hover:text-green-600 mb-2">
+                        Impact Statement
+                      </p>
+                      <p className="text-sm text-gray-200 italic font-light">
+                        Fueling innovation that solves uniquely Indian problems for
+                        a global audience.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Industrial Automation */}
+                <motion.div
+                  variants={cardHover}
+                  whileHover="hover"
+                  className="group relative h-[500px] overflow-hidden rounded-2xl shadow-2xl border border-white hover:border-green-500 transition-all duration-300"
+                >
+                  <motion.img
+                    variants={imageReveal}
+                    alt="Precision engineering and industrial automation in a high-tech factory setting"
+                    className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
+                    src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&auto=format&fit=crop"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    <Cpu
+                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      size={48}
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                      Industrial Automation
+                    </h3>
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                      Bridging legacy industry and Industry 4.0 through AI and IoT
+                      integration.
+                    </p>
+                    <div className="pt-4 border-t border-white/15">
+                      <p className="text-[14px] text-amber-400 uppercase font-black tracking-widest group-hover:text-green-600 mb-2">
+                        Market Context
+                      </p>
+                      <p className="text-sm text-gray-200 italic font-light">
+                        Optimizing workflow and efficiency through data-driven
+                        factory solutions.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+            </div>
+          </motion.section>
+      {/* We Serve Section 
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -659,7 +915,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </motion.section>
+      </motion.section>*/}
 
       <section className="relative py-20 overflow-hidden">
 
