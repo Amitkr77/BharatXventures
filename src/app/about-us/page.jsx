@@ -434,7 +434,7 @@ export default function AboutPage() {
               <motion.h2
                 variants={fadeInUp}
                 transition={{ delay: 0.2 }}
-                className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight"
+                className="text-4xl lg:text-5xl font-black text-green-800 leading-tight"
               >
                 Visionary Governance & Strategic Stewardship
               </motion.h2>
@@ -500,7 +500,7 @@ export default function AboutPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl font-black text-gray-900 mb-6"
+              className="text-4xl font-black text-green-800 mb-6"
             >
               Our Leadership & Advisory Board
             </motion.h2>
