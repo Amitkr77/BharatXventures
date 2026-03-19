@@ -20,16 +20,16 @@ export default function Footer() {
                 />
             </div>
               <div>
-                <h2 className="text-2xl font-bold tracking-tight text-green-800">
+                <h2 className="text-2xl font-bold tracking-tight text-green-900">
                   Bharatx Ventures
                 </h2>
-                <span className="text-sm text-green-600 font-bold tracking-widest uppercase block mt-0.5">
+                <span className="text-sm text-green-700 font-bold tracking-widest uppercase block mt-0.5">
                   PRIVATE LIMITED
                 </span>
               </div>
             </div>
 
-            <p className="text-green-600 text-sm max-w-md leading-relaxed">
+            <p className="text-green-600 font-bold text-sm max-w-md leading-relaxed">
               {`A premier venture development firm committed to institutional
               excellence and scaling India's industrial backbone through
               strategic innovation and capital.`}
@@ -67,11 +67,11 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-gray-400">
               <li>
-                <span className="block text-green-400 font-semibold">CIN :</span>
+                <span className="block text-green-400 text-lg font-semibold">CIN :</span>
                 U01139BR2026PTC083018
               </li>
               <li>
-                <span className="block text-green-400 font-semibold">PAN : </span>
+                <span className="block text-green-400 text-lg font-semibold">PAN : </span>
                 AAOCB4970H
               </li>
             </ul>

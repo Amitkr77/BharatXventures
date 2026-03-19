@@ -227,11 +227,11 @@ export default function AboutPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl font-black text-gray-900 mb-6"
+              className="text-4xl font-black text-green-600 mb-6"
             >
               Leadership Philosophy
             </motion.h2>
-            <div className="h-1 w-20 bg-green-800 mx-auto mb-8 rounded-full"></div>
+            <div className="h-1 w-40 bg-green-700 mx-auto mb-8 rounded-full"></div>
             <motion.p
               variants={fadeInUp}
               transition={{ delay: 0.1 }}

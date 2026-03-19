@@ -87,7 +87,7 @@ export default function Home() {
             />
             
             {/* Optional dark overlay for better text visibility */}
-            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="absolute inset-0 bg-black/20"></div>
           </div>
 
           {/* ✅ Content (kept above background) */}
@@ -111,7 +111,7 @@ export default function Home() {
                   className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center"
                 >
                   Building the{" "}
-                  <span className="text-green-700 italic"> Next Generation</span> of Indian Companies
+                  <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
                   
                 </motion.h2>
 
@@ -1044,14 +1044,14 @@ export default function Home() {
                   {/* Primary CTA */}
                   <a
                     href="/contact-us"
-                    className="px-10 py-4 border border-green-500 bg-green-500 text-[var(--color-primary)] font-bold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-300"
+                    className="px-10 py-4 border border-green-500 bg-green-400 text-[var(--color-primary)] font-extrabold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:scale-105 transition-all duration-300"
                   >
                     Contact Partnership
                   </a>
                   {/* Secondary CTA */}
                   <a
                     href="#"
-                    className="px-10 py-4 border border-green-500 bg-green-500 text-[var(--color-primary)] font-bold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-300"
+                    className="px-10 py-4 border border-green-500 bg-green-400 text-[var(--color-primary)] font-extrabold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:scale-105 transition-all duration-300"
                   >
                     Download Capabilities
                   </a>
