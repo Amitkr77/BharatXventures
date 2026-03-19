@@ -657,7 +657,7 @@ export default function Home() {
                     variants={imageReveal}
                     alt="Modern office hub empowering MSMEs with scalable operations and institutional support"
                     className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1497366811353-11d2b7b3d0e5?w=800&auto=format&fit=crop"
+                    src="msme.png"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -695,7 +695,7 @@ export default function Home() {
                     variants={imageReveal}
                     alt="Advanced manufacturing facility driving industrial excellence and productivity"
                     className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop"
+                    src="manuf.png"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
