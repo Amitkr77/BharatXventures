@@ -592,7 +592,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            variants={staggerContainer}
+            variants={fadeInUp}
             className="py-32 bg-white"
           >
             <div className="max-w-7xl mx-auto px-6">
@@ -917,110 +917,109 @@ export default function Home() {
         </div>
       </motion.section>*/}
 
-      <section className="relative py-20 overflow-hidden">
-
-  {/* 🔥 Background Image 
-  <div className="absolute inset-0 z-0">
-    <img
-      src="/h2.webp" // 👉 your background image
-      alt="Background"
-      className="w-full h-full object-cover"
-    />*/}
-    {/* Overlay for readability */}
-    <div className="absolute inset-0 bg-green-900/85"></div>
-  
-
-  {/* Content */}
-  <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center text-white">
-
-    {/* LEFT — TEXT CONTENT */}
-    <div>
-
-      {/* Heading */}
-      <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-        Why Bharatx Ventures
-      </h2>
-
-      {/* Description */}
-      <p className="text-white/80 text-lg leading-relaxed mb-10">
-        Transforming SMEs, enabling industrial efficiency, and building scalable ventures across sectors.
-      </p>
-
-      {/* Cards */}
-      <div className="space-y-4">
-
-        {[
-          "Structured execution frameworks",
-          "Multi-sector expertise",
-          "Focus on scalable outcomes",
-          "Integrated capital + consulting approach",
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-          >
-            {/* Number */}
-            <div className="w-10 h-10 flex items-center justify-center bg-[var(--color-accent)] text-[var(--color-primary)] font-bold rounded-md">
-              {String(index + 1).padStart(2, "0")}
+      <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          className="relative w-full min-h-screen flex items-center overflow-hidden">
+            {/* 🔥 Background Image 
+            <div className="absolute inset-0 z-0">
+              <img
+                src="/h2.webp" // 👉 your background image
+                alt="Background"
+                className="w-full h-full object-cover"
+              />*/}
+              {/* Overlay for readability */}
+            <div className="absolute inset-0 bg-green-900/85"></div>
+            {/* Content */}
+            <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center text-white">
+              {/* LEFT — TEXT CONTENT */}
+              <div>
+                {/* Heading */}
+                <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+                  Why Bharatx Ventures
+                </h2>
+                {/* Description */}
+                <p className="text-white/80 text-lg leading-relaxed mb-10">
+                  Transforming SMEs, enabling industrial efficiency, and building scalable ventures across sectors.
+                </p>
+                {/* Cards */}
+                <div className="space-y-4">
+                  {[
+                    "Structured execution frameworks",
+                    "Multi-sector expertise",
+                    "Focus on scalable outcomes",
+                    "Integrated capital + consulting approach",
+                  ].map((item, index) => (
+                    <motion.div
+                    variants={cardHover}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    whileHover="hover"
+                    className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                    key={index}
+                    >
+                      {/* Number */}
+                      <div className="w-10 h-10 flex items-center justify-center bg-[var(--color-accent)] text-[var(--color-primary)] font-bold rounded-md">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+                      {/* Text */}
+                      <p className="text-base font-medium">
+                        {item}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+                {/* Featured Work */}
+                <div className="mt-10">
+                  <h3 className="text-xl font-bold mb-2">
+                    Featured Work
+                  </h3>
+                  <p className="text-white/70">
+                    Transforming SMEs, enabling industrial efficiency, and building scalable ventures across sectors.
+                  </p>
+                </div>
+              </div>
+              {/* RIGHT — IMAGE */}
+              <div className="relative">
+                {/* Glow effect */}
+                <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-400/20 rounded-full blur-3xl"></div>
+                {/* Image Card */}
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                  <img
+                    src="/h4.png" // 👉 can be same or different image
+                    alt="Why Bharatx Ventures"
+                    className="w-full h-full object-cover hover:scale-105 transition duration-500"
+                  />
+                </div>
+              </div>
             </div>
+          </motion.section> 
 
-            {/* Text */}
-            <p className="text-base font-medium">
-              {item}
-            </p>
-          </div>
-        ))}
-
-      </div>
-
-      {/* Featured Work */}
-      <div className="mt-10">
-        <h3 className="text-xl font-bold mb-2">
-          Featured Work
-        </h3>
-        <p className="text-white/70">
-          Transforming SMEs, enabling industrial efficiency, and building scalable ventures across sectors.
-        </p>
-      </div>
-
-    </div>
-
-    {/* RIGHT — IMAGE */}
-    <div className="relative">
-
-      {/* Glow effect */}
-      <div className="absolute -top-10 -right-10 w-64 h-64 bg-green-400/20 rounded-full blur-3xl"></div>
-
-      {/* Image Card */}
-      <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-        <img
-          src="/h4.png" // 👉 can be same or different image
-          alt="Why Bharatx Ventures"
-          className="w-full h-full object-cover hover:scale-105 transition duration-500"
-        />
-      </div>
-
-    </div>
-
-  </div>
-</section> 
-
-           {/* CTA Card */}
-           <div className="flex justify-center mt-8">
-            <section className="relative py-12 w-450 overflow-hidden rounded-2xl bg-green-800 text-white">
+        {/* CTA Card */}
+          <div className="flex justify-center mt-8">
+            <motion.section 
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="relative py-12 w-450 overflow-hidden rounded-2xl bg-green-800 text-white"
+            >
               {/* Background Decorative Element 
               <div className="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4 pointer-events-none">
                 <svg width="600" height="600" viewBox="0 0 100 100" fill="none">
                   <rect width="100" height="100" fill="white" />
                 </svg>
               </div>*/}
-              {/* ✅ Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
+        {/* ✅ Background Image */}
+          <div className="absolute inset-0 z-0">
+           <motion.img
+            variants={imageReveal}
             src="/h2.webp"
             alt="Background"
             className="w-full h-full object-cover scale-105"
-          />
+           />
           </div>
 
         {/* ✅ Content */}
@@ -1059,7 +1058,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </section>  
+            </motion.section>  
           </div>
              
     </main>
