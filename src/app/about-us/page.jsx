@@ -124,7 +124,7 @@ export default function AboutPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="border-2 border-gray-200 px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-colors duration-200"
+                  className="border-2 border-green-500 px-8 py-4 rounded-xl text-green-700 font-bold hover:bg-green-500 hover:text-gray-800 transition-colors duration-200"
                 >
                   View Portfolio
                 </motion.button>
