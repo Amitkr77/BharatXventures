@@ -624,7 +624,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <Wheat
-                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      className="text-amber-400 group-hover:text-green-500 mb-4"
                       size={48}
                       strokeWidth={1.5}
                     />
@@ -662,7 +662,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <Building2
-                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      className="text-amber-400 group-hover:text-green-400 mb-4"
                       size={48}
                       strokeWidth={1.5}
                     />
@@ -700,7 +700,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <Factory
-                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      className="text-amber-400 group-hover:text-green-400 mb-4"
                       size={48}
                       strokeWidth={1.5}
                     />
@@ -738,7 +738,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <HardHat
-                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      className="text-amber-400 group-hover:text-green-400 mb-4"
                       size={48}
                       strokeWidth={1.5}
                     />
@@ -776,7 +776,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <Rocket
-                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      className="text-amber-400 group-hover:text-green-400 mb-4"
                       size={48}
                       strokeWidth={1.5}
                     />
@@ -814,7 +814,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <Cpu
-                      className="text-amber-400 group-hover:text-green-600 mb-4"
+                      className="text-amber-400 group-hover:text-green-400 mb-4"
                       size={48}
                       strokeWidth={1.5}
                     />
