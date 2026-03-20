@@ -146,7 +146,11 @@ export default function FeaturedInitiativesPage() {
                 variants={fadeInUp}
                 className="max-w-3xl"
               >
-                <span className="inline-block py-1.5 px-4 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-[0.2em] uppercase mb-8">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400"></span>
+                </span>
                   Strategic Impact
                 </span>
 
