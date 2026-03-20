@@ -132,8 +132,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Modern agriculture and food processing facility showcasing sustainable value chains"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1500384066616-8a8d547abfc9?w=800&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="agro.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -170,8 +170,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Modern office hub empowering MSMEs with scalable operations and institutional support"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1497366811353-11d2b7b3d0e5?w=800&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="msme.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -208,8 +208,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Advanced manufacturing facility driving industrial excellence and productivity"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="manuf.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -246,8 +246,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Urban infrastructure development project symbolizing national growth foundations"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1486406146926-c627a92c91f9?w=800&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="infra.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -284,8 +284,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Modern tech startup workspace fostering high-growth innovation"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="tstar.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -322,8 +322,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Precision engineering and industrial automation in a high-tech factory setting"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="indauto.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -360,8 +360,8 @@ export default function IndustriesPage() {
               <motion.img
                 variants={imageReveal}
                 alt="Shipping port and global trade logistics facilitating Indian export businesses"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1569449568416-7e6e11b0e4c3?w=1600&auto=format&fit=crop"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
+                src="export.png"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent"></div>
               <div className="absolute inset-0 p-12 flex flex-col justify-end">
@@ -463,9 +463,9 @@ export default function IndustriesPage() {
                 <motion.div
                   variants={cardHover}
                   whileHover="hover"
-                  className="flex gap-5 group"
+                  className="flex gap-5 group rounded-xl"
                 >
-                  <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-amber-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  <div className="size-12 rounded-xl bg-green-50 flex items-center justify-center text-amber-500 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                     <BarChart3 size={24} />
                   </div>
                   <div>
@@ -482,9 +482,9 @@ export default function IndustriesPage() {
                 <motion.div
                   variants={cardHover}
                   whileHover="hover"
-                  className="flex gap-5 group"
+                  className="flex gap-5 group rounded-xl"
                 >
-                  <div className="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-amber-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                  <div className="size-12 rounded-xl bg-green-50 flex items-center justify-center text-amber-500 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
                     <Handshake size={24} />
                   </div>
                   <div>
