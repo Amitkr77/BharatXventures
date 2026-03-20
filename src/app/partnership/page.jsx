@@ -484,144 +484,144 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
               </motion.div>
 
               <motion.div
-      variants={fadeInUp}
-      transition={{ delay: 0.4 }}
-      className="relative z-10 lg:w-1/2 w-full bg-white p-6 md:p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100"
-    >
-      <form className="space-y-6" onSubmit={handleSubmit}>
+                variants={fadeInUp}
+                transition={{ delay: 0.4 }}
+                className="relative z-10 lg:w-1/2 w-full bg-white p-6 md:p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100"
+              >
+                <form className="space-y-6" onSubmit={handleSubmit}>
 
-        {/* 🔹 Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {/* 🔹 Grid Section */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-          {/* Company Name */}
-          <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Company/Organization Name
-            </label>
-            <input
-              id="companyName"
-              type="text"
-              value={formData.companyName}
-              onChange={handleChange}
-              placeholder="Company Name"
-              className={inputClass('companyName')}
-            />
-            {errors.companyName && (
-              <p className="text-red-500 text-sm">{errors.companyName}</p>
-            )}
-          </div>
+                    {/* Company Name */}
+                    <div className="flex flex-col gap-2">
+                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        Company/Organization Name
+                      </label>
+                      <input
+                        id="companyName"
+                        type="text"
+                        value={formData.companyName}
+                        onChange={handleChange}
+                        placeholder="Company Name"
+                        className={inputClass('companyName')}
+                      />
+                      {errors.companyName && (
+                        <p className="text-red-500 text-sm">{errors.companyName}</p>
+                      )}
+                    </div>
 
-          {/* Partner Type */}
-          <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Partner Type
-            </label>
-            <select
-              id="partnerType"
-              value={formData.partnerType}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
-            >
-              <option>Technology</option>
-              <option>Industry</option>
-              <option>Venture/VC</option>
-              <option>Other</option>
-            </select>
-          </div>
+                    {/* Partner Type */}
+                    <div className="flex flex-col gap-2">
+                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        Partner Type
+                      </label>
+                      <select
+                        id="partnerType"
+                        value={formData.partnerType}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
+                      >
+                        <option>Technology</option>
+                        <option>Industry</option>
+                        <option>Venture/VC</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
 
-          {/* Collaboration Area */}
-          <div className="md:col-span-2 flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Preferred Collaboration Area
-            </label>
-            <select
-              id="collaborationArea"
-              value={formData.collaborationArea}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
-            >
-              <option>SME Growth</option>
-              <option>Industrial AI</option>
-              <option>Agri-Export</option>
-              <option>Strategic Consulting</option>
-            </select>
-          </div>
-        </div>
+                    {/* Collaboration Area */}
+                    <div className="md:col-span-2 flex flex-col gap-2">
+                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        Preferred Collaboration Area
+                      </label>
+                      <select
+                        id="collaborationArea"
+                        value={formData.collaborationArea}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
+                      >
+                        <option>SME Growth</option>
+                        <option>Industrial AI</option>
+                        <option>Agri-Export</option>
+                        <option>Strategic Consulting</option>
+                      </select>
+                    </div>
+                  </div>
 
-        {/* 🔹 Contact Info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {/* 🔹 Contact Info */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-          {/* Phone */}
-          <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Phone Number
-            </label>
-            <input
-              id="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="+91 00000 00000"
-              className={inputClass('phone')}
-            />
-            {errors.phone && (
-              <p className="text-red-500 text-sm">{errors.phone}</p>
-            )}
-          </div>
+                    {/* Phone */}
+                    <div className="flex flex-col gap-2">
+                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        Phone Number
+                      </label>
+                      <input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+91 00000 00000"
+                        className={inputClass('phone')}
+                      />
+                      {errors.phone && (
+                        <p className="text-red-500 text-sm">{errors.phone}</p>
+                      )}
+                    </div>
 
-          {/* Email */}
-          <div className="flex flex-col gap-2">
-            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Official Email Address
-            </label>
-            <input
-              id="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="contact@company.com"
-              className={inputClass('email')}
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email}</p>
-            )}
-          </div>
-        </div>
+                    {/* Email */}
+                    <div className="flex flex-col gap-2">
+                      <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        Official Email Address
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="contact@company.com"
+                        className={inputClass('email')}
+                      />
+                      {errors.email && (
+                        <p className="text-red-500 text-sm">{errors.email}</p>
+                      )}
+                    </div>
+                  </div>
 
-        {/* 🔹 Message */}
-        <div className="flex flex-col gap-2">
-          <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-            How can we collaborate?
-          </label>
-          <textarea
-            id="message"
-            rows={4}
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Briefly describe your objectives..."
-            className={inputClass('message')}
-          />
-          {errors.message && (
-            <p className="text-red-500 text-sm">{errors.message}</p>
-          )}
-        </div>
+                  {/* 🔹 Message */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      How can we collaborate?
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Briefly describe your objectives..."
+                      className={inputClass('message')}
+                    />
+                    {errors.message && (
+                      <p className="text-red-500 text-sm">{errors.message}</p>
+                    )}
+                  </div>
 
-        {/* 🔹 Button */}
-        <motion.button
-          whileHover="hover"
-          whileTap="tap"
-          variants={buttonVariants}
-          type="submit"
-          className="w-full bg-green-600 text-white py-4 rounded-xl font-semibold text-lg 
-          flex items-center justify-center gap-2
-          hover:bg-green-700 hover:shadow-lg hover:shadow-green-200/40 
-          transition-all duration-300"
-        >
-          Send Inquiry
-          <Send size={18} />
-        </motion.button>
-      </form>
-    </motion.div>
+                  {/* 🔹 Button */}
+                  <motion.button
+                    whileHover="hover"
+                    whileTap="tap"
+                    variants={buttonVariants}
+                    type="submit"
+                    className="w-full bg-green-600 text-white py-4 rounded-xl font-semibold text-lg 
+                    flex items-center justify-center gap-2
+                    hover:bg-green-700 hover:shadow-lg hover:shadow-green-200/40 
+                    transition-all duration-300"
+                  >
+                    Send Inquiry
+                    <Send size={18} />
+                  </motion.button>
+                </form>
+              </motion.div>
             </div>
           </div>
         </motion.section>
