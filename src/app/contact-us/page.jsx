@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   MapPin,
@@ -60,6 +60,94 @@ const buttonVariants = {
 };
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+  fullName: "",
+  organization: "",
+  email: "",
+  phone: "",
+  message: "",
+});
+
+const [errors, setErrors] = useState({});
+const [shake, setShake] = useState(false);
+const [success, setSuccess] = useState(false);
+
+const handleChange = (e) => {
+  const { id, value } = e.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [id]: value,
+  }));
+
+  // remove error while typing
+  setErrors((prev) => ({
+    ...prev,
+    [id]: "",
+  }));
+};
+
+const validate = () => {
+  const newErrors = {};
+
+  if (!formData.fullName.trim())
+    newErrors.fullName = "Full name is required";
+
+  if (!formData.organization.trim())
+    newErrors.organization = "Organization is required";
+
+  if (!formData.email.trim())
+    newErrors.email = "Email is required";
+  else if (!/^\S+@\S+\.\S+$/.test(formData.email))
+    newErrors.email = "Invalid email";
+
+  if (!formData.phone.trim())
+    newErrors.phone = "Phone is required";
+  else if (!/^[0-9+\s-]{10,15}$/.test(formData.phone))
+    newErrors.phone = "Invalid phone";
+
+  if (!formData.message.trim())
+    newErrors.message = "Message is required";
+
+  return newErrors;
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const validationErrors = validate();
+
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+
+    // 🔥 Auto focus first error (no refs)
+    const firstError = Object.keys(validationErrors)[0];
+    document.getElementById(firstError)?.focus();
+
+    // 🔥 Shake animation trigger
+    setShake(true);
+    setTimeout(() => setShake(false), 400);
+
+    return;
+  }
+
+  console.log("Submitted:", formData);
+
+  // ✅ Success toast
+  setSuccess(true);
+
+  // reset form
+  setFormData({
+    fullName: "",
+    organization: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  setTimeout(() => setSuccess(false), 3000);
+};
+
   return (
     <section className="bg-gray-50 text-gray-900 min-h-screen">
       <main className="flex-grow">
@@ -248,13 +336,18 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-20">
             <div className="flex flex-col lg:flex-row gap-16">
               {/* Contact Form */}
-              <motion.div variants={fadeInUp} className="lg:w-1/2">
+              <motion.div
+                variants={fadeInUp}
+                animate={shake ? { x: [-10, 10, -6, 6, 0] } : {}}
+                className="lg:w-1/2"
+              >
                 <motion.h2
                   variants={fadeInUp}
                   className="text-3xl font-black text-gray-900 mb-2"
                 >
                   Send a Message
                 </motion.h2>
+
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.1 }}
@@ -265,96 +358,132 @@ export default function ContactPage() {
                 </motion.p>
 
                 <form
-                  action="#"
+                  onSubmit={handleSubmit}
                   className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
+                  {/* Full Name */}
                   <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="fullName"
-                      className="text-xs font-bold text-gray-700 uppercase tracking-wider"
-                    >
+                    <label className="text-xs font-bold text-gray-700 uppercase">
                       Full Name
                     </label>
                     <input
                       id="fullName"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 rounded-lg border ${
+                        errors.fullName ? "border-red-500" : "border-gray-200"
+                      } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all`}
                       placeholder="John Doe"
-                      type="text"
                     />
+                    {errors.fullName && (
+                      <span className="text-red-500 text-xs">{errors.fullName}</span>
+                    )}
                   </div>
 
+                  {/* Organization */}
                   <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="organization"
-                      className="text-xs font-bold text-gray-700 uppercase tracking-wider"
-                    >
+                    <label className="text-xs font-bold text-gray-700 uppercase">
                       Organization
                     </label>
                     <input
                       id="organization"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
+                      value={formData.organization}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 rounded-lg border ${
+                        errors.organization ? "border-red-500" : "border-gray-200"
+                      } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all`}
                       placeholder="Company Name"
-                      type="text"
                     />
+                    {errors.organization && (
+                      <span className="text-red-500 text-xs">
+                        {errors.organization}
+                      </span>
+                    )}
                   </div>
 
+                  {/* Email */}
                   <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="email"
-                      className="text-xs font-bold text-gray-700 uppercase tracking-wider"
-                    >
+                    <label className="text-xs font-bold text-gray-700 uppercase">
                       Official Email
                     </label>
                     <input
                       id="email"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
-                      placeholder="john@company.com"
                       type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 rounded-lg border ${
+                        errors.email ? "border-red-500" : "border-gray-200"
+                      } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all`}
+                      placeholder="john@company.com"
                     />
+                    {errors.email && (
+                      <span className="text-red-500 text-xs">{errors.email}</span>
+                    )}
                   </div>
 
+                  {/* Phone */}
                   <div className="flex flex-col gap-2">
-                    <label
-                      htmlFor="phone"
-                      className="text-xs font-bold text-gray-700 uppercase tracking-wider"
-                    >
+                    <label className="text-xs font-bold text-gray-700 uppercase">
                       Phone Number
                     </label>
                     <input
                       id="phone"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 rounded-lg border ${
+                        errors.phone ? "border-red-500" : "border-gray-200"
+                      } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all`}
                       placeholder="+91 00000 00000"
-                      type="tel"
                     />
+                    {errors.phone && (
+                      <span className="text-red-500 text-xs">{errors.phone}</span>
+                    )}
                   </div>
 
+                  {/* Message */}
                   <div className="flex flex-col gap-2 md:col-span-2">
-                    <label
-                      htmlFor="message"
-                      className="text-xs font-bold text-gray-700 uppercase tracking-wider"
-                    >
+                    <label className="text-xs font-bold text-gray-700 uppercase">
                       Brief Message
                     </label>
                     <textarea
                       id="message"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-1 focus:ring-green-500 outline-none transition-all duration-200 resize-none"
-                      placeholder="How can we collaborate?"
+                      value={formData.message}
+                      onChange={handleChange}
                       rows={4}
+                      className={`w-full px-4 py-3 rounded-lg border ${
+                        errors.message ? "border-red-500" : "border-gray-200"
+                      } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all`}
+                      placeholder="How can we collaborate?"
                     />
+                    {errors.message && (
+                      <span className="text-red-500 text-xs">{errors.message}</span>
+                    )}
                   </div>
 
+                  {/* Submit */}
                   <div className="md:col-span-2">
                     <motion.button
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
                       type="submit"
-                      className="w-full md:w-auto px-10 py-4 bg-green-600 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-green-200/40 hover:bg-green-700 transition-all duration-300"
+                      className="w-full md:w-auto px-10 py-4 bg-green-600 text-white font-bold rounded-xl hover:shadow-lg hover:bg-green-700"
                     >
                       Submit Institutional Inquiry
                     </motion.button>
                   </div>
                 </form>
+
+                {/* ✅ Success Toast */}
+                {success && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-6 bg-green-100 text-green-700 px-6 py-4 rounded-xl font-semibold shadow"
+                  >
+                    ✅ Message sent successfully!
+                  </motion.div>
+                )}
               </motion.div>
 
               {/* Map & Trust Note */}

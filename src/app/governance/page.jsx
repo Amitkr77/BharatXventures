@@ -123,6 +123,7 @@ export default function GovernancePage() {
                     <ArrowRight size={18} />
                   </motion.button>
                 </Link>
+                 <Link href="/privacy">
 
                 <motion.button
                   whileHover="hover"
@@ -132,6 +133,7 @@ export default function GovernancePage() {
                 >
                   Policy Documents
                 </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
 

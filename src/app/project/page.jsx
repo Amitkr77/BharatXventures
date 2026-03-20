@@ -386,7 +386,7 @@ export default function FeaturedInitiativesPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
-                <Link href="/contact-us">
+                <Link href="/partnership">
                   <button
                     type="button"
                     onClick={() =>

@@ -139,7 +139,7 @@ export default function Home() {
                     </motion.button>
                   </Link>
 
-                  <Link href="/contact-us">
+                  <Link href="/partnership">
                     <motion.button
                       whileHover="hover"
                       whileTap="tap"
@@ -264,7 +264,7 @@ export default function Home() {
               <p className="text-white/90 text-lg mb-6">
                 Partner with Bharatx Ventures to build and scale the next generation of enterprises.
               </p>
-              <Link href="/contact-us">
+              <Link href="/partnership">
                 <motion.button
                   whileHover="hover"
                   whileTap="tap"

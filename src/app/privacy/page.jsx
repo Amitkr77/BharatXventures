@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           variants={fadeInUp}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-50 text-green-700 text-sm font-semibold mb-6">
             <ShieldCheck size={18} />
             Your Privacy Matters
           </div>
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
             variants={fadeInUp}
             className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3"
           >
-            <Lock className="text-blue-600" size={28} /> 1. Information We
+            <Lock className="text-green-600" size={28} /> 1. Information We
             Collect
           </motion.h2>
 
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
             variants={fadeInUp}
             className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3"
           >
-            <FileText className="text-blue-600" size={28} /> 2. How We Use Your
+            <FileText className="text-green-600" size={28} /> 2. How We Use Your
             Information
           </motion.h2>
 
@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
             variants={fadeInUp}
             className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3"
           >
-            <Users className="text-blue-600" size={28} /> 3. Sharing Your
+            <Users className="text-green-600" size={28} /> 3. Sharing Your
             Information
           </motion.h2>
 
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
             variants={fadeInUp}
             className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3"
           >
-            <Clock className="text-blue-600" size={28} /> 4. Data Retention
+            <Clock className="text-green-600" size={28} /> 4. Data Retention
           </motion.h2>
 
           <motion.p variants={fadeInUp}>
@@ -164,7 +164,7 @@ export default function PrivacyPolicy() {
             variants={fadeInUp}
             className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3"
           >
-            <ShieldCheck className="text-blue-600" size={28} /> 5. Your Rights
+            <ShieldCheck className="text-green-600" size={28} /> 5. Your Rights
           </motion.h2>
 
           <motion.p variants={fadeInUp} className="mb-4">
@@ -186,9 +186,9 @@ export default function PrivacyPolicy() {
           <motion.div
             variants={fadeInUp}
             transition={{ delay: 0.4 }}
-            className="mt-16 p-6 bg-blue-50 rounded-2xl border border-blue-100"
+            className="mt-16 p-6 bg-green-50 rounded-2xl border border-green-100"
           >
-            <p className="text-blue-800 font-medium">
+            <p className="text-green-800 font-medium">
               Questions or concerns? Reach out to our Grievance Officer:
             </p>
             <p className="mt-3 text-gray-700">

@@ -16,6 +16,7 @@ export default function Header() {
     { name: "Services", path: "/service" },
     { name: "Industries", path: "/industry" },
     { name: "Projects", path: "/project" },
+    { name: "Partnership", path: "/partnership" },
   ];
 
   const extraLinks = [

@@ -1,6 +1,5 @@
 'use client';
-
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Cpu,
@@ -14,6 +13,7 @@ import {
   CheckCircle2,
   MapPin,
 } from 'lucide-react';
+
 
 // Animation Variants (reused & slightly adjusted for this page)
 const fadeInUp = {
@@ -62,7 +62,89 @@ const buttonVariants = {
   tap: { scale: 0.97 },
 };
 
-export default function EcosystemPage() {
+export default function EcosystemPage({ fadeInUp, buttonVariants }) {
+  const [formData, setFormData] = useState({
+    companyName: '',
+    partnerType: 'Technology',
+    collaborationArea: 'SME Growth',
+    phone: '',
+    email: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({});
+  // 🔹 Handle Input Change
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+
+    // remove error while typing
+    setErrors((prev) => ({
+      ...prev,
+      [id]: '',
+    }));
+  };
+
+  // 🔹 Validation
+  const validate = () => {
+    let newErrors = {};
+
+    if (!formData.companyName.trim()) {
+      newErrors.companyName = 'Company name is required';
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s+/g, ''))) {
+      newErrors.phone = 'Enter valid Indian phone number';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = 'Invalid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message cannot be empty';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // 🔹 Submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validate()) {
+      console.log('Submitted:', formData);
+      alert('Form submitted successfully!');
+
+      setFormData({
+        companyName: '',
+        partnerType: 'Technology',
+        collaborationArea: 'SME Growth',
+        phone: '',
+        email: '',
+        message: '',
+      });
+
+      setErrors({});
+    }
+  };
+
+  // 🔹 Dynamic input border
+  const inputClass = (field) =>
+    `w-full px-4 py-3 rounded-xl border ${
+      errors[field] ? 'border-red-500' : 'border-gray-200'
+    } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all`;
   return (
     <section className="bg-gray-50 text-gray-900 antialiased">
       <main>
@@ -78,11 +160,11 @@ export default function EcosystemPage() {
               <motion.div
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6"
               >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-600"></span>
                 </span>
                 Strategic Collaboration
               </motion.div>
@@ -116,7 +198,7 @@ export default function EcosystemPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-200/40 transition-all duration-300"
+                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:-translate-y-0.5 hover:shadow-xl hover:shadow-green-200/40 transition-all duration-300"
                 >
                   Explore Network
                 </motion.button>
@@ -142,7 +224,7 @@ export default function EcosystemPage() {
                   backgroundPosition: 'center',
                 }}
               >
-                <div className="absolute inset-0 bg-blue-600/10"></div>
+                <div className="absolute inset-0 bg-green-600/10"></div>
               </div>
 
               <motion.div
@@ -184,9 +266,9 @@ export default function EcosystemPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-blue-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/40"
+                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-green-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-100/40"
               >
-                <div className="size-14 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <div className="size-14 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
                   <Cpu size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Technology Partners</h3>
@@ -195,11 +277,11 @@ export default function EcosystemPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Cloud Infrastructure
                   </li>
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     R&D Collaboration
                   </li>
                 </ul>
@@ -209,9 +291,9 @@ export default function EcosystemPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-blue-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/40"
+                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-green-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-100/40"
               >
-                <div className="size-14 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <div className="size-14 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
                   <Rocket size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Startup Ecosystem</h3>
@@ -220,11 +302,11 @@ export default function EcosystemPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Deal Flow Sharing
                   </li>
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Mentorship Access
                   </li>
                 </ul>
@@ -234,9 +316,9 @@ export default function EcosystemPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-blue-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/40"
+                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-green-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-100/40"
               >
-                <div className="size-14 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <div className="size-14 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
                   <Factory size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Industry Partners</h3>
@@ -245,11 +327,11 @@ export default function EcosystemPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Supply Chain Integration
                   </li>
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Pilot Programs
                   </li>
                 </ul>
@@ -259,9 +341,9 @@ export default function EcosystemPage() {
               <motion.div
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-blue-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100/40"
+                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-green-300/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-100/40"
               >
-                <div className="size-14 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <div className="size-14 rounded-xl bg-green-50 flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
                   <Globe size={28} strokeWidth={1.6} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Export Ecosystem</h3>
@@ -270,11 +352,11 @@ export default function EcosystemPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Global Compliance
                   </li>
                   <li className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-                    <CheckCircle2 className="text-blue-500" size={16} />
+                    <CheckCircle2 className="text-green-500" size={16} />
                     Trade Facilitation
                   </li>
                 </ul>
@@ -343,8 +425,8 @@ export default function EcosystemPage() {
                 </motion.div>
               </motion.div>
 
-              <motion.div variants={imageReveal} className="lg:w-1/2 w-full h-[400px] rounded-3xl overflow-hidden bg-gray-200 relative group border-4 border-white shadow-2xl shadow-blue-100/30">
-                <div className="absolute inset-0 bg-blue-600/10 mix-blend-multiply transition-opacity group-hover:opacity-5 duration-500"></div>
+              <motion.div variants={imageReveal} className="lg:w-1/2 w-full h-[400px] rounded-3xl overflow-hidden bg-gray-200 relative group border-4 border-white shadow-2xl shadow-green-100/30">
+                <div className="absolute inset-0 bg-green-600/10 mix-blend-multiply transition-opacity group-hover:opacity-5 duration-500"></div>
                 <motion.img
                   variants={imageReveal}
                   alt="World map highlighting global industrial and tech hubs connected digitally"
@@ -365,7 +447,7 @@ export default function EcosystemPage() {
           className="py-24 bg-white overflow-hidden"
         >
           <div className="max-w-7xl mx-auto px-6">
-            <div className="bg-blue-600 rounded-[2.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-16 items-center relative overflow-hidden">
+            <div className="bg-green-600 rounded-[2.5rem] p-8 lg:p-16 flex flex-col lg:flex-row gap-16 items-center relative overflow-hidden">
               {/* Decorative blur */}
               <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 blur-[100px] rounded-full -mr-48 -mt-48"></div>
 
@@ -402,121 +484,144 @@ export default function EcosystemPage() {
               </motion.div>
 
               <motion.div
-                variants={fadeInUp}
-                transition={{ delay: 0.4 }}
-                className="relative z-10 lg:w-1/2 w-full bg-white p-8 lg:p-10 rounded-3xl shadow-2xl"
-              >
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="companyName"
-                        className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2"
-                      >
-                        Company/Organization Name
-                      </label>
-                      <input
-                        id="companyName"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
-                        placeholder="Company Name"
-                        type="text"
-                      />
-                    </div>
+      variants={fadeInUp}
+      transition={{ delay: 0.4 }}
+      className="relative z-10 lg:w-1/2 w-full bg-white p-6 md:p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100"
+    >
+      <form className="space-y-6" onSubmit={handleSubmit}>
 
-                    <div>
-                      <label
-                        htmlFor="partnerType"
-                        className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2"
-                      >
-                        Partner Type
-                      </label>
-                      <select
-                        id="partnerType"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200 bg-white"
-                      >
-                        <option>Technology</option>
-                        <option>Industry</option>
-                        <option>Venture/VC</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
+        {/* 🔹 Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                    <div className="md:col-span-2">
-                      <label
-                        htmlFor="collaborationArea"
-                        className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2"
-                      >
-                        Preferred Collaboration Area
-                      </label>
-                      <select
-                        id="collaborationArea"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200 bg-white"
-                      >
-                        <option>SME Growth</option>
-                        <option>Industrial AI</option>
-                        <option>Agri-Export</option>
-                        <option>Strategic Consulting</option>
-                      </select>
-                    </div>
-                  </div>
+          {/* Company Name */}
+          <div className="flex flex-col gap-2">
+            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Company/Organization Name
+            </label>
+            <input
+              id="companyName"
+              type="text"
+              value={formData.companyName}
+              onChange={handleChange}
+              placeholder="Company Name"
+              className={inputClass('companyName')}
+            />
+            {errors.companyName && (
+              <p className="text-red-500 text-sm">{errors.companyName}</p>
+            )}
+          </div>
 
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2"
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      id="phone"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
-                      placeholder="+91 00000 00000"
-                      type="tel"
-                    />
-                  </div>
+          {/* Partner Type */}
+          <div className="flex flex-col gap-2">
+            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Partner Type
+            </label>
+            <select
+              id="partnerType"
+              value={formData.partnerType}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
+            >
+              <option>Technology</option>
+              <option>Industry</option>
+              <option>Venture/VC</option>
+              <option>Other</option>
+            </select>
+          </div>
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2"
-                    >
-                      Official Email Address
-                    </label>
-                    <input
-                      id="email"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200"
-                      placeholder="contact@company.com"
-                      type="email"
-                    />
-                  </div>
+          {/* Collaboration Area */}
+          <div className="md:col-span-2 flex flex-col gap-2">
+            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Preferred Collaboration Area
+            </label>
+            <select
+              id="collaborationArea"
+              value={formData.collaborationArea}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
+            >
+              <option>SME Growth</option>
+              <option>Industrial AI</option>
+              <option>Agri-Export</option>
+              <option>Strategic Consulting</option>
+            </select>
+          </div>
+        </div>
 
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-2"
-                    >
-                      How can we collaborate? (Briefly describe your objectives)
-                    </label>
-                    <textarea
-                      id="message"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200 resize-none"
-                      placeholder="Our objectives..."
-                      rows={4}
-                    />
-                  </div>
+        {/* 🔹 Contact Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                  <motion.button
-                    whileHover="hover"
-                    whileTap="tap"
-                    variants={buttonVariants}
-                    type="submit"
-                    className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-blue-200/30 hover:bg-blue-700 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    Send Inquiry
-                    <Send size={18} />
-                  </motion.button>
-                </form>
-              </motion.div>
+          {/* Phone */}
+          <div className="flex flex-col gap-2">
+            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Phone Number
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="+91 00000 00000"
+              className={inputClass('phone')}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone}</p>
+            )}
+          </div>
+
+          {/* Email */}
+          <div className="flex flex-col gap-2">
+            <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Official Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="contact@company.com"
+              className={inputClass('email')}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
+          </div>
+        </div>
+
+        {/* 🔹 Message */}
+        <div className="flex flex-col gap-2">
+          <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+            How can we collaborate?
+          </label>
+          <textarea
+            id="message"
+            rows={4}
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Briefly describe your objectives..."
+            className={inputClass('message')}
+          />
+          {errors.message && (
+            <p className="text-red-500 text-sm">{errors.message}</p>
+          )}
+        </div>
+
+        {/* 🔹 Button */}
+        <motion.button
+          whileHover="hover"
+          whileTap="tap"
+          variants={buttonVariants}
+          type="submit"
+          className="w-full bg-green-600 text-white py-4 rounded-xl font-semibold text-lg 
+          flex items-center justify-center gap-2
+          hover:bg-green-700 hover:shadow-lg hover:shadow-green-200/40 
+          transition-all duration-300"
+        >
+          Send Inquiry
+          <Send size={18} />
+        </motion.button>
+      </form>
+    </motion.div>
             </div>
           </div>
         </motion.section>

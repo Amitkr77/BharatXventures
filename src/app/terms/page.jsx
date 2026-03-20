@@ -25,7 +25,7 @@ export default function TermsOfService() {
           variants={fadeInUp}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-50 text-green-700 text-sm font-semibold mb-6">
             <FileText size={18} />
             Legal Agreement
           </div>
@@ -43,7 +43,7 @@ export default function TermsOfService() {
           </motion.p>
 
           <motion.h2 variants={fadeInUp} className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-            <Scale className="text-blue-600" size={28} /> 1. Use of the Site
+            <Scale className="text-green-600" size={28} /> 1. Use of the Site
           </motion.h2>
 
           <motion.p variants={fadeInUp}>
@@ -59,7 +59,7 @@ export default function TermsOfService() {
           </motion.ul>
 
           <motion.h2 variants={fadeInUp} className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-            <AlertTriangle className="text-blue-600" size={28} /> 2. No Financial Advice
+            <AlertTriangle className="text-green-600" size={28} /> 2. No Financial Advice
           </motion.h2>
 
           <motion.p variants={fadeInUp}>
@@ -71,7 +71,7 @@ export default function TermsOfService() {
           </motion.p>
 
           <motion.h2 variants={fadeInUp} className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-            <CheckCircle2 className="text-blue-600" size={28} /> 3. Intellectual Property
+            <CheckCircle2 className="text-green-600" size={28} /> 3. Intellectual Property
           </motion.h2>
 
           <motion.p variants={fadeInUp}>
@@ -83,7 +83,7 @@ export default function TermsOfService() {
           </motion.p>
 
           <motion.h2 variants={fadeInUp} className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-            <FileText className="text-blue-600" size={28} /> 4. Limitation of Liability
+            <FileText className="text-green-600" size={28} /> 4. Limitation of Liability
           </motion.h2>
 
           <motion.p variants={fadeInUp}>
@@ -91,7 +91,7 @@ export default function TermsOfService() {
           </motion.p>
 
           <motion.h2 variants={fadeInUp} className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-            <ArrowRight className="text-blue-600" size={28} /> 5. Contact Us
+            <ArrowRight className="text-green-600" size={28} /> 5. Contact Us
           </motion.h2>
 
           <motion.p variants={fadeInUp}>
@@ -101,9 +101,9 @@ export default function TermsOfService() {
           <motion.div
             variants={fadeInUp}
             transition={{ delay: 0.4 }}
-            className="mt-6 p-6 bg-blue-50 rounded-2xl border border-blue-100"
+            className="mt-6 p-6 bg-green-50 rounded-2xl border border-green-100"
           >
-            <p className="text-blue-800 font-medium">
+            <p className="text-green-800 font-medium">
               Email: legal@bharatx.vc<br />
               Address: H. No. 136, Beladih, Cherki Bazar, Gaya, Bihar – 824237, India
             </p>

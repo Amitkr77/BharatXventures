@@ -80,7 +80,7 @@ export default function MethodologyPage() {
               <motion.span
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest mb-6"
+                className="inline-block px-4 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest mb-6"
               >
                 Our Methodology
               </motion.span>
@@ -113,7 +113,7 @@ export default function MethodologyPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-blue-200/40 transition-all duration-300 flex items-center gap-2"
+                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-green-200/40 transition-all duration-300 flex items-center gap-2"
                 >
                   Download Whitepaper
                   <Download size={18} />
@@ -123,7 +123,7 @@ export default function MethodologyPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="border-2 border-blue-200 text-blue-600 px-8 py-4 rounded-xl font-bold text-base hover:bg-blue-50 transition-all duration-300"
+                  className="border-2 border-green-200 text-green-600 px-8 py-4 rounded-xl font-bold text-base hover:bg-green-50 transition-all duration-300"
                 >
                   Learn More
                 </motion.button>
@@ -134,7 +134,7 @@ export default function MethodologyPage() {
               variants={imageReveal}
               className="flex-1 w-full relative"
             >
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-blue-600 to-blue-900 p-1">
+              <div className="aspect-square rounded-3xl bg-gradient-to-br from-green-600 to-green-900 p-1">
                 <div className="w-full h-full rounded-[1.4rem] bg-white overflow-hidden relative">
                   <div
                     className="absolute inset-0 opacity-10"
@@ -146,8 +146,8 @@ export default function MethodologyPage() {
                   />
                   <div className="h-full w-full flex items-center justify-center p-8">
                     <div className="grid grid-cols-2 gap-4 w-full h-full">
-                      <div className="bg-blue-50 rounded-xl border border-blue-100 flex flex-col items-center justify-center p-4">
-                        <Lightbulb className="text-blue-600 mb-2" size={36} />
+                      <div className="bg-green-50 rounded-xl border border-green-100 flex flex-col items-center justify-center p-4">
+                        <Lightbulb className="text-green-600 mb-2" size={36} />
                         <span className="text-[10px] font-bold uppercase tracking-tighter text-gray-500">
                           Phase 01
                         </span>
@@ -169,8 +169,8 @@ export default function MethodologyPage() {
                         </span>
                       </div>
 
-                      <div className="bg-blue-50 rounded-xl border border-blue-100 flex flex-col items-center justify-center p-4">
-                        <Scale className="text-blue-600 mb-2" size={36} />
+                      <div className="bg-green-50 rounded-xl border border-green-100 flex flex-col items-center justify-center p-4">
+                        <Scale className="text-green-600 mb-2" size={36} />
                         <span className="text-[10px] font-bold uppercase tracking-tighter text-gray-500">
                           Phase 03
                         </span>
@@ -179,9 +179,9 @@ export default function MethodologyPage() {
                         </span>
                       </div>
 
-                      <div className="bg-blue-600 rounded-xl flex flex-col items-center justify-center p-4 shadow-2xl">
+                      <div className="bg-green-600 rounded-xl flex flex-col items-center justify-center p-4 shadow-2xl">
                         <TrendingUp className="text-white mb-2" size={36} />
-                        <span className="text-[10px] font-bold uppercase tracking-tighter text-blue-200">
+                        <span className="text-[10px] font-bold uppercase tracking-tighter text-green-200">
                           Phase 04+
                         </span>
                         <span className="font-bold text-white">Scaling</span>
@@ -266,8 +266,8 @@ export default function MethodologyPage() {
                     variants={cardHover}
                     className={`size-${stage.special ? "24" : "20"} rounded-full ${
                       stage.special
-                        ? "bg-blue-600 border-4 border-amber-500/30"
-                        : "bg-white border-2 border-blue-500"
+                        ? "bg-green-600 border-4 border-amber-500/30"
+                        : "bg-white border-2 border-green-500"
                     } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}
                   >
                     {stage.special ? (
@@ -280,7 +280,7 @@ export default function MethodologyPage() {
                         </span>
                       </div>
                     ) : (
-                      <stage.icon className="text-blue-600" size={32} />
+                      <stage.icon className="text-green-600" size={32} />
                     )}
                   </motion.div>
 
@@ -356,7 +356,7 @@ export default function MethodologyPage() {
                   desc: "Building for permanence or profitable exit. We ensure the venture is IPO-ready or attractive for global M&A.",
                   advantage:
                     "Institutional-grade enterprises valued at ₹100Cr and beyond.",
-                  highlight: true,
+                 /* highlight: true,*/
                 },
               ].map((stage, index) => (
                 <motion.div
@@ -365,16 +365,16 @@ export default function MethodologyPage() {
                   whileHover="hover"
                   className={`bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 ${
                     stage.highlight
-                      ? "border-amber-500 bg-gradient-to-br from-blue-50 to-white"
-                      : "border-blue-500"
+                      ? "border-amber-500 bg-gradient-to-br from-green-50 to-white"
+                      : "border-green-500"
                   } group`}
                 >
                   <div className="flex items-center gap-4 mb-6">
                     <div
                       className={`size-12 rounded-xl ${
-                        stage.highlight ? "bg-amber-100" : "bg-blue-50"
+                        stage.highlight ? "bg-amber-100" : "bg-green-50"
                       } flex items-center justify-center text-${
-                        stage.highlight ? "amber-600" : "blue-600"
+                        stage.highlight ? "amber-600" : "green-600"
                       } font-bold`}
                     >
                       {stage.num}
@@ -410,7 +410,7 @@ export default function MethodologyPage() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="py-20 px-6 md:px-20 bg-blue-600 relative overflow-hidden"
+          className="py-20 px-6 md:px-20 bg-green-600 relative overflow-hidden"
         >
           <div className="absolute inset-0 opacity-10"></div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -452,7 +452,7 @@ export default function MethodologyPage() {
                 whileHover="hover"
                 whileTap="tap"
                 variants={buttonVariants}
-                className="w-full md:w-auto px-10 py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300"
+                className="w-full md:w-auto px-10 py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:text-gray-900 hover:bg-amber-300 transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
               >
                 View Success Stories
               </motion.button>
