@@ -274,29 +274,77 @@ export default function FeaturedInitiativesPage() {
                     <div className="flex gap-4 mt-4">
                       <button
                         type="button"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="p-2 rounded-full bg-gray-100 hover:bg-green-300 transition-colors"
                         aria-label="Share on X"
+                        onClick={() => {
+                          const url = window.location.href;
+                          const text = "Check this out!";
+
+                          window.open(
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+                            "_blank"
+                          );
+                        }}
                       >
                         <Twitter size={18} />
                       </button>
                       <button
                         type="button"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="p-2 rounded-full bg-gray-100 hover:bg-green-300 transition-colors"
                         aria-label="Share on LinkedIn"
+                        onClick={() => {
+                          const url = window.location.href;
+                          const text = "Check this out!";
+
+                          window.open(
+                            `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+                            "_blank"
+                          );
+                        }}
                       >
                         <Linkedin size={18} />
                       </button>
                       <button
                         type="button"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                        className="p-2 rounded-full bg-gray-100 hover:bg-green-300 transition-colors"
                         aria-label="Share via Email"
+                        onClick={() => {
+                          const url = window.location.href;
+                          const subject = "Check this out";
+                          const body = `Have a look at this: ${url}`;
+
+                          window.open(
+                            `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+                            "_blank"
+                          );
+                        }}
                       >
                         <Mail size={18} />
                       </button>
                       <button
                         type="button"
-                        className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors ml-auto"
-                        aria-label="Print this case study"
+                        onClick={() => {
+                          const url = window.location.href;
+                          const title = document.title;
+                          const text = "Check this out!";
+
+                          if (navigator.share) {
+                            // ✅ Mobile / supported browsers
+                            navigator
+                              .share({
+                                title: title,
+                                text: text,
+                                url: url,
+                              })
+                              .catch((err) => console.log("Share failed:", err));
+                          } else {
+                            // ✅ Fallback (copy link)
+                            navigator.clipboard.writeText(url);
+                            alert("Link copied to clipboard!");
+                          }
+                        }}
+                        className="p-2 rounded-full bg-gray-100 hover:bg-green-300 transition-colors ml-auto"
+                        aria-label="Share this page"
                       >
                         <Share2 size={18} />
                       </button>
@@ -346,7 +394,7 @@ export default function FeaturedInitiativesPage() {
                         .getElementById("contact-form")
                         ?.scrollIntoView({ behavior: "smooth" })
                     }
-                    className="w-full sm:w-auto bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-all duration-300 shadow-lg"
+                    className="w-full sm:w-auto bg-green-700 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-500 transition-all duration-300 shadow-lg"
                   >
                     Start Your Partnership
                   </button>
@@ -358,7 +406,7 @@ export default function FeaturedInitiativesPage() {
                     (window.location.href =
                       "mailto:hello@bharatx.vc?subject=Request%20Case%20Study%20Details")
                   }
-                  className="w-full sm:w-auto border-2 border-green text-green-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-700 hover:text-white transition-all duration-300"
+                  className="w-full sm:w-auto border-2 border-green text-green-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
                 >
                   Request Case Detail
                 </button>
