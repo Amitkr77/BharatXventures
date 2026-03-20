@@ -17,6 +17,8 @@ export default function Header() {
     { name: "Industries", path: "/industry" },
     { name: "Projects", path: "/project" },
     { name: "Partnership", path: "/partnership" },
+    { name: "Events", path: "/events" },
+    { name: "Insights", path: "/insights" },
   ];
 
   const extraLinks = [
@@ -110,7 +112,7 @@ export default function Header() {
                 className={`hidden md:flex items-center justify-center px-5 h-10 rounded-lg text-sm font-bold transition-colors duration-200 ${
                   pathname === "/governance"
                     ? "bg-green-600 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-green-400"
+                    : "bg-white text-gray-700 hover:bg-green-500"
                 }`}
               >
                 Governance
@@ -121,7 +123,7 @@ export default function Header() {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
                   pathname === "/contact-us"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-gray-200 text-gray-700 hover:bg-green-400"
+                    : "bg-white text-gray-700 hover:bg-green-500"
                 }`}
               >
                 Contact

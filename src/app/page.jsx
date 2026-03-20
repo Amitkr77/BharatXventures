@@ -97,7 +97,7 @@ export default function Home() {
                 <motion.div
                   variants={fadeInUp}
                   transition={{ delay: 0.1 }}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border border-green-100 mx-auto"
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 mx-auto opacity-75"
                 >
                   <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>

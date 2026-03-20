@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+/* =========================
+   THEME TOKENS
+========================= */
 @theme {
   /* Colors */
   --color-primary: #002466;
   --color-accent: #D4AF37;
-  /* Gold accent for high-end feel */
   --color-background-light: #f5f6f8;
   --color-background-dark: #0f1623;
+
+  /* Text Colors */
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
 
   /* Fonts */
   --font-display: "Inter", sans-serif;
@@ -18,53 +24,132 @@
   --radius-full: 9999px;
 }
 
-/* globals.css or tailwind base layer */
+/* =========================
+   BASE STYLES
+========================= */
+html {
+  scroll-behavior: smooth;
+}
 
-/* For WebKit browsers (Chrome, Safari, Edge) */
+body {
+  font-family: var(--font-display);
+  background: var(--color-background-light);
+  color: var(--color-text-main);
+}
+
+/* Dark Mode */
+.dark body {
+  background: var(--color-background-dark);
+  color: white;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 8px;
-  /* vertical scrollbar width */
   height: 8px;
-  /* horizontal scrollbar height */
 }
 
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
-  /* light gray track */
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #64748b;
-  /* slate-600 thumb */
   border-radius: 9999px;
   border: 2px solid #f1f5f9;
-  /* subtle padding around thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
-  /* darker on hover */
 }
 
-/* For Firefox */
+/* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-green-500) #f1f5f9;
+  scrollbar-color: #64748b #f1f5f9;
 }
 
-/* Optional: Completely hide scrollbar but keep scrolling functionality */
+/* Hide Scrollbar Utility */
 .hide-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari, Edge */
 }
+
+/* =========================
+   REUSABLE UTILITIES
+========================= */
+
+/* Text */
 .text-gold {
   color: var(--color-accent);
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-slate-600 dark:text-slate-300 text-sm font-semibold transition-colors hover:text-primary;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-xl font-bold transition-all hover:bg-blue-900 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white/10 backdrop-blur border border-white/30 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20;
+}
+
+/* Badge */
+.badge {
+  @apply inline-block px-4 py-1.5 rounded-full bg-accent/20 border border-accent/40 text-accent text-xs font-bold uppercase tracking-widest;
+}
+
+/* Section Container */
+.container-section {
+  @apply max-w-[1280px] mx-auto px-6 md:px-20 lg:px-40 py-16;
+}
+
+/* Titles */
+.section-title {
+  @apply text-3xl md:text-4xl font-extrabold text-primary dark:text-white tracking-tight;
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-lg transition-all hover:shadow-2xl;
+}
+
+.card-img {
+  @apply w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110;
+}
+
+.card-title {
+  @apply text-xl font-bold text-slate-900 dark:text-white;
+}
+
+.card-desc {
+  @apply text-sm text-slate-500 dark:text-slate-400;
+}
+
+/* Featured Card */
+.featured-card {
+  @apply bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-800 flex flex-col lg:flex-row transition-all;
+}
+
+/* Pulse Dot */
+.pulse-dot {
+  @apply w-2 h-2 bg-red-500 rounded-full animate-pulse inline-block ml-2;
+}
+
+/* Footer */
+.footer {
+  @apply bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-16 text-center text-slate-400 text-sm;
 }
