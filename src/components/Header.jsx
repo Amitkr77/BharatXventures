@@ -130,10 +130,10 @@ export default function Header() {
                 Contact
               </button>
             </Link>
-            <Link href="/institutions-home">
+            <Link href="/institutional/institute-home">
               <button
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
-                  pathname === "/institutions-home"
+                  pathname === "/institutional/institute-home"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
                     : "bg-white text-gray-700 hover:bg-green-500"
                 }`}
