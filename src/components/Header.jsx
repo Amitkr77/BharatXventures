@@ -17,13 +17,14 @@ export default function Header() {
     { name: "Industries", path: "/industry" },
     { name: "Projects", path: "/project" },
     { name: "Partnership", path: "/partnership" },
-    { name: "Events", path: "/events" },
-    { name: "Insights", path: "/insights" },
+    /*{ name: "Events", path: "/events" },
+    { name: "Insights", path: "/insights" },*/
   ];
 
   const extraLinks = [
     { name: "Governance", path: "/governance" },
     { name: "Contact", path: "/contact-us" },
+    { name: "Institutions", path: "/institutions-home" },
   ];
 
   const isActive = (path) =>
@@ -127,6 +128,17 @@ export default function Header() {
                 }`}
               >
                 Contact
+              </button>
+            </Link>
+            <Link href="/institutions-home">
+              <button
+                className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
+                  pathname === "/institutions-home"
+                    ? "bg-green-600 text-white shadow-md shadow-green-200/40"
+                    : "bg-white text-gray-700 hover:bg-green-500"
+                }`}
+              >
+                Institutions
               </button>
             </Link>
           </div>
