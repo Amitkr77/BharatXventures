@@ -264,10 +264,10 @@ export default function MethodologyPage() {
                   <motion.div
                     whileHover="hover"
                     variants={cardHover}
-                    className={`size-${stage.special ? "24" : "20"} rounded-full ${
+                    className={`size-${stage.special ? "20" : "20"} rounded-full ${
                       stage.special
                         ? "bg-green-600 border-4 border-amber-500/30"
-                        : "bg-white border-2 border-green-500"
+                        : "bg-white border-4 border-green-500"
                     } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}
                   >
                     {stage.special ? (
@@ -275,7 +275,7 @@ export default function MethodologyPage() {
                         <span className="text-white font-black text-xl leading-none italic">
                           {stage.value}
                         </span>
-                        <span className="text-[8px] text-amber-400 uppercase font-bold tracking-tighter block">
+                        <span className="text-[8px] text-white uppercase font-bold tracking-tighter block">
                           Enterprise
                         </span>
                       </div>
