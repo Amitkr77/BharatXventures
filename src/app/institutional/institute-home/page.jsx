@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";  
 
 /* ================= ANIMATION ================= */
 const fadeUp = {
@@ -66,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* ================= VERTICALS ================= */}
-      <section className="py-24 bg-[#F8F9FA]">
+      <section className="py-24 bg-gray-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <motion.div
             initial="hidden"
@@ -211,7 +212,7 @@ export default function HomePage() {
           
           <div className="bg-[#1A3C34] p-4">
             <img
-              src="https://i.imgur.com/6VBx3io.png"
+              src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
               alt="Founder"
               className="w-full h-full object-cover"
             />
@@ -227,11 +228,11 @@ export default function HomePage() {
             </p>
 
             <h4 className="font-semibold text-[#1A3C34]">
-              Vikram S. Bharat
+              Pradeep Kumar
             </h4>
 
             <p className="text-sm text-[#C5A059] uppercase tracking-widest">
-              Founder & Chairman
+              Founder & CEO
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-6 text-sm text-gray-500">
@@ -248,6 +249,36 @@ export default function HomePage() {
 
         </div>
       </section>
+      {/* ================= COMPLIANCE STRIP ================= */}
+<section className="w-full bg-gray-200 border-b border-gray-200">
+  <div className="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-[0.15em] uppercase">
+
+    {/* Left Side */}
+    <div className="flex flex-wrap items-center gap-6 text-gray-500">
+      <span className="font-semibold text-gray-400">
+        Institutional Governance:
+      </span>
+      <span>SEC Compliant</span>
+      <span>SEBI Registered</span>
+      <span>ESG Certified</span>
+    </div>
+
+    {/* Right Side */}
+    <div>
+  <button className="group text-green-700 font-extrabold flex items-center gap-2 transition-all hover:scale-105">
+    Compliance Reports
+
+    <span className="flex items-center justify-center w-8 h-8 transition-all duration-300">
+      <ArrowRight
+        size={18}
+        className="text-green-700 group-hover:text-green-500 transform group-hover:translate-x-1 transition-all duration-300"
+      />
+    </span>
+  </button>
+</div>
+
+  </div>
+</section>
 
     </main>
   );
