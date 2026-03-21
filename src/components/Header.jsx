@@ -27,7 +27,7 @@ export default function Header() {
   const extraLinks = [
     { name: "Governance", path: "/governance" },
     { name: "Contact", path: "/contact-us" },
-    { name: "Institutions", path: "/institutions-home" },
+    { name: "Institutions", path: "/institutional/institute-home" },
   ];
 
   const isActive = (path) =>

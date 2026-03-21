@@ -29,9 +29,8 @@ export default function InstitutionalHeader() {
 ];
   
    const extraItems = [
-    { name: "Governance", path: "/governance" },
-    { name: "Contact", path: "/contact-us" },
-    { name: "Institutions", path: "/institutions-home" },
+    { name: "BACK TO MAIN", path: "/" },
+    { name: "GET IN TOUCH", path: "/institutional/contact" },
   ];
 
   return (
