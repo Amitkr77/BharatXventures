@@ -17,9 +17,6 @@ export default function InstitutionalLayout({ children }) {
         {children}
       </main>
 
-      {/* 🔹 Footer (optional – keep same or create separate) */}
-      <Footer />
-
       {/* 🔹 Scroll To Top */}
       <GoToTop />
     </div>
