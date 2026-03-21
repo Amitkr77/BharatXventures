@@ -9,7 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
+  const isInstitutional = pathname.startsWith("/institutional");
+  if (isInstitutional) return null;
+  
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about-us" },
@@ -38,6 +41,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
             <div className="flex items-center gap-3">
                <img
                   src="/vlogo.png"   //  logo in public folder
@@ -47,6 +51,7 @@ export default function Header() {
                   className="object-contain"
                 />
             </div>
+        </Link>
 
             {/*<div className="flex flex-col">
               <h1 className="text-green-700 text-xl font-bold leading-none tracking-tight">
