@@ -140,7 +140,7 @@ export default function FrameworkPage() {
 
             {/* FINAL CARD */}
             <motion.div variants={fadeUp}>
-              <div className="p-8 bg-green-800 text-white h-full flex flex-col justify-center items-center text-center shadow-2xl hover:scale-105 transition-all duration-500">
+              <div className="p-8 bg-green-800 text-white h-full flex flex-col justify-center items-center text-center shadow-2xl hover:bg-green-700 hover:scale-105 transition-all duration-500">
 
                 <h4 className="text-[#C5A059] font-serif text-4xl mb-2">
                   ₹100Cr
