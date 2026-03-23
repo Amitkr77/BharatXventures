@@ -24,12 +24,12 @@ export default function InstitutionalHeader() {
   { name: "Framework", path: "/institutional/institute-framework" },
   { name: "Portfolio", path: "/institutional/portfolio" },
   { name: "About Us", path: "/institutional/about" },
-  { name: "Contact Us", path: "/institutional/contact" },
+  { name: "Contact Us", path: "/institutional/institute-contact" },
 ];
   
    const extraItems = [
     { name: "BACK TO MAIN", path: "/" },
-    { name: "GET IN TOUCH", path: "/institutional/contact" },
+    { name: "GET IN TOUCH", path: "/institutional/institute-contact" },
   ];
 
   return (

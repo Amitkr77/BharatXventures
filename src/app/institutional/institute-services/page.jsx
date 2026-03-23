@@ -89,7 +89,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 z-0">
           {/* Image */}
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVvmXkg0OrMVmw3aTggvkuT1Ipe_TepSFnszkfzpMsVILizmM4kXjfy6Lsf557JbCjt3Wcq83xbTek4SvBzwkvcse9RS0YXmYX08QRnQFjQRud-SERb0yrNNYehuT8RiyQc-O0hOopolfFNSEMPJe0HSNhVECaNgTkA9n7YrpRjzE4rK9xz8_r_3iSzUxzZYqo90YKkq6f_S2FD_KjgT8NYEdsTBAuybTYzwE-z11mbVSD3W6qLy86wPSntMc_EmNek_HX9uQ-D-Ul"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5nHa1VMoPx4V4_oq7Zbll8BU5m4TSNekw9OwqJJJnC-QPB8g2oKsXIuutcBwIEhW4AZJMRPFWgyDR0J6nnogsNPL2X9UjK8uZpOexQq2w78-0lNLn8Du_Vp_IN9wM-M1GFEYExl4iziCIciJPqBgUbd_deH1UyvE6Psctol1TJlE1HLdoC8z5mR4zQVghqKRTUZnPiuWnkEoAmie1zPTCihzyVvIx5iR-u4pu24pr3O_zbIFxjDv8moRXv4TGxSjWj0P3cXr3eo31"
             className="w-full h-full object-cover scale-105"
           />
 
