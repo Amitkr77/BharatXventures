@@ -4,12 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 /* ================= ANIMATION ================= */
+
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
@@ -75,9 +76,18 @@ export default function FrameworkPage() {
           variants={fadeUp}
           className="max-w-5xl mx-auto px-6"
         >
-          <span className="inline-block py-1 px-3 mb-6 border border-[#C5A059] text-[#C5A059] text-[10px] uppercase tracking-[0.3em] font-bold">
-            Institutional Protocol
-          </span>
+            <motion.div
+                variants={fadeUp}
+                transition={{ delay: 0.1 }}
+                className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-amber-200/20 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-[0.2em] uppercase mb-8"
+            >
+             <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-85"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400"></span>
+             </span>
+             Institutional Protocol
+            </motion.div>
+          
 
           <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">
             The Venture Development <br />
@@ -113,7 +123,7 @@ export default function FrameworkPage() {
                       {step.id}
                     </span>
 
-                    <h3 className="font-bold text-lg uppercase tracking-wider mb-3">
+                    <h3 className="font-bold text-lg text-green-800 uppercase tracking-wider mb-3">
                       {step.title}
                     </h3>
 
@@ -169,14 +179,14 @@ export default function FrameworkPage() {
 
           {/* LEFT */}
           <motion.div variants={fadeUp} initial="hidden" whileInView="show">
-            <h2 className="font-serif text-4xl md:text-5xl mb-8">
+            <h2 className="font-serif text-4xl text-green-800 md:text-5xl mb-8">
               Structured execution capability is our{" "}
               <span className="text-[#C5A059] italic underline underline-offset-8">
                 competitive edge.
               </span>
             </h2>
 
-            <p className="text-gray-600 mb-8 font-light">
+            <p className="text-green-800 mb-8 font-semibold">
               Bharatx Ventures does not just provide capital; we provide the
               blueprint. Our framework is designed to mitigate risks while
               maximizing scale.
@@ -189,7 +199,7 @@ export default function FrameworkPage() {
                 "Proprietary growth playbooks.",
               ].map((item, i) => (
                 <div key={i} className="flex items-start">
-                  <div className="mt-2 mr-4 w-2 h-2 rounded-full bg-[#C5A059]" />
+                  <div className="mt-2 mr-4 w-2 h-2 rounded-full bg-green-800" />
                   <p className="text-sm">{item}</p>
                 </div>
               ))}

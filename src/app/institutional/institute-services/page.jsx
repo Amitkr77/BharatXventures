@@ -101,9 +101,17 @@ export default function ServicesPage() {
         </div>
 
         <motion.div initial="hidden" animate="show" variants={fadeUp} className="relative max-w-7xl mx-auto px-6 md:px-10">
-          <span className="text-[#C5A059] uppercase tracking-[0.25em] text-xs font-bold">
-            Precision. Scale. Impact.
-          </span>
+          <motion.div
+            variants={fadeUp}
+            transition={{ delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-amber-200/20 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-[0.2em] uppercase mb-8"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-85"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400"></span>
+            </span>
+               Precision. Scale. Impact.
+          </motion.div>
 
           <h1 className="text-5xl md:text-7xl text-white mt-6 leading-tight font-semibold">
             Institutional Excellence for High-Growth Landscapes
@@ -141,21 +149,21 @@ export default function ServicesPage() {
                       <div className="w-12 h-[1px] bg-[#C5A059]" />
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-6 relative z-10">
+                    <h2 className="text-3xl md:text-4xl text-green-800 font-semibold mb-6 relative z-10">
                       {s.title}
                     </h2>
 
-                    <p className="text-gray-600 mb-6 relative z-10">
+                    <p className="text-green-700 mb-6 relative z-10">
                       {s.desc}
                     </p>
 
-                    <ul className="space-y-2 mb-8 relative z-10">
+                    <ul className="space-y-2 mb-8 text-green-600 relative z-10">
                       {s.points.map((p, idx) => (
                         <li key={idx}>■ {p}</li>
                       ))}
                     </ul>
 
-                    <button className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest relative z-10">
+                    <button className="group flex items-center gap-2 text-sm text-green-500 font-bold uppercase tracking-widest relative z-10">
                       Learn More
                       <ArrowRight className="group-hover:translate-x-2 transition duration-300" />
                     </button>
@@ -186,21 +194,21 @@ export default function ServicesPage() {
                       <div className="w-12 h-[1px] bg-[#C5A059]" />
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-6 relative z-10">
+                    <h2 className="text-3xl md:text-4xl text-green-800 font-semibold mb-6 relative z-10">
                       {s.title}
                     </h2>
 
-                    <p className="text-gray-600 mb-6 relative z-10">
+                    <p className="text-green-700 mb-6 relative z-10">
                       {s.desc}
                     </p>
 
-                    <ul className="space-y-2 mb-8 relative z-10">
+                    <ul className="space-y-2 mb-8 text-green-600 relative z-10">
                       {s.points.map((p, idx) => (
                         <li key={idx}>■ {p}</li>
                       ))}
                     </ul>
 
-                    <button className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest relative z-10">
+                    <button className="group flex items-center gap-2 text-sm text-green-500 font-bold uppercase tracking-widest relative z-10">
                       Learn More
                       <ArrowRight className="group-hover:translate-x-2 transition duration-300" />
                     </button>
@@ -214,13 +222,13 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0A192F] py-28 text-center">
+      <section className="bg-green-900 py-28 text-center">
         <motion.div initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
           <h2 className="text-4xl md:text-5xl text-white font-semibold mb-6">
             Ready to Scale Your Institutional Impact?
           </h2>
 
-          <p className="text-gray-400 mb-10">
+          <p className="text-gray-200 mb-10">
             Speak with our partners regarding capital allocation.
           </p>
 
@@ -229,7 +237,7 @@ export default function ServicesPage() {
               Contact Partnership
             </button>
 
-            <button className="border border-white text-white px-10 py-4 uppercase tracking-widest hover:text-gray-800 hover:bg-amber-300 hover:scale-105 transition duration-300">
+            <button className="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:text-gray-800 hover:bg-amber-300 hover:scale-105 transition duration-300">
               Download Capabilities
             </button>
           </div>
