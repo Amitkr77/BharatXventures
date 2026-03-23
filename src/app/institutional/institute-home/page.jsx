@@ -47,7 +47,7 @@ export default function HomePage() {
               governance at the core of India's growth story.`}
             </p>
 
-            <button className="px-8 py-4 border border-[#1A3C34] text-[#1A3C34] font-semibold hover:bg-[#1A3C34] hover:text-white transition text-sm uppercase tracking-widest">
+            <button className="px-8 py-4 border border-[#1A3C34] text-[#1A3C34] font-semibold hover:bg-green-700 hover:text-white transition text-sm uppercase tracking-widest">
               Discover Our Impact
             </button>
           </motion.div>
@@ -210,7 +210,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-2 gap-12 items-center">
           
-          <div className="bg-[#1A3C34] p-4">
+          <div className="bg-gradient-to-tr from-green-300 to-green-700 p-4">
             <img
               src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
               alt="Founder"

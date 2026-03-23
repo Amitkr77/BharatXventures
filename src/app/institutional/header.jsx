@@ -9,10 +9,9 @@ import { usePathname } from "next/navigation";
 
 
 export default function InstitutionalHeader() {
-  const pathname = usePathname(); // ✅ DEFINE HERE
+  const pathname = usePathname(); 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // ✅ MOVE INSIDE COMPONENT
   const isActive = (path) =>
     pathname === path || (path !== "/" && pathname.startsWith(path));
 
@@ -21,8 +20,8 @@ export default function InstitutionalHeader() {
 
   const navItems = [
   { name: "Home", path: "/institutional/institute-home" },
-  { name: "Services", path: "/institutional/services" },
-  { name: "Framework", path: "/institutional/framework" },
+  { name: "Services", path: "/institutional/institute-services" },
+  { name: "Framework", path: "/institutional/institute-framework" },
   { name: "Portfolio", path: "/institutional/portfolio" },
   { name: "About Us", path: "/institutional/about" },
   { name: "Contact Us", path: "/institutional/contact" },
