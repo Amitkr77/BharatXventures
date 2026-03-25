@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
 /* ================= ANIMATION ================= */
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -277,7 +276,7 @@ export default function AboutPage() {
                 {/* IMAGE */}
                 <div className="lg:col-span-5 relative">
                     <img
-                    src=""
+                    src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
                     className="w-full h-[500px] object-cover grayscale"
                     />
 
@@ -312,7 +311,7 @@ export default function AboutPage() {
                     {/* PARAGRAPHS */}
                     <div className="space-y-4 text-gray-500 text-sm leading-relaxed">
                     <p>
-                        Naveen Kumar brings over two decades of experience in investment
+                        Praddep Kumar brings over two decades of experience in investment
                         banking and industrial restructuring. Under his leadership,
                         Bharatx Ventures has pioneered a unique hybrid model of venture
                         building.
@@ -327,89 +326,88 @@ export default function AboutPage() {
                 </div>
 
                 {/* ================= ADVISORY BOARD ================= */}
-                <div className="text-center mb-16">
-                <h2 className="text-3xl font-extrabold text-[#0A3D2E] mb-4">
-                    Our Advisory Board
-                </h2>
+<section className="py-24 bg-[#F8F9FA]">
+  <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-                <p className="text-gray-500 max-w-2xl mx-auto">
-                    {`Seasoned industry veterans and policy experts committed to scaling
-                    India's industrial landscape through institutional excellence.`}
-                </p>
-                </div>
+    {/* HEADER */}
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A3D2E] mb-4">
+        Our Advisory Board
+      </h2>
 
-                {/* GRID */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        {`Seasoned industry veterans and policy experts committed to scaling
+        India's industrial landscape through institutional excellence.`}
+      </p>
+    </div>
 
-                {/* MEMBER 1 */}
-                <div className="bg-white border">
-                    <img
-                    src=""
-                    className="w-full h-[260px] object-cover grayscale"
-                    />
-                    <div className="p-6">
-                    <h3 className="font-bold"></h3>
-                    <p className="text-[#C5A059] text-xs uppercase mt-1 mb-3">
-                        Managing Director
-                    </p>
-                    <p className="text-xs text-gray-500">
-                        Industrial restructuring and consulting expert.
-                    </p>
-                    </div>
-                </div>
+    {/* GRID */}
+    <div className="grid md:grid-cols-4 lg:grid-cols-3 gap-8">
 
-                {/* MEMBER 2 */}
-                <div className="bg-white border">
-                    <img
-                    src=""
-                    className="w-full h-[260px] object-cover grayscale"
-                    />
-                    <div className="p-6">
-                    <h3 className="font-bold"></h3>
-                    <p className="text-[#C5A059] text-xs uppercase mt-1 mb-3">
-                        Head of Automation
-                    </p>
-                    <p className="text-xs text-gray-500">
-                        AI & Industry 4.0 integration leader.
-                    </p>
-                    </div>
-                </div>
+      {[
+        {
+          name: "Pradeep Kumar",
+          role: "Founder & CEO",
+          desc: "Industrial restructuring and consulting expert.",
+          img: "https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg",
+        },
+        {
+          name: "Vandana Bharti",
+          role: "Co-Founder & MD",
+          desc: "AI & Industry 4.0 integration leader.",
+          img: "/vandana.png",
+        },
+        {
+          name: "Khushi Kumari",
+          role: "Co-Founder & Head of Business Operation",
+          desc: "Financial structuring and capital markets expert.",
+          img: "/khushikumari.png",
+        },
+      ].map((member, i) => (
 
-                {/* MEMBER 3 */}
-                <div className="bg-white border">
-                    <img
-                    src=""
-                    className="w-full h-[260px] object-cover grayscale"
-                    />
-                    <div className="p-6">
-                    <h3 className="font-bold"></h3>
-                    <p className="text-[#C5A059] text-xs uppercase mt-1 mb-3">
-                        Director of Capital
-                    </p>
-                    <p className="text-xs text-gray-500">
-                        Financial structuring and capital markets expert.
-                    </p>
-                    </div>
-                </div>
+        <div
+          key={i}
+          className="group bg-white border border-gray-200 rounded-xl overflow-hidden 
+          hover:shadow-2xl transition duration-300"
+        >
 
-                {/* MEMBER 4 */}
-                <div className="bg-white border">
-                    <img
-                    src=""
-                    className="w-full h-[260px] object-cover grayscale"
-                    />
-                    <div className="p-6">
-                    <h3 className="font-bold"></h3>
-                    <p className="text-[#C5A059] text-xs uppercase mt-1 mb-3">
-                        Lead Initiatives
-                    </p>
-                    <p className="text-xs text-gray-500">
-                        Agriculture & sustainability expert.
-                    </p>
-                    </div>
-                </div>
+          {/* IMAGE */}
+          <div className="relative overflow-hidden">
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-full h-[260px] md:h-[320px] lg:h-[380px] object-cover grayscale 
+              group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
+            />
 
-                </div>
+            {/* HOVER OVERLAY */}
+            <div className="absolute inset-0 bg-black/50 opacity-0 
+              group-hover:opacity-100 transition duration-300 
+              flex items-center justify-center px-6 text-center">
+
+              <p className="text-white text-sm leading-relaxed">
+                {member.desc}
+              </p>
+            </div>
+          </div>
+
+          {/* CONTENT */}
+          <div className="p-6 text-center">
+            <h3 className="font-bold text-lg text-[#0A3D2E]">
+              {member.name}
+            </h3>
+
+            <p className="text-[#C5A059] text-xs uppercase mt-2 tracking-wider">
+              {member.role}
+            </p>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
             </div>
             </section>
       {/* ================= PREMIUM CTA ================= */}
