@@ -1,60 +1,93 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+
+/* ================= ANIMATION ================= */
+const fadeUp = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7 },
+  },
+};
 
 export default function AboutPage() {
   return (
     <div className="bg-white text-[#0A3D2E]">
 
       {/* ================= HERO ================= */}
-      <section className="py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10 items-center">
+          <section className="py-24 lg:py-32 bg-white">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
 
-          {/* LEFT */}
-          <div className="lg:col-span-7">
-            <span className="text-[#D4AF37] text-xs font-bold tracking-[0.4em] uppercase">
-              Established Growth Partner
-            </span>
+              {/* LEFT CONTENT */}
+              <div className="lg:col-span-7">
 
-            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight mt-6">
-              About <br />
-              <span className="text-gray-300">Bharatx Ventures</span>
-            </h1>
+                {/* Badge */}
+                <motion.div
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full 
+                  bg-amber-200/20 border border-amber-500/30 
+                  text-amber-500 text-xs font-bold tracking-[0.2em] uppercase mb-6"
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+                  </span>
+                  Established Growth Partner
+                </motion.div>
 
-            <p className="text-gray-500 mt-6 max-w-xl">
-              Empowering Indian SMEs to scale through institutionalized
-              strategic partnership and venture building. We bridge the gap
-              between local industrial potential and global operational
-              standards.
-            </p>
+                {/* Heading */}
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight">
+                  About <br />
+                  <span className="text-gray-300">Bharatx Ventures</span>
+                </h1>
 
-            <div className="flex gap-4 mt-8">
-              <button className="bg-[#0A3D2E] text-white px-8 py-3 font-bold text-xs tracking-widest uppercase">
-                Our Methodology
-              </button>
-              <button className="border px-8 py-3 font-bold text-xs tracking-widest uppercase">
-                View Portfolio
-              </button>
+                {/* Description */}
+                <p className="text-gray-500 mt-6 max-w-xl leading-relaxed">
+                  Empowering Indian SMEs to scale through institutionalized strategic 
+                  partnerships and venture building. We bridge the gap between local 
+                  industrial potential and global operational standards.
+                </p>
+
+                {/* Buttons */}
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <button className="bg-green-800 hover:bg-green-600 transition text-white hover:scale-105 duration-300 px-8 py-3 font-bold text-xs tracking-widest uppercase rounded-sm">
+                    Our Methodology
+                  </button>
+
+                  <button className="border border-gray-300 hover:bg-green-600 hover:border-white hover:text-white transition hover:scale-105 duration-300 px-8 py-3 font-bold text-xs tracking-widest uppercase rounded-sm">
+                    View Portfolio
+                  </button>
+                </div>
+              </div>
+
+              {/* RIGHT IMAGE */}
+              <div className="lg:col-span-5 relative">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxiXMXjp1ysBRm7A1Hm0XwKPmZet7DVeJ3JW0Ek41K95pdOIKW5LPhLig-6nGahWh4ZpgXDo5lJbpz5ucf5hM6B51f92CALsh7CTTQuT22P4HUZUp4zEn-NuSNFlu6GELXoGm8ONfktMXRGlALzDeCzbQbtPZzLSNnxJwFSa14ntIybU2CgXTyj6djYvN63PFIAHyrEauT49aHbyiSENFc4PWJPJ27Vvg6l5QVQBte8mXT1r6sv7-N3L15UHidj-h-tHrSIiIpOgcJ"
+                  alt="Bharatx Ventures"
+                  className="w-full h-[400px] lg:h-[500px] object-cover grayscale rounded-xl"
+                />
+
+                {/* STAT CARD */}
+                <div className="absolute bottom-[-30px] left-[-20px] lg:left-[-40px] bg-[#0A3D2E] text-white p-6 lg:p-8 w-[220px] lg:w-[260px] rounded-xl shadow-2xl">
+                  <h3 className="text-3xl lg:text-4xl font-bold text-[#D4AF37]">
+                    100Cr+
+                  </h3>
+                  <p className="text-xs mt-2 text-gray-300 leading-relaxed">
+                    Target venture scale for high-impact industrial transformation
+                  </p>
+                </div>
+              </div>
+
             </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="lg:col-span-5 relative">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxiXMXjp1ysBRm7A1Hm0XwKPmZet7DVeJ3JW0Ek41K95pdOIKW5LPhLig-6nGahWh4ZpgXDo5lJbpz5ucf5hM6B51f92CALsh7CTTQuT22P4HUZUp4zEn-NuSNFlu6GELXoGm8ONfktMXRGlALzDeCzbQbtPZzLSNnxJwFSa14ntIybU2CgXTyj6djYvN63PFIAHyrEauT49aHbyiSENFc4PWJPJ27Vvg6l5QVQBte8mXT1r6sv7-N3L15UHidj-h-tHrSIiIpOgcJ"
-              className="w-full h-[500px] object-cover grayscale"
-            />
-
-            {/* GREEN CARD */}
-            <div className="absolute bottom-[-40px] left-[-40px] bg-[#0A3D2E] text-white p-8 w-[260px] shadow-2xl">
-              <h3 className="text-4xl font-bold text-[#D4AF37]">100Cr+</h3>
-              <p className="text-xs mt-2 text-gray-300">
-                Target venture scale for high-impact industrial transformation
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {/* ================= VISION / MISSION ================= */}
       <section className="py-20 bg-gray-50 border-y">
