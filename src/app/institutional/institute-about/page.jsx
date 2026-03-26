@@ -71,7 +71,8 @@ export default function AboutPage() {
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxiXMXjp1ysBRm7A1Hm0XwKPmZet7DVeJ3JW0Ek41K95pdOIKW5LPhLig-6nGahWh4ZpgXDo5lJbpz5ucf5hM6B51f92CALsh7CTTQuT22P4HUZUp4zEn-NuSNFlu6GELXoGm8ONfktMXRGlALzDeCzbQbtPZzLSNnxJwFSa14ntIybU2CgXTyj6djYvN63PFIAHyrEauT49aHbyiSENFc4PWJPJ27Vvg6l5QVQBte8mXT1r6sv7-N3L15UHidj-h-tHrSIiIpOgcJ"
                   alt="Bharatx Ventures"
-                  className="w-full h-[400px] lg:h-[500px] object-cover grayscale rounded-xl"
+                  className="w-full h-[400px] lg:h-[500px] object-cover grayscale 
+                            hover:grayscale-0 rounded-xl"
                 />
 
                 {/* STAT CARD */}
@@ -250,16 +251,17 @@ export default function AboutPage() {
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="relative">
+                <div className="group relative">
 
                 {/* Image */}
                 <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPHbeb5-fuR9P983SuzX_IPAyGDStxb_pPyspPcwAE2YzltcO910DlEIDuedxzUpEVxuqNSiV5Pwrg3BstLugNsDT5UbkdUPUBjuXqmsle7TOM27JvtgwJvT9uoay3sY2q27EPY9qw5iz9c6pjavCF4Qq4iz-oy4G4dyzEpIVfD1e4gPmHfFi3apoeGPtaLjPphx_mTA_sxe05saukmgyjs1LEndJU3mJhH7Ekndbp04xGYyF5azF6QxuD6fSWhzuLsGMawV0cmH9u"
-                    className="w-full h-[420px] object-cover grayscale opacity-80"
+                    className="w-full h-[420px] object-cover grayscale 
+                            group-hover:grayscale-0 group-hover:scale-105 transition duration-500 opacity-80"
                 />
 
                 {/* Border frame */}
-                <div className="absolute inset-6 border border-[#C5A059]/30"></div>
+                <div className="absolute inset-6 border border-[#C5A059]/30 group-hover:scale-105 transition duration-500"></div>
 
                 </div>
 
@@ -274,16 +276,17 @@ export default function AboutPage() {
                 <div className="grid lg:grid-cols-12 gap-16 items-start mb-28">
 
                 {/* IMAGE */}
-                <div className="lg:col-span-5 relative">
+                <div className="group lg:col-span-5 relative">
                     <img
                     src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
-                    className="w-full h-[500px] object-cover grayscale"
+                    className="w-full h-[500px] object-cover grayscale 
+                            group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
                     />
 
                     {/* NAME CARD */}
-                    <div className="absolute bottom-0 left-0 bg-[#0A3D2E] text-white px-6 py-5 w-[70%]">
+                    <div className="absolute bottom-0 left-0 bg-green-900 rounded-sm text-white px-6 py-5 w-[70%]">
                     <h3 className="text-lg font-bold"></h3>
-                    <p className="text-xs tracking-widest text-gray-300 uppercase">
+                    <p className="text-lg tracking-widest text-gray-300 uppercase">
                         Founder & CEO
                     </p>
                     </div>
@@ -440,12 +443,12 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-6">
 
             {/* Primary Button */}
-            <button className="bg-[#D4AF37] text-[#0A3D2E] px-10 py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">
+            <button className="bg-[#D4AF37] text-[#0A3D2E] rounded-sm px-10 py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">
                 Meet Our Team
             </button>
 
             {/* Outline Button */}
-            <button className="border border-[#D4AF37] text-[#D4AF37] px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0A3D2E] hover:scale-105 transition-all">
+            <button className="border border-[#D4AF37] text-[#D4AF37] rounded-sm px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0A3D2E] hover:scale-105 transition-all">
                 Get in Touch
             </button>
 
