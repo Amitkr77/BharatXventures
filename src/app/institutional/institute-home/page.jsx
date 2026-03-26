@@ -55,12 +55,13 @@ export default function HomePage() {
           {/* RIGHT IMAGE */}
           <motion.div
             variants={fadeUp}
-            className="md:col-span-5 h-[350px] md:h-[600px] overflow-hidden"
+            className="group md:col-span-5 h-[350px] md:h-[600px] overflow-hidden"
           >
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkeHPwLFXRhdRdtuC6VXNB1aLBSLsHUASN4gtRZj90zUuZxBH-qQrm9dYf4La3LeTlOwh3gDW941oAYXuazQF89wXaVViFASCQtYGaGZcDBBg9Xdoc0e_4Q7XkwwPGo8mxZd8yrQpVr4OfjVT6aqoxpoBG2t_n264lHspe7pWDOMNhJmc2FOh-ZW8sU30KocmjcfeyCIfoXwagrQwk9wAyc53jlLBrCC7fbXDGRlX7tdlMOhPxVkgci5nMaZwuJz5LJa-_KpowNzoj"
               alt="Industrial"
-              className="w-full h-full object-cover grayscale contrast-110"
+              className="w-full h-full object-cover grayscale 
+                            group-hover:grayscale-0 group-hover:scale-101 transition duration-500 contrast-110"
             />
           </motion.div>
         </motion.div>
