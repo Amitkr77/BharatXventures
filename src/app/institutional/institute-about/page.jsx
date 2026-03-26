@@ -326,88 +326,88 @@ export default function AboutPage() {
                 </div>
 
                 {/* ================= ADVISORY BOARD ================= */}
-<section className="py-24 bg-[#F8F9FA]">
-  <div className="max-w-7xl mx-auto px-6 lg:px-10">
+              <section className="py-24 bg-[#F8F9FA]">
+                <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-    {/* HEADER */}
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A3D2E] mb-4">
-        Our Advisory Board
-      </h2>
+                  {/* HEADER */}
+                  <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A3D2E] mb-4">
+                      Our Advisory Board
+                    </h2>
 
-      <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-        {`Seasoned industry veterans and policy experts committed to scaling
-        India's industrial landscape through institutional excellence.`}
-      </p>
-    </div>
+                    <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                      {`Seasoned industry veterans and policy experts committed to scaling
+                      India's industrial landscape through institutional excellence.`}
+                    </p>
+                  </div>
 
-    {/* GRID */}
-    <div className="grid md:grid-cols-4 lg:grid-cols-3 gap-8">
+                  {/* GRID */}
+                  <div className="grid md:grid-cols-4 lg:grid-cols-3 gap-8">
 
-      {[
-        {
-          name: "Pradeep Kumar",
-          role: "Founder & CEO",
-          desc: "Industrial restructuring and consulting expert.",
-          img: "https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg",
-        },
-        {
-          name: "Vandana Bharti",
-          role: "Co-Founder & MD",
-          desc: "AI & Industry 4.0 integration leader.",
-          img: "/vandana.png",
-        },
-        {
-          name: "Khushi Kumari",
-          role: "Co-Founder & Head of Business Operation",
-          desc: "Financial structuring and capital markets expert.",
-          img: "/khushikumari.png",
-        },
-      ].map((member, i) => (
+                    {[
+                      {
+                        name: "Pradeep Kumar",
+                        role: "Founder & CEO",
+                        desc: "Industrial restructuring and consulting expert.",
+                        img: "https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg",
+                      },
+                      {
+                        name: "Vandana Bharti",
+                        role: "Co-Founder & MD",
+                        desc: "AI & Industry 4.0 integration leader.",
+                        img: "/vandana.png",
+                      },
+                      {
+                        name: "Khushi Kumari",
+                        role: "Co-Founder & Head of Business Operation",
+                        desc: "Financial structuring and capital markets expert.",
+                        img: "/khushikumari.png",
+                      },
+                    ].map((member, i) => (
 
-        <div
-          key={i}
-          className="group bg-white border border-gray-200 rounded-xl overflow-hidden 
-          hover:shadow-2xl transition duration-300"
-        >
+                      <div
+                        key={i}
+                        className="group bg-white border border-gray-200 rounded-xl overflow-hidden 
+                        hover:shadow-2xl transition duration-300"
+                      >
 
-          {/* IMAGE */}
-          <div className="relative overflow-hidden">
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-full h-[260px] md:h-[320px] lg:h-[380px] object-cover grayscale 
-              group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
-            />
+                        {/* IMAGE */}
+                        <div className="relative overflow-hidden">
+                          <img
+                            src={member.img}
+                            alt={member.name}
+                            className="w-full h-[260px] md:h-[320px] lg:h-[380px] object-cover grayscale 
+                            group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
+                          />
 
-            {/* HOVER OVERLAY */}
-            <div className="absolute inset-0 bg-black/50 opacity-0 
-              group-hover:opacity-100 transition duration-300 
-              flex items-center justify-center px-6 text-center">
+                          {/* HOVER OVERLAY */}
+                          <div className="absolute inset-0 bg-black/50 opacity-0 
+                            group-hover:opacity-100 transition duration-300 
+                            flex items-center justify-center px-6 text-center">
 
-              <p className="text-white text-sm leading-relaxed">
-                {member.desc}
-              </p>
-            </div>
-          </div>
+                            <p className="text-white text-sm leading-relaxed">
+                              {member.desc}
+                            </p>
+                          </div>
+                        </div>
 
-          {/* CONTENT */}
-          <div className="p-6 text-center">
-            <h3 className="font-bold text-lg text-[#0A3D2E]">
-              {member.name}
-            </h3>
+                        {/* CONTENT */}
+                        <div className="p-6 text-center">
+                          <h3 className="font-bold text-lg text-[#0A3D2E]">
+                            {member.name}
+                          </h3>
 
-            <p className="text-[#C5A059] text-xs uppercase mt-2 tracking-wider">
-              {member.role}
-            </p>
-          </div>
+                          <p className="text-[#C5A059] text-xs uppercase mt-2 tracking-wider">
+                            {member.role}
+                          </p>
+                        </div>
 
-        </div>
-      ))}
+                      </div>
+                    ))}
 
-    </div>
-  </div>
-</section>
+                  </div>
+                </div>
+              </section>
             </div>
             </section>
       {/* ================= PREMIUM CTA ================= */}
@@ -445,7 +445,7 @@ export default function AboutPage() {
             </button>
 
             {/* Outline Button */}
-            <button className="border border-[#D4AF37] text-[#D4AF37] px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0A3D2E] transition-all">
+            <button className="border border-[#D4AF37] text-[#D4AF37] px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0A3D2E] hover:scale-105 transition-all">
                 Get in Touch
             </button>
 
