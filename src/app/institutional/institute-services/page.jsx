@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -233,9 +234,11 @@ export default function ServicesPage() {
           </p>
 
           <div className="flex justify-center gap-6 flex-wrap">
+            <Link href="/institutional/institute-contact">
             <button className="bg-[#C5A059] text-white px-10 py-4 font-bold uppercase tracking-widest hover:text-gray-800 hover:bg-amber-300 hover:scale-105 transition duration-300">
               Contact Partnership
             </button>
+            </Link>
 
             <button className="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:text-gray-800 hover:bg-amber-300 hover:scale-105 transition duration-300">
               Download Capabilities

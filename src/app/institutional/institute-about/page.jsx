@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 /* ================= ANIMATION ================= */
 const fadeUp = {
@@ -448,9 +449,11 @@ export default function AboutPage() {
             </button>
 
             {/* Outline Button */}
-            <button className="border border-[#D4AF37] text-[#D4AF37] rounded-sm px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0A3D2E] hover:scale-105 transition-all">
+            <Link href="/institutional/institute-contact">
+              <button className="border border-[#D4AF37] text-[#D4AF37] rounded-sm px-10 py-4 font-bold text-sm uppercase tracking-widest hover:bg-[#D4AF37] hover:text-[#0A3D2E] hover:scale-105 transition-all">
                 Get in Touch
-            </button>
+              </button>
+            </Link>
 
             </div>
         </div>
