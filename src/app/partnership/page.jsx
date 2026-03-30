@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   MapPin,
 } from 'lucide-react';
+import Link from 'next/link';
 
 
 // Animation Variants (reused & slightly adjusted for this page)
@@ -194,6 +195,7 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                 transition={{ delay: 0.4 }}
                 className="flex flex-wrap gap-4"
               >
+                <Link href="/partnership#network" passHref>
                 <motion.button
                   whileHover="hover"
                   whileTap="tap"
@@ -202,6 +204,7 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                 >
                   Explore Network
                 </motion.button>
+                </Link>
 
                 <motion.button
                   whileHover="hover"
@@ -367,6 +370,7 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
 
         {/* Global Reach */}
         <motion.section
+          id="network"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}

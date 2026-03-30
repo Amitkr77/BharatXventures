@@ -128,6 +128,7 @@ export default function AboutPage() {
                 </motion.button>
 
                 <motion.button
+                  onClick={() => router.push("/service")}
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
@@ -163,10 +164,8 @@ export default function AboutPage() {
               >
                 <p className="text-4xl font-black text-green-800 mb-2">100Cr+</p>
                 <p className="text-sm font-semibold text-gray-500">
-                  Pioneering sustainable industrial practices, Ananya has over
-                  15 years of experience in transforming the agriculture and
-                  food processing sectors through technology-driven resource
-                  management and eco-friendly manufacturing standards.
+                  Our focus is on nurturing high-potential startups and transforming them into
+                  ₹100Cr+ market leaders through capital infusion and strategic mentorship.
                 </p>
               </motion.div>
             </motion.div>
@@ -192,9 +191,7 @@ export default function AboutPage() {
               <Eye className="text-green-200 mb-6" size={48} strokeWidth={1.5} />
               <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
               <p className="text-blue-100 text-lg leading-relaxed">
-                {`To be India's leading venture developer scaling local
-                enterprises to global standards. We envision a future where
-                Indian SMEs lead global market innovations.`}
+                {`To build and scale transformative businesses that contribute to India's economic leadership while creating long-term value for industries, communities, and future generations.`}
               </p>
             </motion.div>
 
@@ -210,9 +207,10 @@ export default function AboutPage() {
               />
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-blue-100 text-lg leading-relaxed">
-                Building ₹100Cr+ enterprises through capital, technology, and
-                strategic excellence. Our commitment lies in creating
-                sustainable, high-impact growth for every venture we touch.
+                Our mission is to identify high-potential opportunities, empower visionary entrepreneurs,
+                and build scalable enterprises capable of competing at national and global levels.
+                Through strategic guidance, operational expertise, and technology integration, 
+                BharatX Ventures enables ventures to grow with stability, efficiency, and sustainable impact.
               </p>
             </motion.div>
           </div>
@@ -245,9 +243,10 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="text-gray-600 text-lg"
             >
-              Our leadership is anchored in the belief that institutional
-              standards and unwavering integrity are the foundations of
-              long-term sustainable growth.
+              At BharatX Ventures, leadership is driven by long-term vision, integrity, 
+              and responsible growth. We believe strong leadership empowers people, encourages innovation, 
+              and builds businesses that create lasting impact. Our approach combines strategic thinking with 
+              entrepreneurial agility to develop scalable and sustainable enterprises.
             </motion.p>
           </motion.div>
 
@@ -264,10 +263,8 @@ export default function AboutPage() {
                 Integrity First
               </h3>
               <p className="text-gray-600">
-                Pioneering sustainable industrial practices, Ananya has over 15
-                years of experience in transforming the agriculture and food
-                processing sectors through technology-driven resource management
-                and eco-friendly manufacturing standards.
+                We uphold the highest standards of ethics, transparency, and accountability 
+                in every decision, ensuring trust with our partners, stakeholders, and the communities we serve.
               </p>
             </motion.div>
 
@@ -283,10 +280,8 @@ export default function AboutPage() {
                 Institutional Standards
               </h3>
               <p className="text-gray-600">
-                Pioneering sustainable industrial practices, Ananya has over 15
-                years of experience in transforming the agriculture and food
-                processing sectors through technology-driven resource management
-                and eco-friendly manufacturing standards.
+                We operate with strong governance, disciplined processes, and professional management 
+                practices that enable BharatX Ventures to build enduring and credible institutions.
               </p>
             </motion.div>
 
@@ -302,10 +297,8 @@ export default function AboutPage() {
                 Sustainable Growth
               </h3>
               <p className="text-gray-600">
-                Pioneering sustainable industrial practices,Pradeep kumar has over 15
-                years of experience in transforming the agriculture and food
-                processing sectors through technology-driven resource management
-                and eco-friendly manufacturing standards.
+                Our focus is on long-term value creation by building resilient businesses that grow 
+                responsibly while contributing to economic and societal progress.
               </p>
             </motion.div>
           </div>
@@ -454,10 +447,10 @@ export default function AboutPage() {
               >
                 <Quote className="absolute -top-6 -left-8 text-7xl text-gray-200 -z-10" />
                 <p className="text-xl text-gray-600 leading-relaxed italic">
-                  {`Bharatx Ventures was founded on the principle of
-                  institutionalizing the Indian SME sector. We don't just
-                  provide capital; we provide the strategic scaffolding required
-                  for homegrown businesses to evolve into global titans.`}
+                  {`BharatX Ventures was founded with the vision of institutionalizing and strengthening 
+                  India’s SME ecosystem. Beyond providing capital, the company focuses on building the 
+                  strategic foundation, governance frameworks, and operational capabilities required for 
+                  homegrown enterprises to evolve into globally competitive businesses.`}
                 </p>
               </motion.div>
 
@@ -468,10 +461,10 @@ export default function AboutPage() {
               >
                 <p className="font-bold text-lg text-gray-900">Pradeep Kumar</p>
                 <p className="text-gray-500 text-sm">
-                  Pioneering sustainable industrial practices,Pradeep kumar  has over
-                  15 years of experience in transforming the agriculture and
-                  food processing sectors through technology-driven resource
-                  management and eco-friendly manufacturing standards.
+                  A strong advocate of sustainable industrial development, Pradeep Kumar brings over 
+                  15 years of experience in advancing the agriculture and food processing sectors.
+                  His work focuses on integrating technology-driven resource management with environmentally 
+                  responsible manufacturing practices to build efficient and future-ready industries.
                 </p>
               </motion.div>
 
@@ -482,10 +475,9 @@ export default function AboutPage() {
               >
                 <div className="h-23 w-1 bg-green-600"></div>
                 <p className="text-sm text-gray-500 max-w-md leading-relaxed">
-                  Pioneering sustainable industrial practices, Ananya has over
-                  15 years of experience in transforming the agriculture and
-                  food processing sectors through technology-driven resource
-                  management and eco-friendly manufacturing standards.
+                  Aligned with the national vision of Viksit Bharat 2047, he is committed to building sustainable,
+                  technology-driven enterprises that strengthen India’s industrial ecosystem and contribute to
+                  the country’s long-term economic leadership.
                 </p>
               </motion.div>
             </motion.div>

@@ -130,6 +130,7 @@ export default function ServicesPage() {
                 </motion.button>
                 </Link>
 
+                <Link href="/project" passHref>
                 <motion.button
                   whileHover="hover"
                   whileTap="tap"
@@ -138,6 +139,7 @@ export default function ServicesPage() {
                 >
                   Our Impact
                 </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
           </div>
