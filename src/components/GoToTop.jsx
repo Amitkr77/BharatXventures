@@ -54,6 +54,13 @@ const strokeWidth = 3;
     ["rgba(138, 234, 121, 0.56)", "rgb(13, 197, 28)"]
   );
 
+   // 🌗 Glass background intensity (scroll based)
+ /* const glassBg = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["rgba(255,255,255,0.1)", "rgba(255,255,255,0.25)"]
+  );*/
+
   return (
     <motion.button
       onClick={scrollToTop}
