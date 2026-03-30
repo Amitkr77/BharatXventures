@@ -209,8 +209,6 @@ export default function AboutPage() {
               <p className="text-blue-100 text-lg leading-relaxed">
                 Our mission is to identify high-potential opportunities, empower visionary entrepreneurs,
                 and build scalable enterprises capable of competing at national and global levels.
-                Through strategic guidance, operational expertise, and technology integration, 
-                BharatX Ventures enables ventures to grow with stability, efficiency, and sustainable impact.
               </p>
             </motion.div>
           </div>
@@ -307,6 +305,7 @@ export default function AboutPage() {
 
       {/* Venture Building Methodology */}
       <motion.section
+        id="methodology"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}

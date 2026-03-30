@@ -506,7 +506,7 @@ export default function IndustriesPage() {
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.3 }}
                 className="group inline-flex items-center gap-3 text-green-600 font-black uppercase text-xs tracking-[0.2em] hover:text-green-800 transition-colors"
-                href="#"
+                href="/about-us#methodology"
               >
                 Discover our Strategic Methodology
                 <ArrowRight

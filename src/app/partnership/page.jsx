@@ -200,20 +200,22 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:-translate-y-0.5 hover:shadow-xl hover:shadow-green-200/40 transition-all duration-300"
+                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:-translate-y-0.5 hover:shadow-xl hover:shadow-green-200/40 hover:bg-green-400 transition-all duration-300"
                 >
                   Explore Network
                 </motion.button>
                 </Link>
 
-                <motion.button
-                  whileHover="hover"
-                  whileTap="tap"
-                  variants={buttonVariants}
-                  className="border border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300"
+                <Link href="/about-us#methodology" passHref>
+                  <motion.button
+                    whileHover="hover"
+                    whileTap="tap"
+                    variants={buttonVariants}
+                    className="border border-gray-200 bg-white text-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 hover:-translate-y-0.5 hover:bg-green-400 transition-all duration-300"
                 >
                   View Methodology
                 </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
 
