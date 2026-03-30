@@ -57,9 +57,11 @@ export default function AboutPage() {
 
                 {/* Buttons */}
                 <div className="flex flex-wrap gap-4 mt-8">
-                  <button className="bg-green-800 hover:bg-green-600 transition text-white hover:scale-105 duration-300 px-8 py-3 font-bold text-xs tracking-widest uppercase rounded-sm">
-                    Our Methodology
-                  </button>
+                  <Link href="/institutional/institute-framework">
+                    <button className="bg-green-800 hover:bg-green-600 transition text-white hover:scale-105 duration-300 px-8 py-3 font-bold text-xs tracking-widest uppercase rounded-sm">
+                      Our Framework
+                    </button>
+                  </Link>
 
                   <button className="border border-gray-300 hover:bg-green-600 hover:border-white hover:text-white transition hover:scale-105 duration-300 px-8 py-3 font-bold text-xs tracking-widest uppercase rounded-sm">
                     View Portfolio
@@ -135,54 +137,62 @@ export default function AboutPage() {
                 Our leadership is anchored in the belief that institutional standards and
                 unwavering integrity are the foundation of long-term sustainable growth.
                 </p>
-
                 {/* Cards */}
-                <div className="grid md:grid-cols-3 gap-12">
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="grid md:grid-cols-3 gap-8"
+              >
+                {[
+                  {
+                    icon: "Verified_User",
+                    title: "Integrity First",
+                    desc: "Adhering to the highest ethical standards in every transaction, ensuring that our partners and stakeholders build on a foundation of trust and transparency.",
+                  },
+                  {
+                    icon: "Account_Balance",
+                    title: "Institutional Standards",
+                    desc: "Implementing governance frameworks traditionally reserved for blue-chip corporations into the SME ecosystem to drive professional excellence.",
+                  },
+                  {
+                    icon: "Trending_Up",
+                    title: "Sustainable Growth",
+                    desc: "Focusing on long-term value creation rather than short-term gains, ensuring businesses are resilient to global changes.",
+                  },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    variants={fadeUp}
+                    whileHover={{ y: -10 }}
+                    className="group relative bg-white rounded-sm p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                  >
+                    {/* Gradient hover effect */}
+                    <div className="absolute inset-0 rounded-sm bg-gradient-to-br from-green-500/60 to-transparent opacity-0 group-hover:opacity-100 transition" />
 
-                {/* Card 1 */}
-                <div className="group">
-                    <div className="text-[#C5A059] text-3xl mb-4">verified_user</div>
+                    {/* Content */}
+                    <div className="relative z-10">
+                      {/* Icon */}
+                      <div className="text-[#C5A059] text-3xl mb-4">
+                        {item.icon}
+                      </div>
 
-                    <h3 className="font-bold text-sm tracking-widest uppercase mb-2">
-                    Integrity First
-                    </h3>
+                      {/* Title */}
+                      <h3 className="font-bold text-sm tracking-widest uppercase mb-3 text-[#0B2A5B]">
+                        {item.title}
+                      </h3>
 
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                    Adhering to the highest ethical standards in every transaction,
-                    ensuring that our partners and stakeholders build on a foundation of
-                    trust and transparency.
-                    </p>
-                </div>
+                      {/* Description */}
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
 
-                {/* Card 2 */}
-                <div className="group">
-                    <div className="text-[#C5A059] text-3xl mb-4">account_balance</div>
-
-                    <h3 className="font-bold text-sm tracking-widest uppercase mb-2">
-                    Institutional Standards
-                    </h3>
-
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                    Implementing governance frameworks traditionally reserved for blue-chip
-                    corporations into the SME ecosystem to drive professional excellence.
-                    </p>
-                </div>
-
-                {/* Card 3 */}
-                <div className="group">
-                    <div className="text-[#C5A059] text-3xl mb-4">trending_up</div>
-
-                    <h3 className="font-bold text-sm tracking-widest uppercase mb-2">
-                    Sustainable Growth
-                    </h3>
-
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                    Focusing on long-term value creation rather than short-term gains,
-                    ensuring businesses are resilient to global changes.
-                    </p>
-                </div>
-
-                </div>
+                    {/* Bottom animated line */}
+                    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 group-hover:w-full transition-all duration-300 rounded-sm" />
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
             </section>
 
@@ -330,7 +340,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* ================= ADVISORY BOARD ================= */}
-              <section className="py-24 bg-[#F8F9FA]">
+              <section id="core-team" className="py-24 bg-[#F8F9FA]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
                   {/* HEADER */}
@@ -444,9 +454,11 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-6">
 
             {/* Primary Button */}
+            <Link href="/institutional/institute-about#core-team">
             <button className="bg-[#D4AF37] text-[#0A3D2E] rounded-sm px-10 py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all">
                 Meet Our Team
             </button>
+            </Link>
 
             {/* Outline Button */}
             <Link href="/institutional/institute-contact">

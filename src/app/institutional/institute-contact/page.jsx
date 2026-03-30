@@ -190,7 +190,7 @@ export default function ContactPage() {
               <p className="text-sm text-gray-500">
                 For general queries and partnerships:
               </p>
-              <p className="font-bold mt-2">hello@bharatx.vc</p>
+              <p className="font-bold mt-2">partner@bharatxventures.com</p>
             </div>
 
             <a className="text-[#C5A059] font-bold text-sm flex items-center group-hover:text-green-400 gap-2 mt-auto">
@@ -207,9 +207,9 @@ export default function ContactPage() {
             <div>
               <h3 className="font-bold text-lg mb-2">Corporate Support</h3>
               <p className="text-sm text-gray-500">
-                Mon-Fri, 9:00 AM - 6:00 PM IST
+                Mon-Fri, 11:00 AM - 6:00 PM IST
               </p>
-              <p className="font-bold mt-2">+91 22 4567 8900</p>
+              <p className="font-bold mt-2">+91 98 1126 3046</p>
             </div>
 
             <a className="text-[#C5A059] font-bold text-sm flex items-center group-hover:text-green-400 gap-2 mt-auto">

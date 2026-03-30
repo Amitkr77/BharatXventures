@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";  
 
@@ -47,9 +48,11 @@ export default function HomePage() {
               governance at the core of India's growth story.`}
             </p>
 
-            <button className="px-8 py-4 border border-[#1A3C34] text-[#1A3C34] font-semibold hover:bg-green-700 hover:text-white transition text-sm uppercase tracking-widest">
-              Discover Our Impact
-            </button>
+            <Link href="/institutional/institute-services">
+              <button className="px-8 py-4 border border-[#1A3C34] rounded-lg text-[#1A3C34] font-semibold hover:bg-green-700 hover:text-white transition text-sm uppercase tracking-widest">
+                Discover Our Services
+              </button>
+            </Link>
           </motion.div>
 
           {/* RIGHT IMAGE */}
@@ -74,6 +77,7 @@ export default function HomePage() {
             initial="hidden"
             whileInView="show"
             variants={fadeUp}
+
             className="mb-16"
           >
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#C5A059] block mb-4">
@@ -250,36 +254,36 @@ export default function HomePage() {
 
         </div>
       </section>
-      {/* ================= COMPLIANCE STRIP ================= */}
-<section className="w-full bg-gray-200 border-b border-gray-200">
-  <div className="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-[0.15em] uppercase">
+      {/* ================= COMPLIANCE STRIP ================= 
+      <section className="w-full bg-gray-200 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-[0.15em] uppercase">
 
-    {/* Left Side */}
-    <div className="flex flex-wrap items-center gap-6 text-gray-500">
-      <span className="font-semibold text-gray-400">
-        Institutional Governance:
-      </span>
-      <span>SEC Compliant</span>
-      <span>SEBI Registered</span>
-      <span>ESG Certified</span>
-    </div>
+          {/* Left Side 
+          <div className="flex flex-wrap items-center gap-6 text-gray-500">
+            <span className="font-semibold text-gray-400">
+              Institutional Governance:
+            </span>
+            <span>SEC Compliant</span>
+            <span>SEBI Registered</span>
+            <span>ESG Certified</span>
+          </div>
 
-    {/* Right Side */}
-    <div>
-  <button className="group text-green-700 font-extrabold flex items-center gap-2 transition-all hover:scale-105">
-    Compliance Reports
+          {/* Right Side 
+          <div>
+        <button className="group text-green-700 font-extrabold flex items-center gap-2 transition-all hover:scale-105">
+          Compliance Reports
 
-    <span className="flex items-center justify-center w-8 h-8 transition-all duration-300">
-      <ArrowRight
-        size={18}
-        className="text-green-700 group-hover:text-green-500 transform group-hover:translate-x-1 transition-all duration-300"
-      />
-    </span>
-  </button>
-</div>
+          <span className="flex items-center justify-center w-8 h-8 transition-all duration-300">
+            <ArrowRight
+              size={18}
+              className="text-green-700 group-hover:text-green-500 transform group-hover:translate-x-1 transition-all duration-300"
+            />
+          </span>
+        </button>
+      </div>
 
-  </div>
-</section>
+        </div>
+      </section>*/}
 
     </main>
   );

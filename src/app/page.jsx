@@ -511,7 +511,7 @@ export default function Home() {
                   With over 15 years of experience in strategic consulting and industrial scale-up, Pradeep Kumar leads Bharatx Ventures with a vision for operational excellence and sustainable impact.
                 </p>
               </motion.div>
-             <a className="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors" href="#">
+             <a href="/about-us#core-team" className="text-primary font-black text-xs uppercase tracking-widest flex items-center gap-2 hover:text-accent transition-colors">
                 Our Core Team
                 <svg
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -931,7 +931,7 @@ export default function Home() {
               {/* Overlay for readability */}
             <div className="absolute inset-0 bg-green-900/85"></div>
             {/* Content */}
-            <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center text-white">
+            <div className="relative z-10 max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center text-white">
               {/* LEFT — TEXT CONTENT */}
               <div>
                 {/* Heading */}
@@ -943,7 +943,7 @@ export default function Home() {
                   Transforming SMEs, enabling industrial efficiency, and building scalable ventures across sectors.
                 </p>
                 {/* Cards */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {[
                     "Structured execution frameworks",
                     "Multi-sector expertise",
@@ -976,8 +976,8 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2">
                     Featured Work
                   </h3>
-                  <p className="text-white/70">
-                    Transforming SMEs, enabling industrial efficiency, and building scalable ventures across sectors.
+                  <p className="text-white/70 text-sm">
+                    Transforming SMEs, enabling industrial efficiency & building scalable ventures across sectors.
                   </p>
                 </div>
               </div>
@@ -1050,10 +1050,10 @@ export default function Home() {
                   </a>
                   {/* Secondary CTA */}
                   <a
-                    href="#"
+                    href="/service"
                     className="px-10 py-4 border border-green-500 bg-green-400 text-[var(--color-primary)] font-extrabold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:scale-105 transition-all duration-300"
                   >
-                    Download Capabilities
+                    View Capabilities
                   </a>
                 </div>
               </div>

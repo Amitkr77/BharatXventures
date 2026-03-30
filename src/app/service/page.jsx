@@ -119,14 +119,16 @@ export default function ServicesPage() {
                 transition={{ delay: 0.3 }}
                 className="flex flex-wrap gap-4"
               >
+                <Link href="/industry" passHref>
                 <motion.button
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
                   className="bg-amber-500 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-amber-300 transition-all duration-300 shadow-lg"
                 >
-                  Explore Verticals
+                  Explore Industries
                 </motion.button>
+                </Link>
 
                 <motion.button
                   whileHover="hover"

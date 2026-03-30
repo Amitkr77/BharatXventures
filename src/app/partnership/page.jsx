@@ -474,11 +474,11 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                 <motion.div variants={fadeInUp} transition={{ delay: 0.3 }} className="flex flex-col gap-4 text-gray-100">
                   <div className="flex items-center gap-4">
                     <Mail size={20} />
-                    <span>ecosystem@bharatxventures.com</span>
+                    <span>partner@bharatxventures.com</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone size={20} />
-                    <span>+91 (022) 4000 5000</span>
+                    <span>+91 (981) 1263 046</span>
                   </div>
                 </motion.div>
               </motion.div>

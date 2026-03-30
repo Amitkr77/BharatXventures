@@ -164,10 +164,10 @@ export default function ServicesPage() {
                       ))}
                     </ul>
 
-                    <button className="group flex items-center gap-2 text-sm text-green-500 font-bold uppercase tracking-widest relative z-10">
+                    {/*<button className="group flex items-center gap-2 text-sm text-green-500 font-bold uppercase tracking-widest relative z-10">
                       Learn More
                       <ArrowRight className="group-hover:translate-x-2 transition duration-300" />
-                    </button>
+                    </button>*/}
                   </motion.div>
 
                   {/* IMAGE */}
@@ -209,10 +209,10 @@ export default function ServicesPage() {
                       ))}
                     </ul>
 
-                    <button className="group flex items-center gap-2 text-sm text-green-500 font-bold uppercase tracking-widest relative z-10">
+                    {/*<button className="group flex items-center gap-2 text-sm text-green-500 font-bold uppercase tracking-widest relative z-10">
                       Learn More
                       <ArrowRight className="group-hover:translate-x-2 transition duration-300" />
-                    </button>
+                    </button>*/}
                   </motion.div>
                 </>
               )}
@@ -240,9 +240,11 @@ export default function ServicesPage() {
             </button>
             </Link>
 
-            <button className="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:text-gray-800 hover:bg-amber-300 hover:scale-105 transition duration-300">
-              Download Capabilities
-            </button>
+            <Link href="/institutional/institute-about#core-team">
+              <button className="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:text-gray-800 hover:bg-amber-300 hover:scale-105 transition duration-300">
+                Our Core Members
+              </button>
+            </Link>
           </div>
         </motion.div>
       </section>

@@ -280,7 +280,7 @@ const handleSubmit = (e) => {
                     For general queries and partnerships:
                   </p>
                   <p className="text-green-600 font-bold mt-2">
-                    hello@bharatx.vc
+                    partner@bharatxventures.com
                   </p>
                 </div>
                 <motion.a
@@ -311,7 +311,7 @@ const handleSubmit = (e) => {
                     Available Mon-Fri, 9:00 AM - 6:00 PM IST:
                   </p>
                   <p className="text-green-600 font-bold mt-2">
-                    +91 22 4567 8900
+                    +91 98 1126 3046
                   </p>
                 </div>
                 <motion.a

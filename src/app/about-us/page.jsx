@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Eye,
@@ -65,6 +66,7 @@ const buttonVariants = {
 };
 
 export default function AboutPage() {
+  const router = useRouter();
   return (
     <main className="flex-grow bg-gray-50 text-gray-900 min-h-screen">
       {/* Hero Section */}
@@ -116,12 +118,13 @@ export default function AboutPage() {
                 className="flex flex-wrap gap-4"
               >
                 <motion.button
+                  onClick={() => router.push("/about-us#philosophy")}
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
                   className="bg-green-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-colors duration-200"
                 >
-                  Our Methodology
+                  Philosophy & Approach
                 </motion.button>
 
                 <motion.button
@@ -130,7 +133,7 @@ export default function AboutPage() {
                   variants={buttonVariants}
                   className="border-2 border-green-500 px-8 py-4 rounded-xl text-green-700 font-bold hover:bg-green-500 hover:text-gray-800 transition-colors duration-200"
                 >
-                  View Portfolio
+                  View Solutions
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -218,6 +221,7 @@ export default function AboutPage() {
 
       {/* Leadership Philosophy */}
       <motion.section
+        id="philosophy"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
@@ -491,6 +495,7 @@ export default function AboutPage() {
 
       {/* Leadership & Advisory Board */}
       <motion.section
+        id="core-team"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
