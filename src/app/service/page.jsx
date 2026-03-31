@@ -238,7 +238,7 @@ export default function ServicesPage() {
                   variants={imageReveal}
                   alt="Executive team collaborating around a modern office table during strategic planning"
                   className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqBJNOu5NdQwX8ZrK1qgTm5jIAuPMXvUnmxF_9hX5ORnWQNryE-yORrPe2p6b3x7hj3i-RQHUhBTXY1doxiTKjimIvTD-v6DwUoVwALS-LyshpQ9S0F4ydZHLwulvL73wuTd_9liBE1jE4WhWfGTPEWCp31IFbfYa6ZEwwE0G-gQS9NUxWGF559j6k19fS-RF9slHCg_Qh569rczexlzJo0dScNULku9Dl5I4Cbb4DezVL3dvZWFfTz8ssx6X-4aB-8xSCCi9NMeHC"
+                  src="/ser-sme.png"
                 />
               </div>
             </motion.div>
@@ -536,7 +536,7 @@ export default function ServicesPage() {
                   variants={imageReveal}
                   alt="Business professional analyzing financial charts and regulatory documents on a modern desk"
                   className="w-[540px] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1iAWU-RQGI4CpnH6X_LiS1z9bTCbhnofVZEJIfyjX7thvtX6KqsQopdxca7jt1VXuqT4T8JdFME9OvNtn2-FuUazHudfWt1jeZn3fkWUmR73GSOG9v9LOq7awnhj82Cy6t8ZEi6kp8zIXwuh_j9Dt1q0GlSw0N-H5k0F-ubf2E54aMaEAt9fXyVPwGXGYmRSuuUuQPnaBUBki670ssTfZ11Pmd7UTrXd2UhWPixF_AOx5bQHbvKxMnGYVxQJiTxNXabmu4OrP6QfI"
+                  src="/agritech.png"
               />
               </div>
             </motion.div>
