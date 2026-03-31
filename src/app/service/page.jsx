@@ -634,7 +634,7 @@ export default function ServicesPage() {
               <motion.img
                   variants={imageReveal}
                   alt="Executive team collaborating around a modern office table during strategic planning"
-                  className="w-full h-[540px] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-[540px] h-[540px] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
                 src="/automation.png"
               />
             </div>  
