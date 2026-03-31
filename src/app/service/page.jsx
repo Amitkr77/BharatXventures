@@ -438,8 +438,8 @@ export default function ServicesPage() {
               <motion.img
                   variants={imageReveal}
                   alt="Executive team collaborating around a modern office table during strategic planning"
-                  className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL2EVBJaADw_d0se4CXwqDLeftqIZQ7DM3m1HZp60fgRetcWHXFwwOXyhcwihGwGILf3xomf0SA6PF4Y8LJyfETAB5kzm_AIfGBx0Sh9ltcP3lzFC0UKfypRH0YjQ_GFi3kNeQcYZtTQSaXUIWBgIc4wv0mXO069_k5giCAGpoQdT-Mfrw1GO3LOoX84LMx6hnpGtkYGpY0nc_bf_5Y7xfzFQ4h0dDlIHbwah-bN_INnF7Ne2_QL8fOxF2kOB7MkHKxwshYIt7jkI4"
+                  className="w-[540px] h-[500px] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                  src="/develop.png"
               />
             </div>  
             </motion.div>
@@ -535,8 +535,8 @@ export default function ServicesPage() {
                 <motion.img
                   variants={imageReveal}
                   alt="Business professional analyzing financial charts and regulatory documents on a modern desk"
-                  className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1iAWU-RQGI4CpnH6X_LiS1z9bTCbhnofVZEJIfyjX7thvtX6KqsQopdxca7jt1VXuqT4T8JdFME9OvNtn2-FuUazHudfWt1jeZn3fkWUmR73GSOG9v9LOq7awnhj82Cy6t8ZEi6kp8zIXwuh_j9Dt1q0GlSw0N-H5k0F-ubf2E54aMaEAt9fXyVPwGXGYmRSuuUuQPnaBUBki670ssTfZ11Pmd7UTrXd2UhWPixF_AOx5bQHbvKxMnGYVxQJiTxNXabmu4OrP6QfI"
+                  className="w-[540px] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                  src="/agritech.png"
               />
               </div>
             </motion.div>
@@ -634,8 +634,8 @@ export default function ServicesPage() {
               <motion.img
                   variants={imageReveal}
                   alt="Executive team collaborating around a modern office table during strategic planning"
-                  className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtGdEnAblW6Of4dowdt9NlGY50uhcqPbAqyr5JIufSfXKgINx_PVbvUwcrW_obr3lNcniD6UpQGXG8ALbi7vv4bWw9p7vLLWyKV0Rrpu1IZ0WhsIOx_F5TQ9auzupjKJcMCjBoBaCsVa-V9bD99JEfaLlSGKJjSf8hH2v_cEQ9dqc7qsVbirlkppId4ytGwaVfwGXwNAoO3vU70zrnhkoY6JkDwbnDWOnhAGEZnRO5HyMgR937TjJwqpsEWmPRYojb9EfO4hdxo1BH"
+                  className="w-full h-[540px] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                src="/automation.png"
               />
             </div>  
             </motion.div>
