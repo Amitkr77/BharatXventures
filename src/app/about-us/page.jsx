@@ -474,9 +474,9 @@ export default function AboutPage() {
               >
                 <div className="h-auto w-1 bg-green-600"></div>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  Aligned with the national vision of Viksit Bharat 2047, he is committed to building sustainable,
+                  ❝ Aligned with the national vision of Viksit Bharat 2047, he is committed to building sustainable,
                   technology-driven enterprises that strengthen India’s industrial ecosystem and contribute to
-                  the country’s long-term economic leadership.
+                  the country’s long-term economic leadership. ❞
                 </p>
               </motion.div>
             </motion.div>

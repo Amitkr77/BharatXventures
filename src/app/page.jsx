@@ -498,7 +498,7 @@ export default function Home() {
                 <div className="h-20 w-1 bg-green-600"></div>
                 <Quote className="absolute -top-4 -left-6 text-6xl text-gray-200 -z-10" />
                 <p className="text-xl text-gray-600 leading-relaxed italic">
-                  {`“ Our mission is to build the backbone of India's future economy by combining deep sector expertise with institutional rigor ”`}
+                  {`❝ Our mission is to build the backbone of India's future economy by combining deep sector expertise with institutional rigor ❞`}
                 </p>
               </motion.div>
 
