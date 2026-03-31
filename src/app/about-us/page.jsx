@@ -518,17 +518,17 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "Pradeep kumar",
+                name: "PRADEEP KUMAR",
                 role: "Founder & CEO",
                 src: pradeep,
               },
               {
-                name: "Vandana Bharti",
+                name: "VANDANA BHARTI",
                 role: "Co-Founder & MD",
                 src: vandana,
               },
               {
-                name: "Kushi kumari",
+                name: "KHUSHI KUMARI",
                 role: "Co-Founder & Head of Business Operation",
                 src: khushi,
               },

@@ -375,19 +375,19 @@ export default function AboutPage() {
 
                     {[
                       {
-                        name: "Pradeep Kumar",
+                        name: "PRADEEP KUMAR",
                         role: "Founder & CEO",
                         desc: "Industrial restructuring and consulting expert.",
                         img: "https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg",
                       },
                       {
-                        name: "Vandana Bharti",
+                        name: "VANDANA BHARTI",
                         role: "Co-Founder & MD",
                         desc: "AI & Industry 4.0 integration leader.",
                         img: "/vandana.png",
                       },
                       {
-                        name: "Khushi Kumari",
+                        name: "KHUSHI KUMARI",
                         role: "Co-Founder & Head of Business Operation",
                         desc: "Financial structuring and capital markets expert.",
                         img: "/khushikumari.png",
