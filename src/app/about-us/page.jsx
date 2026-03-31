@@ -122,7 +122,7 @@ export default function AboutPage() {
                   whileHover="hover"
                   whileTap="tap"
                   variants={buttonVariants}
-                  className="bg-green-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-colors duration-200"
+                  className="bg-green-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-gray-800 transition-colors duration-200"
                 >
                   Philosophy & Approach
                 </motion.button>
@@ -472,8 +472,8 @@ export default function AboutPage() {
                 transition={{ delay: 0.5 }}
                 className="flex gap-4 mt-4"
               >
-                <div className="h-23 w-1 bg-green-600"></div>
-                <p className="text-sm text-gray-500 max-w-md leading-relaxed">
+                <div className="h-auto w-1 bg-green-600"></div>
+                <p className="text-sm text-gray-500 leading-relaxed">
                   Aligned with the national vision of Viksit Bharat 2047, he is committed to building sustainable,
                   technology-driven enterprises that strengthen India’s industrial ecosystem and contribute to
                   the country’s long-term economic leadership.

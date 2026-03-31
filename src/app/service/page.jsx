@@ -682,7 +682,7 @@ export default function ServicesPage() {
                     whileHover="hover"
                     whileTap="tap"
                     variants={buttonVariants}
-                    className="bg-amber-500 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-400 hover:scale-100 transition-all duration-300 shadow-xl shadow-amber-400/20"
+                    className="bg-amber-600 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-400 hover:scale-100 transition-all duration-300 shadow-xl shadow-amber-400/20"
                   >
                     Book a Consultation
                   </motion.button>

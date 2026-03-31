@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ShieldCheck, Building2, TrendingUp } from "lucide-react";
 /* ================= ANIMATION ================= */
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -146,16 +147,19 @@ export default function AboutPage() {
               >
                 {[
                   {
+                    ico: ShieldCheck,
                     icon: "Verified_User",
                     title: "Integrity First",
                     desc: "Adhering to the highest ethical standards in every transaction, ensuring that our partners and stakeholders build on a foundation of trust and transparency.",
                   },
                   {
+                    ico: Building2,
                     icon: "Account_Balance",
                     title: "Institutional Standards",
                     desc: "Implementing governance frameworks traditionally reserved for blue-chip corporations into the SME ecosystem to drive professional excellence.",
                   },
                   {
+                    ico: TrendingUp,
                     icon: "Trending_Up",
                     title: "Sustainable Growth",
                     desc: "Focusing on long-term value creation rather than short-term gains, ensuring businesses are resilient to global changes.",
@@ -172,6 +176,17 @@ export default function AboutPage() {
 
                     {/* Content */}
                     <div className="relative z-10">
+                      <div className="mb-4">
+                        {(() => {
+                          const Icon = item.ico;
+                          return (
+                            <Icon
+                              className="text-[#C5A059] group-hover:scale-110 group-hover:text-green-600 transition"
+                              size={32}
+                            />
+                          );
+                        })()}
+                      </div>
                       {/* Icon */}
                       <div className="text-[#C5A059] text-3xl mb-4">
                         {item.icon}
@@ -212,7 +227,7 @@ export default function AboutPage() {
 
                     {/* Stage 1 */}
                     <div className="relative pl-6 border-l border-white/20">
-                    <div className="absolute left-[-1px] top-0 w-[2px] h-10 bg-[#C5A059]"></div>
+                    <div className="absolute left-[-1px] top-0 w-[2px] h-8 bg-[#C5A059]"></div>
 
                     <span className="text-[#C5A059] text-xs uppercase tracking-widest">
                         Stage 01
@@ -228,7 +243,7 @@ export default function AboutPage() {
 
                     {/* Stage 2 */}
                     <div className="relative pl-6 border-l border-white/20">
-                    <div className="absolute left-[-1px] top-0 w-[2px] h-10 bg-[#C5A059]"></div>
+                    <div className="absolute left-[-1px] top-0 w-[2px] h-8 bg-[#C5A059]"></div>
 
                     <span className="text-[#C5A059] text-xs uppercase tracking-widest">
                         Stage 02
@@ -244,7 +259,7 @@ export default function AboutPage() {
 
                     {/* Stage 3 */}
                     <div className="relative pl-6 border-l border-white/20">
-                    <div className="absolute left-[-1px] top-0 w-[2px] h-10 bg-[#C5A059]"></div>
+                    <div className="absolute left-[-1px] top-0 w-[2px] h-8 bg-[#C5A059]"></div>
 
                     <span className="text-[#C5A059] text-xs uppercase tracking-widest">
                         Stage 03

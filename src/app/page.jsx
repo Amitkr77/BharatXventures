@@ -498,7 +498,7 @@ export default function Home() {
                 <div className="h-20 w-1 bg-green-600"></div>
                 <Quote className="absolute -top-4 -left-6 text-6xl text-gray-200 -z-10" />
                 <p className="text-xl text-gray-600 leading-relaxed italic">
-                  {`Our mission is to build the backbone of India's future economy by combining deep sector expertise with institutional rigor`}
+                  {`“ Our mission is to build the backbone of India's future economy by combining deep sector expertise with institutional rigor ”`}
                 </p>
               </motion.div>
 
@@ -507,7 +507,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className="flex gap-4"
               >               
-                <p className="text-sm text-gray-500 max-w-sm">
+                <p className="text-sm text-gray-500 leading-relaxed">
                   With over 15 years of experience in strategic consulting and industrial scale-up, Pradeep Kumar leads Bharatx Ventures with a vision for operational excellence and sustainable impact.
                 </p>
               </motion.div>
@@ -976,7 +976,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2">
                     Featured Work
                   </h3>
-                  <p className="text-white/70 text-sm">
+                  <p className="text-white/70 text-[12px] leading-relaxed">
                     Transforming SMEs, enabling industrial efficiency & building scalable ventures across sectors.
                   </p>
                 </div>
