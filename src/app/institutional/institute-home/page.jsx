@@ -224,12 +224,12 @@ export default function HomePage() {
           </div>
 
           <div>
-            <div className="w-10 h-[2px] bg-[#C5A059] mb-6"></div>
+            <div className="w-10 h-[4px] bg-[#C5A059] mb-6"></div>
 
             <p className="text-xl md:text-2xl italic text-gray-700 mb-6 leading-relaxed">
-              {`"Our vision is not just to build businesses, but to build
+              {`❝ Our vision is not just to build businesses, but to build
               institutions that redefine the Indian economic landscape for
-              generations to come."`}
+              generations to come.❞`}
             </p>
 
             <h4 className="font-semibold text-[#1A3C34]">
