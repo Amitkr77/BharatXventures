@@ -92,7 +92,7 @@ export default function FeaturedInitiativesPage() {
         { value: "15+", label: "Export Markets Opened" },
       ],
       image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBUcTzX9V46007GOtMZ2IvgGzB4CgL0_QsA_uSr8qHLkTanRgM52IOTm8d1nyhHanfvWZtIPlCHV3nLeeJute9iZFS8rCGWCM4NckDO_jHV1i2IIJQGQtFDiG0zezjWkZuYnx_1x-a62WHKau6-xhqc1eMUHJO_jP4GZlokbNs_JnhkQoqSImRFG1OtWs_yh7HnJp5HgM4Vi32NrR67ESjVnlkCq_GX1EwAMW5ugeMHbBLxGQL-DbGRz3J_nIVi0-87zTd_27QG2Ags",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuD1iAWU-RQGI4CpnH6X_LiS1z9bTCbhnofVZEJIfyjX7thvtX6KqsQopdxca7jt1VXuqT4T8JdFME9OvNtn2-FuUazHudfWt1jeZn3fkWUmR73GSOG9v9LOq7awnhj82Cy6t8ZEi6kp8zIXwuh_j9Dt1q0GlSw0N-H5k0F-ubf2E54aMaEAt9fXyVPwGXGYmRSuuUuQPnaBUBki670ssTfZ11Pmd7UTrXd2UhWPixF_AOx5bQHbvKxMnGYVxQJiTxNXabmu4OrP6QfI",
       metricsSource: "Third-party impact assessment 2025",
     },
   ];
