@@ -22,7 +22,7 @@ export default function InstitutionalHeader() {
   { name: "Home", path: "/institutional/institute-home" },
   { name: "Services", path: "/institutional/institute-services" },
   { name: "Framework", path: "/institutional/institute-framework" },
-  { name: "Portfolio", path: "/institutional/portfolio" },
+  { name: "Portfolio", path: "/institutional/institute-portfolio" },
   { name: "About Us", path: "/institutional/institute-about" },
   { name: "Contact Us", path: "/institutional/institute-contact" },
 ];
