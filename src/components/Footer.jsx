@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-12 mb-16">
           
           {/* ================= BRAND ================= */}
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <img
                 src="/vlogo.png"
@@ -54,6 +54,36 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+          </div>
+
+          {/* ================= FAST LINKS ================= */}
+          <div className="flex flex-col gap-6 bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition">
+            <h4 className="font-bold text-green-800 uppercase tracking-widest text-sm">
+              Fast Links
+            </h4>
+
+            <ul className="flex flex-col gap-3 text-sm text-gray-700 font-medium">
+              <li>
+                <Link href="/" className="hover:text-green-700 transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about-us" className="hover:text-green-700 transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/service" className="hover:text-green-700 transition">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact-us" className="hover:text-green-700 transition">
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* ================= REGULATORY ================= */}
