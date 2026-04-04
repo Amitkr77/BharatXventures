@@ -13,6 +13,7 @@ const fadeInUp = {
 const staggerContainer = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } },
+  
 };
 
 export default function TermsOfService() {

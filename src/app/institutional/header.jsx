@@ -29,7 +29,7 @@ export default function InstitutionalHeader() {
   
    const extraItems = [
     { name: "BACK TO MAIN", path: "/" },
-    { name: "GET IN TOUCH", path: "/institutional/institute-contact" },
+    { name: "GET IN TOUCH", path: "/institutional/institute-get-in-touch" },
   ];
 
   return (
@@ -95,10 +95,10 @@ export default function InstitutionalHeader() {
             </Link>
 
           {/* Primary CTA */}
-          <Link href="/institutional/institute-contact">
+          <Link href="/institutional/institute-get-in-touch">
               <button
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
-                  pathname === "/institutional/institute-contact"
+                  pathname === "/institutional/institute-get-in-touch"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
                     : "bg-white text-gray-700 hover:bg-green-500"
                 }`}
