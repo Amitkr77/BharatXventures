@@ -405,7 +405,7 @@ export default function AboutPage() {
                   variants={imageReveal}
                   alt="Pradeep Kumar, Founder & CEO of Bharatx Ventures"
                   className="w-full aspect-[4/5] object-cover"
-                  src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
+                  src="pradeep.jpeg"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-600/95 to-transparent p-8 text-white">
                   <h3 className="text-2xl font-bold">Pradeep Kumar</h3>

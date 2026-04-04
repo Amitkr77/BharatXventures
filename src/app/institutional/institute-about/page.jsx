@@ -304,7 +304,7 @@ export default function AboutPage() {
                 {/* IMAGE */}
                 <div className="group lg:col-span-5 relative">
                     <img
-                    src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
+                    src="/pradeep.jpeg"
                     className="w-full h-[500px] object-cover grayscale 
                             group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
                     />
@@ -378,7 +378,7 @@ export default function AboutPage() {
                         name: "PRADEEP KUMAR",
                         role: "Founder & CEO",
                         desc: "Industrial restructuring and consulting expert.",
-                        img: "https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg",
+                        img: "/pradeepkumar.png",
                       },
                       {
                         name: "VANDANA BHARTI",

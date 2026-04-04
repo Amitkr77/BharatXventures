@@ -455,7 +455,7 @@ export default function Home() {
                 variants={imageReveal}
                 alt="Pradeep Kumar, Founder & CEO of Bharatx Ventures"
                 className="w-full h-[460px] object-cover object-top"
-                src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
+                src="pradeep.jpeg"
               />
 
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t to-transparent p-6 text-white">

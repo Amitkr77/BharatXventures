@@ -217,9 +217,9 @@ export default function HomePage() {
           
           <div className="bg-gradient-to-tr from-green-300 to-green-700 p-4">
             <img
-              src="https://aixpertslabs.com/assets/pradeep_kumar-69a6af88.jpeg"
+              src="/pradeep.jpeg"
               alt="Founder"
-              className="w-full h-full object-cover"
+              className="w-full aspect-[4/5] object-cover"
             />
           </div>
 
