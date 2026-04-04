@@ -88,7 +88,7 @@ export default function Footer() {
               Fast Links
             </h4>
 
-            <ul className="flex flex-col gap-3 text-sm text-gray-700 font-medium">
+            <ul className="flex flex-col gap-3 text-sm font-medium text-gray-700">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about-us">About Us</Link></li>
               <li><Link href="/service">Services</Link></li>
