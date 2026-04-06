@@ -305,7 +305,7 @@ export default function AboutPage() {
                 <div className="group lg:col-span-5 relative">
                     <img
                     src="/pradeep.jpeg"
-                    className="w-full h-[500px] object-cover grayscale 
+                    className="w-full h-[500px] object-cover object-top grayscale 
                             group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
                     />
 
@@ -405,7 +405,7 @@ export default function AboutPage() {
                           <img
                             src={member.img}
                             alt={member.name}
-                            className="w-full h-[260px] md:h-[320px] lg:h-[380px] object-cover grayscale 
+                            className="w-full h-[260px] md:h-[320px] lg:h-[380px] object-cover object-top grayscale 
                             group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
                           />
 
