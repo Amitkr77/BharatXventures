@@ -224,7 +224,7 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                 </motion.button>
                 </Link>
 
-                <Link href="/about-us#methodology" passHref>
+                <Link href="/framework" passHref>
                   <motion.button
                     whileHover="hover"
                     whileTap="tap"
