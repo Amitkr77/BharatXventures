@@ -77,13 +77,17 @@ export default function MethodologyPage() {
         >
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <motion.div variants={fadeInUp} className="flex-1 z-10">
-              <motion.span
+              <motion.div
                 variants={fadeInUp}
                 transition={{ delay: 0.1 }}
-                className="inline-block px-4 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest mb-6"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6"
               >
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-600"></span>
+                </span>
                 Our Methodology
-              </motion.span>
+              </motion.div>
 
               <motion.h1
                 variants={fadeInUp}
