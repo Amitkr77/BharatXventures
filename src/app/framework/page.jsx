@@ -119,14 +119,16 @@ export default function MethodologyPage() {
                   <Download size={18} />
                 </motion.button>
 
-                <motion.button
-                  whileHover="hover"
-                  whileTap="tap"
-                  variants={buttonVariants}
-                  className="border-2 border-green-200 text-green-600 px-8 py-4 rounded-xl font-bold text-base hover:bg-green-50 transition-all duration-300"
-                >
-                  Learn More
-                </motion.button>
+                <Link href="/institutional/institute-framework">
+                  <motion.button
+                    whileHover="hover"
+                    whileTap="tap"
+                    variants={buttonVariants}
+                    className="border-2 border-green-200 text-green-600 px-8 py-4 rounded-xl font-bold text-base hover:bg-green-50 transition-all duration-300"
+                  >
+                    Learn More
+                  </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
 
@@ -448,14 +450,16 @@ export default function MethodologyPage() {
                 </motion.button>
               </Link>
 
-              <motion.button
-                whileHover="hover"
-                whileTap="tap"
-                variants={buttonVariants}
-                className="w-full md:w-auto px-10 py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:text-gray-900 hover:bg-amber-300 transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
-              >
-                View Success Stories
-              </motion.button>
+              <Link href="/project">
+                <motion.button
+                  whileHover="hover"
+                  whileTap="tap"
+                  variants={buttonVariants}
+                  className="w-full md:w-auto px-10 py-4 border-2 border-white/20 text-white font-bold rounded-xl hover:text-gray-900 hover:bg-amber-300 transition-all duration-300 shadow-xl flex items-center justify-center gap-2"
+                >
+                  View Success Stories
+                </motion.button>
+              </Link>
             </motion.div>
           </div>
         </motion.section>
