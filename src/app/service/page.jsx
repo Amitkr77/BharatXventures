@@ -688,6 +688,7 @@ export default function ServicesPage() {
                   </motion.button>
                 </Link>
 
+                <a href="/brochure.png" download>
                 <motion.button
                   whileHover="hover"
                   whileTap="tap"
@@ -696,6 +697,7 @@ export default function ServicesPage() {
                 >
                   Download Services Brochure
                 </motion.button>
+                </a>
               </motion.div>
             </div>
           </div>
