@@ -176,7 +176,7 @@ export default function GetInTouchPage() {
                 Our team will contact you within 24–48 hours.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-2">
 
                 {/* FULL NAME */}
                 <div className="flex flex-col gap-1">
@@ -189,9 +189,9 @@ export default function GetInTouchPage() {
                       errors.fullName ? "border-red-500" : "border-gray-200"
                     } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none`}
                   />
-                  {errors.fullName && (
-                    <span className="text-red-500 text-xs">{errors.fullName}</span>
-                  )}
+                  <span className="text-red-500 text-xs min-h-[16px]">
+                    {errors.fullName || ""}
+                  </span>
                 </div>
 
                 {/* ORGANIZATION */}
@@ -205,11 +205,9 @@ export default function GetInTouchPage() {
                       errors.organization ? "border-red-500" : "border-gray-200"
                     } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none`}
                   />
-                  {errors.organization && (
-                    <span className="text-red-500 text-xs">
-                      {errors.organization}
-                    </span>
-                  )}
+                  <span className="text-red-500 text-xs min-h-[16px]">
+                    {errors.organization || ""}
+                  </span>
                 </div>
 
                 {/* EMAIL */}
@@ -224,9 +222,9 @@ export default function GetInTouchPage() {
                       errors.email ? "border-red-500" : "border-gray-200"
                     } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none`}
                   />
-                  {errors.email && (
-                    <span className="text-red-500 text-xs">{errors.email}</span>
-                  )}
+                  <span className="text-red-500 text-xs min-h-[16px]">
+                    {errors.email || ""}
+                  </span>
                 </div>
 
                 {/* PHONE */}
@@ -240,9 +238,9 @@ export default function GetInTouchPage() {
                       errors.phone ? "border-red-500" : "border-gray-200"
                     } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none`}
                   />
-                  {errors.phone && (
-                    <span className="text-red-500 text-xs">{errors.phone}</span>
-                  )}
+                  <span className="text-red-500 text-xs min-h-[16px]">
+                    {errors.phone || ""}
+                  </span>
                 </div>
                 {/* PURPOSE */}
                 <div className="flex flex-col gap-2 hover:scale-[1.02] transition duration-300">
@@ -262,9 +260,9 @@ export default function GetInTouchPage() {
                     <option value="Media">Media / Press</option>
                     <option value="Other">--Others--</option>
                   </select>
-                  {errors.purpose && (
-                    <span className="text-red-500 text-xs">{errors.purpose}</span>
-                  )}
+                  <span className="text-red-500 text-xs min-h-[16px]">
+                    {errors.purpose || ""}
+                  </span>
                 </div>
 
                 {/* MESSAGE */}
@@ -279,9 +277,9 @@ export default function GetInTouchPage() {
                       errors.message ? "border-red-500" : "border-gray-200"
                     } focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none`}
                   />
-                  {errors.message && (
-                    <span className="text-red-500 text-xs">{errors.message}</span>
-                  )}
+                  <span className="text-red-500 text-xs min-h-[16px]">
+                    {errors.message || ""}
+                  </span>
                 </div>
 
                 {/* BUTTON */}
