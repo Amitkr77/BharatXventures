@@ -622,7 +622,7 @@ export default function AboutPage() {
                   </motion.li>
                 </motion.ul>
 
-                <Link href="/contact-us">
+                <Link href="/partnership" passHref>
                   <motion.button
                     whileHover="hover"
                     whileTap="tap"
