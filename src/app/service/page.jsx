@@ -688,7 +688,7 @@ export default function ServicesPage() {
                   </motion.button>
                 </Link>
 
-                <a href="/brochure.png" download>
+                <a href="/brochure.png" target="_blank" rel="noopener noreferrer" download>
                 <motion.button
                   whileHover="hover"
                   whileTap="tap"
