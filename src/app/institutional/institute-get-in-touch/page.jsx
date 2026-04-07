@@ -260,6 +260,7 @@ export default function GetInTouchPage() {
                     <option value="Partnership">Partnership</option>
                     <option value="Collaboration">Institutional Collaboration</option>
                     <option value="Media">Media / Press</option>
+                    <option value="Other">--Others--</option>
                   </select>
                   {errors.purpose && (
                     <span className="text-red-500 text-xs">{errors.purpose}</span>
