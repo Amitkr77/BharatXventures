@@ -571,7 +571,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
+            <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8 last:border-r-2">
               <p className="text-gold text-sm font-bold tracking-widest uppercase">
                 Cross-Sector Expertise
               </p>
