@@ -66,14 +66,17 @@ const buttonVariants = {
 export default function EcosystemPage({ fadeInUp, buttonVariants }) {
   const [formData, setFormData] = useState({
     companyName: '',
-    partnerType: 'Technology',
-    collaborationArea: 'SME Growth',
+    partnerType: 'Select Type',
+    collaborationArea: 'Select Area',
     phone: '',
     email: '',
     message: '',
   });
 
   const [errors, setErrors] = useState({});
+
+  const [shake, setShake] = useState(false);
+
   // 🔹 Handle Input Change
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -96,6 +99,14 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
 
     if (!formData.companyName.trim()) {
       newErrors.companyName = 'Company name is required';
+    }
+
+    if(!formData.partnerType || formData.partnerType === 'Select Type') { 
+      newErrors.partnerType = 'Please select a partner type';
+    }
+
+    if(!formData.collaborationArea || formData.collaborationArea === 'Select Area') { 
+      newErrors.collaborationArea = 'Please select a collaboration area';
     }
 
     if (!formData.phone.trim()) {
@@ -124,14 +135,21 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!validate()) {
+      // ❌ trigger shake on error
+      setShake(true);
+      setTimeout(() => setShake(false), 400);
+    return;
+  }
+
     if (validate()) {
       console.log('Submitted:', formData);
       alert('Form submitted successfully!');
 
       setFormData({
         companyName: '',
-        partnerType: 'Technology',
-        collaborationArea: 'SME Growth',
+        partnerType: 'Select Type',
+        collaborationArea: 'Select Area',
         phone: '',
         email: '',
         message: '',
@@ -490,8 +508,10 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
               </motion.div>
 
               <motion.div
+                key={shake ? 'shake' : 'rest'}
+                animate={shake ? { x: [-10, 10, -6, 6, 0] } : { x: 0 }}
+                transition={{ duration: 0.4 }}
                 variants={fadeInUp}
-                transition={{ delay: 0.4 }}
                 className="relative z-10 lg:w-1/2 w-full bg-white p-6 md:p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100"
               >
                 <form className="space-y-6" onSubmit={handleSubmit}>
@@ -528,11 +548,15 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
                       >
-                        <option>Technology</option>
-                        <option>Industry</option>
-                        <option>Venture/VC</option>
-                        <option>Other</option>
+                        <option value="">Select Type</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Industry">Industry</option>
+                        <option value="Venture/VC">Venture/VC</option>
+                        <option value="Other">Other</option>
                       </select>
+                      {errors.partnerType && (
+                        <p className="text-red-500 text-sm">{errors.partnerType}</p>
+                      )}
                     </div>
 
                     {/* Collaboration Area */}
@@ -546,11 +570,15 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all bg-white"
                       >
-                        <option>SME Growth</option>
-                        <option>Industrial AI</option>
-                        <option>Agri-Export</option>
-                        <option>Strategic Consulting</option>
+                        <option value="">Select Area</option>
+                        <option value="SME Growth">SME Growth</option>
+                        <option value="Industrial AI">Industrial AI</option>
+                        <option value="Agri-Export">Agri-Export</option>
+                        <option value="Strategic Consulting">Strategic Consulting</option>
                       </select>
+                      {errors.collaborationArea && (
+                        <p className="text-red-500 text-sm">{errors.collaborationArea}</p>
+                      )}
                     </div>
                   </div>
 
