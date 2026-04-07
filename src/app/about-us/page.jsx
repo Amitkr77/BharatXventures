@@ -404,7 +404,7 @@ export default function AboutPage() {
                 <motion.img
                   variants={imageReveal}
                   alt="Pradeep Kumar, Founder & CEO of Bharatx Ventures"
-                  className="w-full aspect-[4/5] object-cover"
+                  className="w-full aspect-[4/5] object-cover object-top"
                   src="pradeep.jpeg"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-600/95 to-transparent p-8 text-white">
@@ -543,7 +543,7 @@ export default function AboutPage() {
                   <img
                     src={leader.src.src}
                     alt={leader.name}
-                    className="w-full h-full object-cover transition-all duration-500"
+                    className="w-full h-full object-cover object-top transition-all duration-500"
                   />
                 </div>
                 <div className="p-6">
