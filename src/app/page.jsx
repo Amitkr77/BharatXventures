@@ -76,7 +76,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative w-full min-h-screen flex items-center overflow-hidden"
+          className="relative w-full min-h-screen flex items-start pt-6 overflow-hidden"
         >
           {/* ✅ Background Image */}
           <div className="absolute inset-0 z-0">
@@ -108,7 +108,7 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center"
+                  className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center mb-60"
                 >
                   Building the{" "}
                   <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
@@ -118,7 +118,7 @@ export default function Home() {
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-xl text-white font-bold leading-relaxed max-w-xl item-center mx-auto"
+                  className="text-xl text-white font-bold leading-relaxed max-w-4xl item-center mx-auto"
                 >
                   BharatX Ventures partners with startups and SMEs to design, build, and scale high-impact businesses across India using AI, strategy, and execution
                 </motion.p>
@@ -525,68 +525,68 @@ export default function Home() {
               </a>
             </motion.div>
           </div>
-        </div>
-        
+        </div>       
       </motion.section>
       
-      {/* Stats Section */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
-        variants={staggerContainer}
-        className="py-20 bg-green-800 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
-        </div>
+          {/* Stats Section */}
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.25 }}
+            variants={staggerContainer}
+            className="py-6 bg-green-800 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+              <div className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+              <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+            </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
-              <p className="text-gold text-sm font-bold tracking-widest uppercase">
-                Cumulative Scale
-              </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-gold">
-                100Cr+
-              </h3>
-              <p className="text-gold font-medium">
-                Enterprise Value Generated
-              </p>
-            </motion.div>
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8">
+                  <p className="text-gold text-sm font-bold tracking-widest uppercase">
+                    Cumulative Scale
+                  </p>
+                  <h3 className="text-5xl lg:text-6xl font-black text-gold">
+                    100Cr+
+                  </h3>
+                  <p className="text-gold font-medium">
+                    Enterprise Value Generated
+                  </p>
+                </motion.div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col gap-4 border-l-2 border-primary pl-8"
-            >
-              <p className="text-gold text-sm font-bold tracking-widest uppercase">
-                Ecosystem Impact
-              </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-gold">
-                50+
-              </h3>
-              <p className="text-gold font-medium">
-                Ventures Supported Globally
-              </p>
-            </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  className="flex flex-col gap-4 border-l-2 border-primary pl-8"
+                >
+                  <p className="text-gold text-sm font-bold tracking-widest uppercase">
+                    Ecosystem Impact
+                  </p>
+                  <h3 className="text-5xl lg:text-6xl font-black text-gold">
+                    50+
+                  </h3>
+                  <p className="text-gold font-medium">
+                    Ventures Supported Globally
+                  </p>
+                </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8 last:border-r-2">
-              <p className="text-gold text-sm font-bold tracking-widest uppercase">
-                Cross-Sector Expertise
-              </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-gold">
-                10+
-              </h3>
-              <p className="text-gold font-medium">
-                Core Industries Served
-              </p>
-            </motion.div>
-            
-          </div>
-        </div>
-      </motion.section>
-      {/* We Serve Section */}
+                <motion.div variants={fadeInUp} className="flex flex-col gap-4 border-l-2 border-primary pl-8 last:border-r-2">
+                  <p className="text-gold text-sm font-bold tracking-widest uppercase">
+                    Cross-Sector Expertise
+                  </p>
+                  <h3 className="text-5xl lg:text-6xl font-black text-gold">
+                    10+
+                  </h3>
+                  <p className="text-gold font-medium">
+                    Core Industries Served
+                  </p>
+                </motion.div>
+                
+              </div>
+            </div>
+          </motion.section>
+
+        {/* We Serve Section */}
           <motion.section
             initial="hidden"
             whileInView="visible"
