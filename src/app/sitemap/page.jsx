@@ -1,109 +1,83 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Home,
+  Info,
+  Phone,
+  Layers,
+  Shield,
+  Building,
+  Users,
+  Folder,
+  Briefcase,
+} from "lucide-react";
 
 export default function SitemapPage() {
   return (
-    <div className="p-10 bg-gray-100 min-h-screen flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center pt-20 px-4">
 
       {/* TITLE */}
-      <h1 className="text-4xl font-bold mb-12 text-gray-800">
+      <h1 className="text-4xl font-bold mb-10 text-gray-800">
         Website Sitemap
       </h1>
 
-      {/* HOME */}
-      <div className="bg-[#0A1F3D] text-white px-8 py-4 rounded-xl shadow-lg font-semibold">
-        Home (/)
-      </div>
+      {/* HOME NODE */}
+      <motion.div whileHover={{ scale: 1.08 }}>
+        <Link
+          href="/"
+          className="flex items-center gap-2 bg-[#0A1F3D] text-white px-8 py-4 rounded-2xl shadow-xl font-semibold text-lg"
+        >
+          <Home size={20} />
+          Home
+        </Link>
+      </motion.div>
 
-      {/* VERTICAL LINE */}
-      <div className="w-px h-10 bg-gray-400"></div>
+      {/* Vertical Line from Home */}
+      <div className="w-[2px] h-12 bg-gray-400"></div>
 
-      {/* MAIN BRANCH */}
-      <div className="relative w-full flex justify-center">
+      {/* TREE WRAPPER */}
+      <div className="relative w-full max-w-6xl flex flex-col items-center">
 
-        {/* HORIZONTAL LINE */}
-        <div className="absolute top-0 left-10 right-10 h-px bg-gray-400"></div>
+        {/* Horizontal Line */}
+        <div className="absolute top-0 w-full h-[2px] bg-gray-400"></div>
 
-        <div className="flex gap-20">
+        {/* BRANCH GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-10 w-full px-4">
 
           {/* MAIN WEBSITE */}
-          <div className="flex flex-col items-center">
-            <div className="w-px h-10 bg-gray-400"></div>
-
-            <div className="bg-white px-6 py-3 rounded-xl shadow font-semibold">
-              Main Website
-            </div>
-
-            <div className="w-px h-6 bg-gray-400"></div>
-
-            <div className="flex flex-col gap-3">
-              <Box text="about-us" />
-              <Box text="contact-us" />
-              <Box text="framework" />
-              <Box text="governance" />
-              <Box text="industry" />
-              <Box text="partnership" />
-              <Box text="project" />
-              <Box text="service" />
-              <Box text="privacy" />
-              <Box text="terms" />
-            </div>
-          </div>
+          <Column
+            title="Main Website"
+            icon={<Layers size={18} />}
+            items={[
+              { name: "About", path: "/about-us", icon: <Info size={16} /> },
+              { name: "Contact", path: "/contact-us", icon: <Phone size={16} /> },
+              { name: "Framework", path: "/framework", icon: <Layers size={16} /> },
+              { name: "Governance", path: "/governance", icon: <Shield size={16} /> },
+              { name: "Industry", path: "/industry", icon: <Building size={16} /> },
+              { name: "Partnership", path: "/partnership", icon: <Users size={16} /> },
+              { name: "Project", path: "/project", icon: <Folder size={16} /> },
+              { name: "Service", path: "/service", icon: <Briefcase size={16} /> },
+              { name: "Privacy", path: "/privacy", icon: <Shield size={16} /> },
+              { name: "Terms", path: "/terms", icon: <Shield size={16} /> },
+            ]}
+          />
 
           {/* INSTITUTIONAL */}
-          <div className="flex flex-col items-center">
-            <div className="w-px h-10 bg-gray-400"></div>
-
-            <div className="bg-white px-6 py-3 rounded-xl shadow font-semibold">
-              Institutional
-            </div>
-
-            <div className="w-px h-6 bg-gray-400"></div>
-
-            <div className="flex flex-col gap-3 items-center">
-              <Box text="institute-home" />
-              <Box text="institute-about" />
-              <Box text="institute-services" />
-              <Box text="institute-framework" />
-              <Box text="institute-portfolio" />
-              <Box text="institute-contact" />
-              <Box text="institute-get-in-touch" />
-            </div>
-          </div>
-
-          {/* COMPONENT SYSTEM */}
-          <div className="flex flex-col items-center">
-            <div className="w-px h-10 bg-gray-400"></div>
-
-            <div className="bg-white px-6 py-3 rounded-xl shadow font-semibold">
-              Components
-            </div>
-
-            <div className="w-px h-6 bg-gray-400"></div>
-
-            <div className="flex flex-col gap-3">
-              <Box text="Header" />
-              <Box text="Footer" />
-              <Box text="GoToTop" />
-            </div>
-          </div>
-
-          {/* GLOBAL */}
-          <div className="flex flex-col items-center">
-            <div className="w-px h-10 bg-gray-400"></div>
-
-            <div className="bg-white px-6 py-3 rounded-xl shadow font-semibold">
-              Global
-            </div>
-
-            <div className="w-px h-6 bg-gray-400"></div>
-
-            <div className="flex flex-col gap-3">
-              <Box text="layout.js" />
-              <Box text="globals.css" />
-              <Box text="page.jsx" />
-            </div>
-          </div>
+          <Column
+            title="Institutional"
+            icon={<Building size={18} />}
+            items={[
+              { name: "Institute Home", path: "/institutional/institute-home" },
+              { name: "Institute About", path: "/institutional/institute-about" },
+              { name: "Institute Services", path: "/institutional/institute-services" },
+              { name: "Institute Framework", path: "/institutional/institute-framework" },
+              { name: "Institute Portfolio", path: "/institutional/institute-portfolio" },
+              { name: "Institute Contact", path: "/institutional/institute-contact" },
+              { name: "Institute Get In Touch", path: "/institutional/institute-get-in-touch" },
+            ]}
+          />
 
         </div>
       </div>
@@ -111,11 +85,47 @@ export default function SitemapPage() {
   );
 }
 
-/* REUSABLE BOX */
-function Box({ text }) {
+/* COLUMN COMPONENT */
+function Column({ title, items, icon }) {
   return (
-    <div className="bg-white px-5 py-2 rounded-lg shadow text-sm text-gray-700 whitespace-nowrap">
-      {text}
+    <div className="flex flex-col items-center relative">
+
+      {/* Line from top */}
+      <div className="w-[2px] h-12 bg-gray-400"></div>
+
+      {/* Title */}
+      <div className="flex items-center gap-2 bg-white px-6 py-3 rounded-xl shadow-md font-semibold mb-6">
+        {icon}
+        {title}
+      </div>
+
+      {/* Items */}
+      <div className="flex flex-col items-center mb-8">
+        {items.map((item, index) => (
+          <div key={index} className="flex flex-col items-center">
+
+            {/* Node */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                href={item.path}
+                className="flex items-center gap-2 bg-white px-5 py-3 rounded-xl shadow text-sm text-gray-700 hover:shadow-lg transition"
+              >
+                {item.icon}
+                {item.name}
+              </Link>
+            </motion.div>
+
+            {/* Connector line (except last) */}
+            {index !== items.length - 1 && (
+              <div className="w-[2px] h-6 bg-gray-400"></div>
+            )}
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
