@@ -93,7 +93,7 @@ export default function Home() {
           {/* ✅ Content (kept above background) */}
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <div className="grid justify-center">
-              <motion.div variants={fadeInUp} className="flex flex-col gap-8">
+              <motion.div variants={fadeInUp} className="flex flex-col gap-2">
                 <motion.div
                   variants={fadeInUp}
                   transition={{ delay: 0.1 }}
