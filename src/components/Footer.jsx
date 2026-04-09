@@ -2,6 +2,11 @@
 import React from "react";
 import { Globe, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Footer() {
   return (
@@ -143,9 +148,24 @@ export default function Footer() {
             © {new Date().getFullYear()} Bharatx Ventures Private Limited. All Rights Reserved.
           </p>
           <p>
-            <Link href="/sitemap" className="underline hover:text-green-700 transition">
-              Sitemap
-            </Link>
+            <motion.span
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              transition={{ delay: 0.1 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold uppercase tracking-wider"
+            >
+              {/* Ping Dot */}
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-600"></span>
+              </span>
+
+              {/* Clickable Link */}
+              <Link href="/sitemap" className="hover:underline">
+                Sitemap
+              </Link>
+            </motion.span>
           </p>
           <div className="flex gap-6">
             <Link href="/privacy">Privacy Policy</Link>
