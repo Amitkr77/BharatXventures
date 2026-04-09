@@ -76,7 +76,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative w-full min-h-screen flex items-start pt-6 overflow-hidden"
+          className="relative w-full min-h-screen flex items-start pt-4 overflow-hidden"
         >
           {/* ✅ Background Image */}
           <div className="absolute inset-0 z-0">
@@ -91,13 +91,13 @@ export default function Home() {
           </div>
 
           {/* ✅ Content (kept above background) */}
-          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
             <div className="grid justify-center">
-              <motion.div variants={fadeInUp} className="flex flex-col gap-2">
+              <motion.div variants={fadeInUp} className="flex flex-col gap-1">
                 <motion.div
                   variants={fadeInUp}
                   transition={{ delay: 0.1 }}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 mx-auto opacity-75"
+                  className="inline-flex items-center gap-1 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 mx-auto opacity-75"
                 >
                   <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
@@ -108,7 +108,7 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center mb-40"
+                  className="text-4xl lg:text-7xl font-black text-gray-100 leading-none tracking-tight item-center mb-50"
                 >
                   Building the{" "}
                   <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
