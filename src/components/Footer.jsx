@@ -142,7 +142,11 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Bharatx Ventures Private Limited. All Rights Reserved.
           </p>
-
+          <p>
+            <Link href="/sitemap" className="underline hover:text-green-700 transition">
+              Sitemap
+            </Link>
+          </p>
           <div className="flex gap-6">
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
