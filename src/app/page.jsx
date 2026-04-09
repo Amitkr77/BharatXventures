@@ -108,7 +108,7 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center mb-60"
+                  className="text-5xl lg:text-7xl font-black text-gray-100 leading-[1.1] tracking-tight item-center mb-40"
                 >
                   Building the{" "}
                   <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
