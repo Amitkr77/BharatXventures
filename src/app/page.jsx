@@ -127,14 +127,14 @@ export default function Home() {
                   className="text-4xl lg:text-7xl font-black text-gray-100 leading-[1.2] tracking-tight item-center mb-10"
                 >
                   Building the{" "}
-                  <span className="text-green-600 italic"> Next Generation</span> of Indian Companies
+                  <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
                   
                 </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-2xl text-white font-bold leading-relaxed max-w-4xl item-center mx-auto mb-6"
+                  className="text-2xl text-white font-bold leading-relaxed max-w-2xl item-center mx-auto mb-4"
                 >
                   BharatX Ventures partners with startups and SMEs to design, build, and scale high-impact businesses across India using AI, strategy, and execution
                 </motion.p>
@@ -149,7 +149,7 @@ export default function Home() {
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
-                      className="px-8 py-4 bg-white text-gray-900 rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:bg-green-500 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
+                      className="px-8 py-4 bg-white text-gray-900 rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:bg-green-600 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Explore Our Capabilities
                     </motion.button>
@@ -160,7 +160,7 @@ export default function Home() {
                       whileHover="hover"
                       whileTap="tap"
                       variants={buttonVariants}
-                      className="px-8 py-4 bg-white text-gray-900 rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:bg-green-500 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
+                      className="px-8 py-4 bg-white text-gray-900 rounded-xl font-bold text-lg shadow-lg shadow-green-200/50 hover:bg-green-600 hover:shadow-xl hover:shadow-green-300/40 hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Partner With Us
                     </motion.button>
@@ -256,7 +256,7 @@ export default function Home() {
                 key={index}
                 variants={cardHover}
                 whileHover="hover"
-                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-sm hover:shadow-xl"
+                className="group p-8 rounded-2xl bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-lg hover:shadow-2xl"
               >
                 <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-6">
                   <vertical.icon size={28} />
@@ -308,7 +308,7 @@ export default function Home() {
           <img
             src="/h1.png"
             alt="Background"
-            className="w-full h-full object-cover scale-105"
+            className="w-full h-full object-cover object-top scale-105"
           />
 
           {/* ✅ Better Overlay (more premium) */}
@@ -493,7 +493,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2"
               >
                 <span className="h-px w-12 bg-green-600"></span>
-                <span className="text-xs font-bold text-green-600 uppercase tracking-[0.2em]">
+                <span className="text-sm font-bold text-green-600 uppercase tracking-[0.2em]">
                   Leadership Message
                 </span>
               </motion.div>
@@ -1019,7 +1019,7 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="relative py-12 w-450 overflow-hidden rounded-2xl bg-green-800 text-white"
+              className="relative py-12 w-450 overflow-hidden rounded-sm bg-green-800 text-white"
             >
               {/* Background Decorative Element 
               <div className="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4 pointer-events-none">
