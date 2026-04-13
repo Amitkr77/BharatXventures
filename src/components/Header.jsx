@@ -51,7 +51,7 @@ useEffect(() => {
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200"
+            ? "bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200 t"
             : "bg-transparent"
         }`}
       >
@@ -91,7 +91,7 @@ useEffect(() => {
                   className={`relative text-lg font-bold transition-colors duration-200 ${
                     active
                       ? "text-green-700 font-bold"
-                      : "text-gray-700 hover:text-green-500"
+                      : "text-gray-400 hover:text-green-500"
                   }`}
                 >
                   {link.name}
@@ -135,7 +135,7 @@ useEffect(() => {
                 className={`hidden md:flex items-center justify-center px-5 h-10 rounded-lg text-lg font-bold transition-colors duration-200 ${
                   pathname === "/governance"
                     ? "bg-green-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-green-500"
+                    : "bg-white text-gray-400 hover:bg-green-500"
                 }`}
               >
                 Governance
@@ -146,7 +146,7 @@ useEffect(() => {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/contact-us"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-700 hover:bg-green-500"
+                    : "bg-white text-gray-400 hover:bg-green-500"
                 }`}
               >
                 Contact
@@ -157,7 +157,7 @@ useEffect(() => {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/institutional/institute-home"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-700 hover:bg-green-500"
+                    : "bg-white text-gray-400 hover:bg-green-500"
                 }`}
               >
                 Institutions

@@ -101,8 +101,8 @@ export default function Home() {
               className="w-full h-full object-cover object-top"
             />
 
-            {/* Optional dark overlay */}
-            <div className="absolute inset-0 bg-black/20"></div>
+            {/* Optional dark overlay 
+            <div className="absolute inset-0 bg-black/20"></div>*/}
           </div>
 
           {/* ✅ Content (kept above background) */}
