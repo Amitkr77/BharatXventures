@@ -88,7 +88,7 @@ useEffect(() => {
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative text-lg font-bold transition-colors duration-200 ${
+                  className={`relative text-lg font-bold transition-colors text-shadow-lg duration-200 ${
                     active
                       ? "text-green-700 font-bold"
                       : "text-gray-400 hover:text-green-500"
