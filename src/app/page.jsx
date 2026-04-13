@@ -98,7 +98,7 @@ export default function Home() {
               loop
               muted
               playsInline
-              className="w-full h-full object-cover object-top will-change-transform"
+              className="w-full h-full object-cover object-top"
               style={{ minWidth: "100%", minHeight: "100%" }}
             />
 
@@ -106,7 +106,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/20"></div>*/}
           </div>
 
-          {/* ✅ Content (kept above background) 
+          {/* ✅ Content (kept above background) */}
           <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
             <div className="grid justify-center">
               <motion.div variants={fadeInUp} className="flex flex-col gap-1">
@@ -197,9 +197,9 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
-              </motion.div>
+              </motion.div>*/}
             </div>
-          </div>*/}
+          </div>
         </motion.section>
 
       {/* Verticals Section */}
