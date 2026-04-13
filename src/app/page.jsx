@@ -107,7 +107,7 @@ export default function Home() {
           </div>
 
           {/* ✅ Content (kept above background) */}
-          <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <div className="relative z-10 max-w-5xl mx-auto px-4 text-center items-start pt-20">
             <div className="grid justify-center">
               <motion.div variants={fadeInUp} className="flex flex-col gap-1">
                 <motion.div
@@ -124,17 +124,17 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-4xl lg:text-7xl font-black text-gray-100 leading-[1.2] tracking-tight item-center mb-15"
+                  className="text-4xl lg:text-7xl font-black text-gray-100 leading-[1.2] tracking-tight item-center mb-10"
                 >
                   Building the{" "}
-                  <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
+                  <span className="text-green-600 italic"> Next Generation</span> of Indian Companies
                   
                 </motion.h2>
 
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-2xl text-white font-bold leading-relaxed max-w-4xl item-center mx-auto mb-10"
+                  className="text-2xl text-white font-bold leading-relaxed max-w-4xl item-center mx-auto mb-6"
                 >
                   BharatX Ventures partners with startups and SMEs to design, build, and scale high-impact businesses across India using AI, strategy, and execution
                 </motion.p>
