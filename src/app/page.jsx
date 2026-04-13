@@ -76,9 +76,9 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative w-full min-h-screen flex items-start pt-4 overflow-hidden"
+          className="relative w-full min-h-screen flex items-center overflow-hidden"
         >
-          {/* ✅ Background Image */}
+          {/* ✅ Background Image
           <div className="absolute inset-0 z-0">
             <img
               src="/hero.png" // 👉 replace with your image path
@@ -86,7 +86,22 @@ export default function Home() {
               className="w-full h-full object-cover object-top"
             />
             
-            {/* Optional dark overlay for better text visibility */}
+            {/* Optional dark overlay for better text visibility 
+            <div className="absolute inset-0 bg-black/20"></div>
+          </div> */}
+
+          {/* ✅ Background Video */}
+          <div className="absolute inset-0 z-0">
+            <video
+              src="/bharatx hero.mp4"  // 👉 replace with your video path
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover object-top"
+            />
+
+            {/* Optional dark overlay */}
             <div className="absolute inset-0 bg-black/20"></div>
           </div>
 
@@ -108,7 +123,7 @@ export default function Home() {
                 <motion.h2
                   variants={fadeInUp}
                   transition={{ delay: 0.2 }}
-                  className="text-4xl lg:text-7xl font-black text-gray-100 leading-none tracking-tight item-center mb-50"
+                  className="text-4xl lg:text-7xl font-black text-gray-100 leading-[1.2] tracking-tight item-center mb-15"
                 >
                   Building the{" "}
                   <span className="text-green-500 italic"> Next Generation</span> of Indian Companies
@@ -118,7 +133,7 @@ export default function Home() {
                 <motion.p
                   variants={fadeInUp}
                   transition={{ delay: 0.3 }}
-                  className="text-xl text-white font-bold leading-relaxed max-w-4xl item-center mx-auto"
+                  className="text-2xl text-white font-bold leading-relaxed max-w-4xl item-center mx-auto mb-10"
                 >
                   BharatX Ventures partners with startups and SMEs to design, build, and scale high-impact businesses across India using AI, strategy, and execution
                 </motion.p>

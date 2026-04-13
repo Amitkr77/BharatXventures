@@ -147,7 +147,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Bharatx Ventures Private Limited. All Rights Reserved.
           </p>
-          <p>
+          {/* <p>
             <motion.span
               initial="hidden"
               animate="visible"
@@ -155,18 +155,18 @@ export default function Footer() {
               transition={{ delay: 0.1 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold uppercase tracking-wider"
             >
-              {/* Ping Dot */}
+              {/* Ping Dot 
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-600"></span>
               </span>
 
-              {/* Clickable Link */}
+              {/* Clickable Link 
               <Link href="/sitemap" className="hover:underline">
                 Sitemap
               </Link>
             </motion.span>
-          </p>
+          </p> */}
           <div className="flex gap-6">
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
