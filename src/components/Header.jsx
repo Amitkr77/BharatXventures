@@ -88,11 +88,13 @@ useEffect(() => {
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative text-lg font-bold transition-colors text-shadow-lg duration-200 ${
+                  className={`relative text-lg font-bold transition-colors text-shadow-sm duration-200 ${
                     active
-                      ? "text-green-700 font-bold"
-                      : "text-gray-400 hover:text-green-500"
-                  }`}
+                       ? "text-green-700 text-bold"
+                        : pathname === "/"
+                          ? (scrolled ? "text-gray-400 hover:text-green-500" : "text-white hover:text-green-500")
+                          : "text-gray-400 hover:text-green-500"
+                    }`}
                 >
                   {link.name}
                   {active && (
@@ -135,7 +137,7 @@ useEffect(() => {
                 className={`hidden md:flex items-center justify-center px-5 h-10 rounded-lg text-lg font-bold transition-colors duration-200 ${
                   pathname === "/governance"
                     ? "bg-green-600 text-white"
-                    : "bg-white text-gray-400 hover:bg-green-500"
+                    : "bg-white text-gray-400 hover:bg-green-500 hover:text-white"
                 }`}
               >
                 Governance
@@ -146,7 +148,7 @@ useEffect(() => {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/contact-us"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-400 hover:bg-green-500"
+                    : "bg-white text-gray-400 hover:bg-green-500 hover:text-white"
                 }`}
               >
                 Contact
@@ -157,7 +159,7 @@ useEffect(() => {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/institutional/institute-home"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-400 hover:bg-green-500"
+                    : "bg-white text-gray-400 hover:bg-green-500 hover:text-white"
                 }`}
               >
                 Institutions
