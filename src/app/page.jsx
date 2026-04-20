@@ -102,8 +102,8 @@ export default function Home() {
               style={{ minWidth: "100%", minHeight: "100%" }}
             />
 
-            {/* Optional dark overlay 
-            <div className="absolute inset-0 bg-black/20"></div>*/}
+            {/* Optional dark overlay */}
+            <div className="absolute inset-0 bg-black/20"></div>
           </div>
 
           {/* ✅ Content (kept above background) */}
