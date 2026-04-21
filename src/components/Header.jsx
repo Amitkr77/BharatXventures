@@ -10,7 +10,7 @@ export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const darkRoutes = ["/service", "/project", "/industry"];
 useEffect(() => {
   const handleScroll = () => {
     setScrolled(window.scrollY > 50); // trigger after 50px scroll
@@ -88,19 +88,27 @@ useEffect(() => {
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative text-lg font-bold transition-colors text-shadow-sm duration-200 ${
+                  className={`relative text-lg font-bold transition-colors duration-200 ${
                     active
-                       ? "text-green-700"
-                        : pathname === "/"
-                          ? (scrolled ? "text-gray-400 hover:text-green-500" : "text-white hover:text-green-500")
-                          : "text-gray-400 hover:text-green-500"
-                    }`}
+                      ? "text-green-500"
+                      : pathname === "/"
+                        ? (scrolled
+                            ? "text-gray-800 hover:text-green-400"
+                            : "text-white hover:text-green-400")
+                        : darkRoutes.includes(pathname)
+                          ? (scrolled
+                              ? "text-gray-800 hover:text-green-400"
+                              : "text-white hover:text-green-400")
+                          : (scrolled
+                              ? "text-gray-800 hover:text-green-400"
+                              : "text-gray-800 hover:text-green-400")
+                  }`}
                 >
                   {link.name}
                   {active && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute left-0 bottom-[-6px] w-full h-0.5 bg-green-700 rounded-full"
+                      className="absolute left-0 bottom-[-6px] w-full h-0.5 bg-green-500 rounded-full"
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}
@@ -137,7 +145,7 @@ useEffect(() => {
                 className={`hidden md:flex items-center justify-center px-5 h-10 rounded-lg text-lg transition-colors duration-200 ${
                   pathname === "/governance"
                     ? "bg-green-600 text-white"
-                    : "bg-white text-gray-400 hover:bg-green-500 hover:text-white"
+                    : "bg-white text-gray-800 hover:bg-green-500 hover:text-white"
                 }`}
               >
                 Governance
@@ -148,7 +156,7 @@ useEffect(() => {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg transition-all duration-200 ${
                   pathname === "/contact-us"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-400 hover:bg-green-500 hover:text-white"
+                    : "bg-white text-gray-800 hover:bg-green-500 hover:text-white"
                 }`}
               >
                 Contact
@@ -159,7 +167,7 @@ useEffect(() => {
                 className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg transition-all duration-200 ${
                   pathname === "/institutional/institute-home"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-400 hover:bg-green-500 hover:text-white"
+                    : "bg-white text-gray-800 hover:bg-green-500 hover:text-white"
                 }`}
               >
                 Institutions
