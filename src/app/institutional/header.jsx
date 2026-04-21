@@ -57,7 +57,7 @@ export default function InstitutionalHeader() {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`relative text-sm font-bold transition-colors duration-200 ${
+                  className={`relative text-lg font-bold transition-colors duration-200 ${
                     active
                       ? "text-green-700 font-bold"
                       : "text-gray-700 hover:text-green-500"
@@ -84,7 +84,7 @@ export default function InstitutionalHeader() {
           {/* Back to Main Website */}
           <Link href="/">
               <button
-                className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
                     : "bg-white text-gray-700 hover:bg-green-500 hover:text-white"
@@ -97,7 +97,7 @@ export default function InstitutionalHeader() {
           {/* Primary CTA */}
           <Link href="/institutional/institute-get-in-touch">
               <button
-                className={`flex items-center justify-center px-6 h-10 rounded-lg text-sm font-bold transition-all duration-200 ${
+                className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/institutional/institute-get-in-touch"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
                     : "bg-white text-gray-700 hover:bg-green-500 hover:text-white"
