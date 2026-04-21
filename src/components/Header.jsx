@@ -177,7 +177,9 @@ useEffect(() => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700 focus:outline-none"
+            className={`lg:hidden focus:outline-none transition-colors duration-200 ${
+              scrolled ? "text-gray-800" : "text-white"
+            }`}
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -212,10 +214,14 @@ useEffect(() => {
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="size-10 bg-green-600 flex items-center justify-center rounded-lg">
-                      <Building2 className="text-white" size={24} />
+                    <div className="size-10 flex items-center justify-center rounded-lg overflow-hidden">
+                      <img
+                        src="/vlogo.png"   // 🔁 change to your logo path
+                        alt="Bharatx Logo"
+                        className="w-full h-full object-contain"
+                      />
                     </div>
-                    <h1 className="text-green-700 text-xl font-bold">Bharatx</h1>
+                    <h1 className="text-green-700 text-xl font-bold">BHARATX</h1>
                   </div>
                   <button onClick={toggleMobileMenu} aria-label="Close menu">
                     <X size={28} className="text-gray-700" />
