@@ -84,7 +84,7 @@ export default function InstitutionalHeader() {
           {/* Back to Main Website */}
           <Link href="/">
               <button
-                className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
+                className={`hidden lg:flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
                     : "bg-white text-gray-700 hover:bg-green-500 hover:text-white"
@@ -97,7 +97,7 @@ export default function InstitutionalHeader() {
           {/* Primary CTA */}
           <Link href="/institutional/institute-get-in-touch">
               <button
-                className={`flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
+                className={`hidden lg:flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
                   pathname === "/institutional/institute-get-in-touch"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
                     : "bg-white text-gray-700 hover:bg-green-500 hover:text-white"
@@ -142,8 +142,12 @@ export default function InstitutionalHeader() {
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="size-10 bg-green-600 flex items-center justify-center rounded-lg">
-                      <Building2 className="text-white" size={24} />
+                    <div className="size-10 flex items-center justify-center rounded-lg">
+                      <img
+                        src="/vlogo.png"
+                        alt="Logo"
+                        className="h-6 w-auto object-contain"
+                      />
                     </div>
                     <h1 className="text-green-700 text-xl font-bold">Bharatx</h1>
                   </div>
