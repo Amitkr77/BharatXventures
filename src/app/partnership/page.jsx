@@ -172,7 +172,7 @@ export default function EcosystemPage({ fadeInUp, buttonVariants }) {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative overflow-hidden pt-16 pb-24"
+          className="relative overflow-hidden pt-30 pb-24"
         >
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <motion.div variants={fadeInUp} className="relative z-10">
