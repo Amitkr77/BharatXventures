@@ -3,7 +3,7 @@
 import { React, useState }  from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Building2, ArrowRight } from "lucide-react";
+import { Menu, X, Building2, ArrowRight, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 
@@ -28,9 +28,9 @@ export default function InstitutionalHeader() {
 ];
   
    const extraItems = [
-    { name: "BACK TO MAIN", path: "/" },
-    { name: "GET IN TOUCH", path: "/institutional/institute-get-in-touch" },
-  ];
+  { name: "BACK TO MAIN", path: "/", icon: Building2 },
+  { name: "GET IN TOUCH", path: "/institutional/institute-get-in-touch", icon: Phone },
+];
 
   return (
     <header className="w-full sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
@@ -187,6 +187,7 @@ export default function InstitutionalHeader() {
                   <div className="grid grid-cols-2 gap-3">
                     {extraItems.map((item, index) => {
                       const active = isActive(item.path);
+                      const Icon = item.icon;
 
                       return (
                         <motion.div
@@ -209,7 +210,7 @@ export default function InstitutionalHeader() {
                               }`}
                             >
                               {/* Optional Icon */}
-                              <ArrowRight
+                              <Icon
                                 size={22}
                                 className={`transition-colors ${
                                   active
