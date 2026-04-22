@@ -59,6 +59,7 @@ export default function InstitutionalHeader() {
 ];
 
   return (
+    <>
    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
@@ -157,7 +158,9 @@ export default function InstitutionalHeader() {
           </button>
         </div>
       </div>
-      {/* Mobile Slide-in Menu */}
+    </header>
+
+    {/* Mobile Slide-in Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -167,7 +170,7 @@ export default function InstitutionalHeader() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[90] lg:hidden"
               onClick={toggleMobileMenu}
             />
 
@@ -177,7 +180,7 @@ export default function InstitutionalHeader() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-[100] lg:hidden overflow-y-auto"
             >
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between">
@@ -198,6 +201,14 @@ export default function InstitutionalHeader() {
               </div>
 
               <div className="p-6 flex flex-col gap-6">
+                <div className="flex justify-center">
+                  <p className="text-xs font-semibold text-green-600 uppercase tracking-wider px-4 py-1.5 bg-green-50 rounded-full border border-green-200">
+                    Menu
+                  </p>
+                </div>
+                <div className="flex justify-center mb-6">
+                  <div className="w-60 h-[2px] bg-gradient-to-r from-transparent via-slate-300 to-transparent rounded-full" />
+                </div>
                 {/* Main Nav */}
                 {navItems.map((item) => {
                   const active = isActive(item.path);
@@ -280,7 +291,6 @@ export default function InstitutionalHeader() {
           </>
         )}
       </AnimatePresence>
-    </header>
-    
+    </>
   );
 }
