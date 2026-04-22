@@ -63,7 +63,7 @@ export default function InstitutionalHeader() {
    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "h-[80px] bg-white/90 backdrop-blur-md shadow-md border-b border-slate-100"
+          ? "h-[80px] bg-white/90 backdrop-blur-md shadow-md border-b border-transparent"
           : "h-[80px] bg-transparent"
       }`}
     >
