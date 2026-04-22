@@ -150,7 +150,11 @@ export default function InstitutionalHeader() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700 focus:outline-none"
+            className={`lg:hidden focus:outline-none transition-colors ${
+                isSpecialPage && !scrolled
+                  ? "text-white"
+                  : "text-gray-700"
+              }`}
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -217,8 +221,8 @@ export default function InstitutionalHeader() {
                       key={item.name}
                       href={item.path}
                       onClick={toggleMobileMenu}
-                      className={`flex items-center justify-between text-lg font-medium ${
-                        active ? "text-green-600" : "text-gray-800"
+                      className={`flex items-center justify-between p-2 text-lg font-medium ${
+                        active ? "text-green-600 border rounded-full bg-green-100 border-transparent" : "text-gray-800 border-transparent hover:bg-gray-300 rounded-full"
                       }`}
                     >
                       {item.name}
