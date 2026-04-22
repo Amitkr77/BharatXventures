@@ -81,17 +81,19 @@ export default function InstitutionalHeader() {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`relative text-lg font-bold transition-colors duration-200 ${
+                  className={`relative text-lg font-bold transition-colors duration-100 ${
                     active
-                      ? "text-green-700 font-bold"
-                      : "text-gray-700 hover:text-green-500"
+                      ? "text-green-500"
+                      : isSpecialPage && !scrolled
+                      ? "text-white hover:text-green-400"
+                      : "text-gray-700 hover:text-green-400"
                   }`}
                 >
                   {item.name}
                   {active && (
                     <motion.span
                       layoutId="underline"
-                      className="absolute left-0 bottom-[-6px] w-full h-0.5 bg-green-700 rounded-full"
+                      className="absolute left-0 bottom-[-2px] w-full h-0.5 bg-green-500 rounded-full"
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
                       transition={{ duration: 0.3, ease: "easeOut" }}

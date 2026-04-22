@@ -105,7 +105,7 @@ export default function ContactPage() {
     <main className="bg-[#f5f6f8] text-[#1A3C34]">
 
       {/* ================= HERO ================= */}
-      <section className="relative bg-white pt-20 pb-28 overflow-hidden">
+      <section className="relative bg-white pt-32 pb-28 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-[#1A3C34]/5 -skew-x-12 translate-x-1/2"></div>
 
         <motion.div
