@@ -1,178 +1,194 @@
 "use client";
 import React from "react";
-import { Globe, Mail, MapPin } from "lucide-react";
+import { Globe, Mail, MapPin, ArrowUpRight, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+
+// --- Animations ---
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+  },
+};
+
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden 
-    bg-[linear-gradient(135deg,#dff5ec,#c7eadb,#eafaf4,#d7f3e7)] 
-    text-gray-800 pt-20 pb-10 border-t border-green-100">
-
-      {/* ✅ Animated Gradient (optional smooth effect) */}
-      <div className="absolute inset-0 opacity-60 bg-[linear-gradient(135deg,#e6f7f0,#cdeee0,#f2fbf7,#dff5ec)] animate-[pulse_8s_ease-in-out_infinite]"></div>
-
-      {/* ✅ Glass Floating Shapes (NEW BACKGROUND DESIGN) */}
-      <div className="absolute inset-0 pointer-events-none">
-
-        <div className="absolute top-10 left-10 w-40 h-40 rounded-2xl 
-        bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg"></div>
-
-        {/*<div className="absolute top-32 left-1/3 w-52 h-52 rounded-2xl 
-        bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg"></div>*/}
-
-        <div className="absolute top-16 right-20 w-44 h-44 rounded-2xl 
-        bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg"></div>
-
-        <div className="absolute bottom-16 left-24 w-48 h-48 rounded-2xl 
-        bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg"></div>
-
-        <div className="absolute bottom-20 right-32 w-40 h-40 rounded-2xl 
-        bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg"></div>
+    <footer className="relative overflow-hidden bg-gradient-to-b from-emerald-50/50 to-white text-gray-800 pt-24 pb-8 border-t border-emerald-100">
+      
+      {/* 1. Modern Background: Topographic Dot Grid */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(#10b981 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
       </div>
 
-      {/* ✅ Your Original Glow (kept) */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,197,94,0.08),transparent_70%)] pointer-events-none"></div>
+      {/* 2. Subtle Glow at the Top */}
+      <div className="absolute top-0 left-0 right-0 h-[300px] bg-gradient-to-b from-green-50/60 to-transparent pointer-events-none" />
 
-      {/* ================= ORIGINAL CONTENT (UNCHANGED) ================= */}
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-4 gap-12 mb-16">
+      {/* ================= CONTENT ================= */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="relative max-w-7xl mx-auto px-6 z-10"
+      >
+        <div className="grid lg:grid-cols-4 gap-8 lg:gap-12 mb-20">
           
           {/* ================= BRAND ================= */}
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-4">
-              <img
-                src="/vlogo.png"
-                alt="Logo"
-                width={70}
-                height={70}
-                className="object-contain drop-shadow-md"
-              />
-
+          <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+            <div className="flex items-center gap-3">
+              <div className="w-14 h-14 rounded-xl bg-white border border-emerald-100 shadow-sm flex items-center justify-center overflow-hidden">
+                <img
+                  src="/vlogo.png"
+                  alt="Bharatx Logo"
+                  className="object-contain p-1.5"
+                />
+              </div>
               <div>
-                <h2 className="text-2xl font-extrabold tracking-tight text-green-900">
+                <h2 className="text-xl font-extrabold tracking-tight text-emerald-900">
                   Bharatx Ventures
                 </h2>
-                <span className="text-xs text-green-700 font-semibold tracking-widest uppercase block">
-                  PRIVATE LIMITED
+                <span className="text-[10px] text-emerald-600 font-bold tracking-[0.2em] uppercase block leading-tight">
+                  Private Limited
                 </span>
               </div>
             </div>
 
-            <p className="text-green-700 text-sm max-w-md leading-relaxed font-medium">
-              {`A premier venture development firm committed to institutional
+            <p className="text-slate-600 text-sm leading-relaxed font-medium">
+              A premier venture development firm committed to institutional
               excellence and scaling India's industrial backbone through
-              strategic innovation and capital.`}
+              strategic innovation and capital.
             </p>
 
             {/* SOCIAL ICONS */}
-            <div className="flex gap-4 mt-2">
-              {[Globe, Mail, MapPin].map((Icon, i) => (
+            <div className="flex gap-3">
+              {[Linkedin, Twitter, Globe].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
-                  className="group w-12 h-12 rounded-xl bg-white/60 backdrop-blur-md border border-green-100 flex items-center justify-center shadow-sm hover:shadow-md hover:bg-green-500 transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-white/60 backdrop-blur-sm border border-emerald-200 flex items-center justify-center text-emerald-700 hover:bg-emerald-600 hover:text-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
-                  <Icon
-                    size={18}
-                    className="text-green-700 group-hover:text-white transition"
-                  />
+                  <Icon size={18} strokeWidth={2} />
                 </a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          {/* FAST LINKS */}
-          <div className="flex flex-col gap-6 bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition">
-            <h4 className="font-bold text-green-800 uppercase tracking-widest text-sm">
-              Fast Links
+          {/* ================= FAST LINKS ================= */}
+          <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+            <h4 className="font-bold text-emerald-900 uppercase tracking-widest text-xs mb-1">
+              Explore
             </h4>
 
-            <ul className="flex flex-col gap-3 text-sm font-medium text-gray-700">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about-us">About Us</Link></li>
-              <li><Link href="/service">Services</Link></li>
-              <li><Link href="/contact-us">Contact</Link></li>
+            <ul className="flex flex-col gap-3 text-sm font-medium text-slate-600">
+              <FooterLink href="/">Home</FooterLink>
+              <FooterLink href="/about-us">About Us</FooterLink>
+              <FooterLink href="/service">Services</FooterLink>
+              <FooterLink href="/contact-us">Contact</FooterLink>
             </ul>
-          </div>
+          </motion.div>
 
-          {/* REGULATORY */}
-          <div className="flex flex-col gap-6 bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition">
-            <h4 className="font-bold text-green-800 uppercase tracking-widest text-sm">
+          {/* ================= REGULATORY ================= */}
+          <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+            <h4 className="font-bold text-emerald-900 uppercase tracking-widest text-xs mb-1">
               Regulatory Identity
             </h4>
 
-            <ul className="flex flex-col gap-4 text-sm">
-              <li>
-                <span className="block text-green-600 text-xs font-semibold uppercase">CIN</span>
-                <span className="font-medium text-gray-700">U01139BR2026PTC083018</span>
-              </li>
-              <li>
-                <span className="block text-green-600 text-xs font-semibold uppercase">PAN</span>
-                <span className="font-medium text-gray-700">AAOCB4970H</span>
-              </li>
-            </ul>
-          </div>
+            <div className="p-6 rounded-2xl bg-white/60 backdrop-blur-md border border-emerald-100 shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300">
+              <ul className="flex flex-col gap-5">
+                <li>
+                  <span className="block text-emerald-600 text-[10px] font-bold uppercase tracking-wider mb-1">Corporate Identity</span>
+                  <span className="block text-slate-800 font-mono text-sm bg-emerald-50 px-2 py-1 rounded border border-emerald-100">
+                    U01139BR2026PTC083018
+                  </span>
+                </li>
+                <li>
+                  <span className="block text-emerald-600 text-[10px] font-bold uppercase tracking-wider mb-1">Tax Identity</span>
+                  <span className="block text-slate-800 font-mono text-sm bg-emerald-50 px-2 py-1 rounded border border-emerald-100">
+                    AAOCB4970H
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
 
-          {/* ADDRESS */}
-          <div className="flex flex-col gap-6 bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition">
-            <h4 className="font-bold text-green-800 uppercase tracking-widest text-sm">
-              Registered Office
+          {/* ================= ADDRESS ================= */}
+          <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+            <h4 className="font-bold text-emerald-900 uppercase tracking-widest text-xs mb-1">
+              Contact Us
             </h4>
 
-            <div className="text-sm text-gray-700 leading-relaxed">
-              <span className="block text-green-600 font-semibold uppercase text-xs mb-1">
-                Gaya, Bihar
-              </span>
+            <div className="p-6 rounded-2xl bg-white/60 backdrop-blur-md border border-emerald-100 shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300">
+              <div className="flex items-start gap-3 mb-5">
+                <div className="mt-1 p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                  <MapPin size={18} strokeWidth={2} />
+                </div>
+                <div>
+                  <span className="block text-emerald-600 text-[10px] font-bold uppercase tracking-wider mb-1">
+                    Registered Office
+                  </span>
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    Bihar Infrastructure Hub,<br />
+                    Gaya, Bihar, India
+                  </p>
+                </div>
+              </div>
 
-              Bharatx Ventures Private Limited
-              <br />
-              Bihar Infrastructure Hub
-              <br />
-              Gaya, India
+              <div className="w-full h-px bg-emerald-100/50 mb-5"></div>
+
+              <div className="flex items-start gap-3">
+                <div className="mt-1 p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+                  <Mail size={18} strokeWidth={2} />
+                </div>
+                <div>
+                  <span className="block text-emerald-600 text-[10px] font-bold uppercase tracking-wider mb-1">
+                    Email
+                  </span>
+                  <a href="mailto:info@bharatx.ventures" className="text-slate-700 text-sm font-medium hover:text-emerald-600 transition-colors">
+                    info@bharatx.ventures
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
+
         </div>
 
         {/* Divider */}
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-green-200 to-transparent mb-6"></div>
+        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-emerald-200 to-transparent mb-8"></div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-          <p>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <p className="font-medium">
             © {new Date().getFullYear()} Bharatx Ventures Private Limited. All Rights Reserved.
           </p>
-          {/* <p>
-            <motion.span
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold uppercase tracking-wider"
-            >
-              {/* Ping Dot 
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-600"></span>
-              </span>
-
-              {/* Clickable Link 
-              <Link href="/sitemap" className="hover:underline">
-                Sitemap
-              </Link>
-            </motion.span>
-          </p> */}
-          <div className="flex gap-6">
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
+          <div className="flex gap-6 font-semibold">
+            <Link href="/privacy" className="hover:text-emerald-600 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-emerald-600 transition-colors">Terms of Service</Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
+  );
+}
+
+// Reusable Link Component with Hover Arrow
+function FooterLink({ href, children }) {
+  return (
+    <li>
+      <Link 
+        href={href} 
+        className="flex items-center gap-2 group text-slate-600 hover:text-emerald-700 transition-all duration-300 w-max"
+      >
+        {children}
+        <ArrowUpRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-emerald-500" />
+      </Link>
+    </li>
   );
 }

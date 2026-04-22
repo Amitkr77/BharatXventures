@@ -11,6 +11,7 @@ import {
   CheckCircle,
   Settings,
   DollarSign,
+  ChevronDown,
   Cpu,
   Building2,
   Wheat,
@@ -22,6 +23,10 @@ import {
   ArrowDown,
   BarChart3,
   Globe,
+  Sparkles,
+  Hexagon,
+  Target,
+  ChevronRight,
 } from "lucide-react";
 
 // Animation Variants (consistent across your site)
@@ -334,151 +339,176 @@ export default function Home() {
       <motion.section
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={staggerContainer}
-        className="relative py-2 overflow-hidden"
+        className="relative py-24 lg:py-32 overflow-hidden bg-slate-950"
       >
-        {/* ✅ Background Image */}
+        {/* Background Image & Green Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src="/h1.png"
             alt="Background"
-            className="w-full h-full object-cover object-top scale-105"
+            className="w-full h-full object-cover object-top mix-blend-overlay opacity-40"
           />
+          {/* Rich Green Gradient Overlay - Defines the Theme */}
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/90 via-slate-900/95 to-emerald-900/90"></div>
 
-          {/* ✅ Better Overlay (more premium) */}
-          <div className="absolute inset-0 bg-green-900/40 backdrop-blur-[2px]"></div>
+          {/* Grid Pattern Texture */}
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: "radial-gradient(#10b981 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
+            }}
+          />
         </div>
 
-        {/* ✅ Content */}
-        <div className="relative z-10 pt-10 pb-5 max-w-7xl mx-auto px-6">
-          <motion.div
-            variants={fadeInUp}
-            className="mb-8 flex flex-col items-center text-center"
-          >
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl lg:text-4xl font-bold text-white mb-4"
-            >
-              Venture Development Framework
-            </motion.h2>
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          {/* --- SECTION 1: THE GRID (Framework) --- */}
+          <motion.div variants={fadeInUp} className="mb-28">
+            <div className="flex flex-col items-center text-center mb-12">
+              <span className="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-[0.2em] text-emerald-400 uppercase bg-emerald-500/10 rounded-full border border-emerald-500/30 backdrop-blur-sm">
+                Framework
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Venture Development Framework
+              </h2>
+              <div className="h-[2px] w-24 bg-gradient-to-r from-emerald-500 via-emerald-400 to-transparent rounded-full"></div>
+            </div>
 
-            {/* ✅ FIXED width */}
-            <div className="h-1 w-40 bg-white/80 rounded-full"></div>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Lightbulb,
-                title: "Identification",
-                desc: "Market gap analysis and thesis development",
-              },
-              {
-                icon: Settings,
-                title: "Architecting",
-                desc: "Strategic blueprinting and team formation",
-              },
-              {
-                icon: DollarSign,
-                title: "Capitalization",
-                desc: "Direct investment and institutional funding",
-              },
-              {
-                icon: TrendingUp,
-                title: "Scale-Up",
-                desc: "Operational excellence and market dominance",
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                variants={cardHover}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover="hover"
-                className="group p-10 rounded-2xl bg-white/90 backdrop-blur-md border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-2"
-              >
-                <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white group-hover:rotate-6 transition-all mb-6">
-                  <step.icon size={28} />
-                </div>
-
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {step.title}
-                </h3>
-
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {step.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        {/* Our Approach */}
-        <div className="relative z-10 pt-10 pb-5 max-w-7xl mx-auto px-6">
-          <motion.div
-            variants={fadeInUp}
-            className="mb-6 flex flex-col items-center text-center"
-          >
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl lg:text-4xl font-bold text-white mb-4"
-            >
-              Our Approach
-            </motion.h2>
-
-            <div className="h-1 w-40 bg-white/80 rounded-full"></div>
-          </motion.div>
-
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {[
-              { title: "Idea", icon: Lightbulb },
-              { title: "Validation", icon: CheckCircle },
-              { title: "Structuring", icon: Settings },
-              { title: "Capital", icon: DollarSign },
-              { title: "Scale", icon: TrendingUp },
-            ].map((step, index) => (
-              <React.Fragment key={index}>
-                {/* Card */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: Lightbulb,
+                  title: "Identification",
+                  desc: "Market gap analysis and thesis development",
+                },
+                {
+                  icon: Settings,
+                  title: "Architecting",
+                  desc: "Strategic blueprinting and team formation",
+                },
+                {
+                  icon: DollarSign,
+                  title: "Capitalization",
+                  desc: "Direct investment and institutional funding",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Scale-Up",
+                  desc: "Operational excellence and market dominance",
+                },
+              ].map((step, index) => (
                 <motion.div
-                  variants={cardHover}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover="hover"
-                  className="group w-[180px] h-[180px] flex flex-col items-center justify-center rounded-full bg-white border border-gray-200 hover:border-green-500 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 text-center font-bold"
+                  key={index}
+                  whileHover={{ y: -5 }}
+                  className="group relative p-8 rounded-2xl bg-emerald-950/40 backdrop-blur-md border border-emerald-500/20 hover:border-emerald-400 hover:bg-emerald-900/50 transition-all duration-300 shadow-xl hover:shadow-emerald-500/20"
                 >
-                  <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all mb-3">
-                    <step.icon size={26} />
+                  {/* Step Number */}
+                  <span className="absolute top-4 right-4 text-xs font-mono font-bold text-emerald-500/30 group-hover:text-emerald-400 transition-colors">
+                    0{index + 1}
+                  </span>
+
+                  <div className="w-14 h-14 mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-300">
+                    <step.icon size={28} strokeWidth={2} />
                   </div>
 
-                  <h3 className="text-xl font-extrabold text-green-600 leading-tight px-2">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-300 transition-colors">
                     {step.title}
                   </h3>
-                </motion.div>
 
-                {/* ✅ Modern Arrow */}
-                {index !== 4 && (
-                  <span className="text-gray-100 text-2xl font-bold hidden md:block mx-4">
-                    →
-                  </span>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-          {/* Bottom Text */}
-          <motion.p
-            variants={fadeInUp}
-            className="text-center text-white font-bold mt-4"
-          >
-            Delivering measurable, scalable outcomes through a structured model.
-          </motion.p>
+                  <p className="text-sm text-emerald-100/70 leading-relaxed">
+                    {step.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* --- SECTION 2: THE FLOW (Approach) --- */}
+          <motion.div variants={fadeInUp} className="relative">
+            <div className="flex flex-col items-center text-center mb-16">
+              <span className="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-[0.2em] text-emerald-400 uppercase bg-emerald-500/10 rounded-full border border-emerald-500/30 backdrop-blur-sm">
+                Approach
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                Our Approach
+              </h2>
+              <div className="h-[2px] w-24 bg-gradient-to-r from-emerald-500 via-emerald-400 to-transparent rounded-full"></div>
+            </div>
+
+            {/* Flow Container */}
+            <div className="relative w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+              {/* Connecting Line (Desktop) */}
+              <div className="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent -z-10 -translate-y-1/2" />
+
+              {/* Mobile Connector Line */}
+              <div className="md:hidden absolute left-[50%] top-0 bottom-0 w-[2px] bg-gradient-to-b from-emerald-500/30 to-transparent -z-10" />
+
+              {[
+                { title: "Idea", icon: Lightbulb },
+                { title: "Validation", icon: CheckCircle },
+                { title: "Structuring", icon: Settings },
+                { title: "Capital", icon: DollarSign },
+                { title: "Scale", icon: TrendingUp },
+              ].map((step, index) => (
+                <React.Fragment key={index}>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="relative group flex flex-col items-center justify-center w-[160px] h-[160px] text-center z-10"
+                  >
+                    {/* Connector Dots on Line (Desktop Only) */}
+                    {index !== 4 && (
+                      <div className="hidden md:block absolute top-1/2 right-0 w-2 h-2 bg-emerald-500 rounded-full translate-x-1/2 -translate-y-1/2 opacity-50" />
+                    )}
+                    {index !== 0 && (
+                      <div className="hidden md:block absolute top-1/2 left-0 w-2 h-2 bg-emerald-500 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50" />
+                    )}
+
+                    {/* The Circle */}
+                    <div className="absolute inset-0 rounded-full border-2 border-emerald-500/30 bg-slate-900/80 backdrop-blur-md transition-all duration-500 group-hover:border-emerald-400 group-hover:shadow-[0_0_40px_rgba(16,185,129,0.2)] group-hover:scale-105" />
+
+                    {/* Inner Content */}
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-14 h-14 mb-3 bg-emerald-500 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                        <step.icon size={24} strokeWidth={2.5} />
+                      </div>
+
+                      <h3 className="text-sm font-bold text-emerald-100 tracking-wide uppercase group-hover:text-white transition-colors">
+                        {step.title}
+                      </h3>
+                    </div>
+                  </motion.div>
+
+                  {/* Spacer / Arrow for Mobile */}
+                  {index !== 4 && (
+                    <div className="md:hidden text-emerald-500/50">
+                      <ChevronDown size={20} />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+
+            {/* Bottom Statement */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-12 text-center"
+            >
+              <div className="inline-block px-6 py-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 backdrop-blur-sm">
+                <p className="text-sm font-medium text-emerald-300 tracking-wide">
+                  Delivering measurable, scalable outcomes through a structured
+                  model.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -586,61 +616,86 @@ export default function Home() {
       </motion.section>
 
       {/* Stats Section */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
-        variants={staggerContainer}
-        className="py-6 bg-green-800 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
-        </div>
+       <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+      variants={staggerContainer}
+      className="relative py-20 lg:py-24 bg-emerald-950 overflow-hidden border-y border-emerald-900"
+    >
+      {/* Atmospheric Gold Glows */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-yellow-500 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-emerald-600 rounded-full blur-[120px]"></div>
+      </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col gap-4 border-l-2 border-primary pl-8"
-            >
-              <p className="text-gold text-sm font-bold tracking-widest uppercase">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-emerald-900/50">
+          
+          {/* Stat 1 */}
+          <motion.div variants={fadeInUp} className="flex flex-col items-center justify-center gap-4 px-4 py-6 md:py-0 group">
+            <div className="w-14 h-14 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center mb-2 group-hover:bg-yellow-500/20 group-hover:scale-110 transition-all duration-500">
+              <TrendingUp className="text-yellow-400" size={28} />
+            </div>
+            
+            <div className="flex flex-col">
+              <p className="text-emerald-300/80 text-xs font-bold tracking-[0.2em] uppercase mb-2">
                 Cumulative Scale
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-gold">
+              {/* Metallic Gold Gradient Text */}
+              <h3 className="text-5xl lg:text-6xl font-black font-sans leading-none bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-700 text-transparent bg-clip-text drop-shadow-sm">
                 100Cr+
               </h3>
-              <p className="text-gold font-medium">
-                Enterprise Value Generated
-              </p>
-            </motion.div>
+            </div>
+            
+            <p className="text-slate-300 font-medium text-sm mt-2">
+              Enterprise Value Generated
+            </p>
+          </motion.div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col gap-4 border-l-2 border-primary pl-8"
-            >
-              <p className="text-gold text-sm font-bold tracking-widest uppercase">
+          {/* Stat 2 */}
+          <motion.div variants={fadeInUp} className="flex flex-col items-center justify-center gap-4 px-4 py-6 md:py-0 group">
+            <div className="w-14 h-14 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center mb-2 group-hover:bg-yellow-500/20 group-hover:scale-110 transition-all duration-500">
+              <Globe className="text-yellow-400" size={28} />
+            </div>
+            
+            <div className="flex flex-col">
+              <p className="text-emerald-300/80 text-xs font-bold tracking-[0.2em] uppercase mb-2">
                 Ecosystem Impact
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-gold">50+</h3>
-              <p className="text-gold font-medium">
-                Ventures Supported Globally
-              </p>
-            </motion.div>
+              <h3 className="text-5xl lg:text-6xl font-black font-sans leading-none bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-700 text-transparent bg-clip-text drop-shadow-sm">
+                50+
+              </h3>
+            </div>
+            
+            <p className="text-slate-300 font-medium text-sm mt-2">
+              Ventures Supported Globally
+            </p>
+          </motion.div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col gap-4 border-l-2 border-primary pl-8 last:border-r-2"
-            >
-              <p className="text-gold text-sm font-bold tracking-widest uppercase">
-                Cross-Sector Expertise
+          {/* Stat 3 */}
+          <motion.div variants={fadeInUp} className="flex flex-col items-center justify-center gap-4 px-4 py-6 md:py-0 group">
+            <div className="w-14 h-14 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center mb-2 group-hover:bg-yellow-500/20 group-hover:scale-110 transition-all duration-500">
+              <Building2 className="text-yellow-400" size={28} />
+            </div>
+            
+            <div className="flex flex-col">
+              <p className="text-emerald-300/80 text-xs font-bold tracking-[0.2em] uppercase mb-2">
+                Cross-Sector
               </p>
-              <h3 className="text-5xl lg:text-6xl font-black text-gold">10+</h3>
-              <p className="text-gold font-medium">Core Industries Served</p>
-            </motion.div>
-          </div>
+              <h3 className="text-5xl lg:text-6xl font-black font-sans leading-none bg-gradient-to-br from-yellow-200 via-yellow-400 to-yellow-700 text-transparent bg-clip-text drop-shadow-sm">
+                10+
+              </h3>
+            </div>
+            
+            <p className="text-slate-300 font-medium text-sm mt-2">
+              Core Industries Served
+            </p>
+          </motion.div>
+
         </div>
-      </motion.section>
+      </div>
+    </motion.section>
 
       {/* We Serve Section */}
       <motion.section
@@ -1053,12 +1108,12 @@ export default function Home() {
       </motion.section>
 
       {/* CTA Card */}
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center ">
         <motion.section
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative py-12 w-450 overflow-hidden rounded-sm bg-green-800 text-white"
+          className="relative py-12 w-450 overflow-hidden rounded-sm bg-green-900/85 text-white"
         >
           {/* Background Decorative Element 
               <div className="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4 pointer-events-none">
@@ -1067,52 +1122,131 @@ export default function Home() {
                 </svg>
               </div>*/}
           {/* ✅ Background Image */}
-          <div className="absolute inset-0 z-0">
+          {/* <div className="absolute inset-0 z-0">
             <motion.img
               variants={imageReveal}
               src="/h2.webp"
               alt="Background"
               className="w-full h-full object-cover scale-105"
             />
-          </div>
+          </div> */}
 
           {/* ✅ Content */}
-          <div className="relative z-10 pt-10 pb-5 max-w-7xl mx-auto px-6"></div>
-          {/* Content */}
-          <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-            {/* Accent Line */}
-            <div className="w-12 h-[2px] bg-[var(--color-accent)] mx-auto mb-10"></div>
-            {/* Heading */}
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tight">
-              Ready to Scale Your <br />
-              <span className="text-[var(--color-accent)]">
-                Institutional Impact?
-              </span>
-            </h2>
-            {/* Description */}
-            <p className="text-lg md:text-xl text-gray-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-              Partner with Bharatx Ventures to leverage world-class operational
-              expertise, strategic capital, and a legacy of governance
-              excellence.
-            </p>
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-              {/* Primary CTA */}
-              <a
-                href="/contact-us"
-                className="px-10 py-4 border border-green-500 bg-green-400 text-[var(--color-primary)] font-extrabold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:scale-105 transition-all duration-300"
+          <section className="relative py-24 lg:py-32 overflow-hidden bg-[#0B0F19]/50 text-white border-y border-white/10">
+            {/* 1. Technical Grid Background Pattern */}
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage:
+                  "radial-gradient(#22c55e 1px, transparent 1px)",
+                backgroundSize: "40px 40px",
+              }}
+            />
+
+            {/* 2. Subtle Diagonal Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-emerald-900/10" />
+
+            {/* 3. Decorative Top Line */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+
+            <div className="relative z-10 max-w-5xl mx-auto px-6">
+              {/* Label / Badge */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center gap-3 mb-8"
               >
-                Contact Partnership
-              </a>
-              {/* Secondary CTA */}
-              <a
-                href="/service"
-                className="px-10 py-4 border border-green-500 bg-green-400 text-[var(--color-primary)] font-extrabold text-xs uppercase tracking-[0.2em] rounded-md hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:scale-105 transition-all duration-300"
+                <div className="h-px w-10 bg-emerald-500"></div>
+                <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-semibold">
+                  Partnership Opportunity
+                </span>
+              </motion.div>
+
+              {/* Main Heading */}
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-[1.1]"
               >
-                View Capabilities
-              </a>
+                Ready to Scale Your <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-white">
+                  Institutional Impact?
+                </span>
+              </motion.h2>
+
+              {/* Description with Icon */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-12 max-w-3xl"
+              >
+                <p className="text-lg md:text-xl text-slate-300 font-normal leading-relaxed flex-1">
+                  Partner with Bharatx Ventures to leverage world-class
+                  operational expertise, strategic capital, and a legacy of
+                  governance excellence.
+                </p>
+
+                {/* Decorative Stat/Icon */}
+                <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded backdrop-blur-sm">
+                  <Target className="text-emerald-500" size={20} />
+                  <div className="text-xs font-mono text-emerald-300 uppercase">
+                    High ROI Focus
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Buttons - Block Style */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+              >
+                {/* Primary - Solid Green, Sharp Edges */}
+                <motion.a
+                  href="/contact-us"
+                  whileHover={{ scale: 1.02, x: 5 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-all duration-300 clip-corner-sm"
+                  style={{
+                    clipPath:
+                      "polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%)",
+                  }} /* Techy corner cut */
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    CONTACT PARTNERSHIP
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </motion.a>
+
+                {/* Secondary - Transparent with Solid Border */}
+                <motion.a
+                  href="/service"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 text-base font-bold text-white border border-emerald-500/50 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all duration-300"
+                >
+                  VIEW CAPABILITIES
+                </motion.a>
+              </motion.div>
             </div>
-          </div>
+
+            {/* Decorative Bottom Graphic */}
+            <div className="absolute bottom-[-50px] right-[-50px] w-64 h-64 border border-white/5 rounded-full flex items-center justify-center opacity-30">
+              <Hexagon
+                size={120}
+                strokeWidth={1}
+                className="text-emerald-500/20"
+              />
+            </div>
+          </section>
         </motion.section>
       </div>
     </main>
