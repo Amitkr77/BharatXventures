@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";  
+import { ArrowDown } from "lucide-react";  
 
 /* ================= ANIMATION ================= */
 const fadeUp = {
@@ -26,7 +26,7 @@ export default function HomePage() {
     <main className="bg-white text-[#1A3C34] overflow-hidden">
 
       {/* ================= HERO ================= */}
-      <section className="min-h-screen flex items-center pt-24">
+      <section className="relative min-h-screen flex items-center pt-24">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -58,7 +58,7 @@ export default function HomePage() {
           {/* RIGHT IMAGE */}
           <motion.div
             variants={fadeUp}
-            className="group md:col-span-5 h-[350px] md:h-[600px] overflow-hidden"
+            className="group md:col-span-5 h-[350px] md:h-[600px] overflow-hidden mb-2"
           >
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkeHPwLFXRhdRdtuC6VXNB1aLBSLsHUASN4gtRZj90zUuZxBH-qQrm9dYf4La3LeTlOwh3gDW941oAYXuazQF89wXaVViFASCQtYGaGZcDBBg9Xdoc0e_4Q7XkwwPGo8mxZd8yrQpVr4OfjVT6aqoxpoBG2t_n264lHspe7pWDOMNhJmc2FOh-ZW8sU30KocmjcfeyCIfoXwagrQwk9wAyc53jlLBrCC7fbXDGRlX7tdlMOhPxVkgci5nMaZwuJz5LJa-_KpowNzoj"
@@ -66,6 +66,25 @@ export default function HomePage() {
               className="w-full h-full object-cover grayscale 
                             group-hover:grayscale-0 group-hover:scale-101 transition duration-500 contrast-110"
             />
+          </motion.div>
+           <motion.div
+            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 px-5 py-3 rounded-full bg-transparent backdrop-blur-md border border-green-400 hover:bg-green-300 transition-all duration-300 cursor-pointer"
+            >
+            <div className="flex items-center">
+              <span className="text-xs font-medium text-green-600 uppercase tracking-widest">
+                Explore
+              </span>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              >
+                <ArrowDown size={20} className="text-green-600" />
+              </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       </section>
