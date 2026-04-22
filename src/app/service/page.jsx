@@ -71,7 +71,7 @@ export default function ServicesPage() {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative py-24 px-6 overflow-hidden"
+          className="relative py-36 px-6 overflow-hidden"
         >
           <div className="absolute inset-0 bg-green-900 z-0">
             <div

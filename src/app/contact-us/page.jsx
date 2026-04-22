@@ -156,7 +156,7 @@ const handleSubmit = (e) => {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="relative bg-white pt-16 pb-24 overflow-hidden"
+          className="relative bg-white pt-36 pb-24 overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-1/3 h-full bg-green-50 -skew-x-12 translate-x-1/2"></div>
 

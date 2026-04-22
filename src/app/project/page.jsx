@@ -127,7 +127,7 @@ export default function FeaturedInitiativesPage() {
       <section className="bg-gray-50 text-gray-900">
         <main className="flex-grow">
           {/* Hero Section */}
-          <section className="relative py-20 overflow-hidden bg-green-900">
+          <section className="relative py-36 overflow-hidden bg-green-900">
             <div className="absolute inset-0 opacity-10">
               <div
                 className="absolute inset-0"

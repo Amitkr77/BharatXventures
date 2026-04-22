@@ -74,7 +74,7 @@ export default function AboutPage() {
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
-        className="relative py-20 lg:py-24 overflow-hidden bg-white"
+        className="relative pt-36 pb-20 lg:pt-36 lg:pb-24 overflow-hidden bg-white"
       >
         
 
