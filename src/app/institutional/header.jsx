@@ -42,8 +42,8 @@ export default function InstitutionalHeader() {
 ];
   
    const extraItems = [
-  { name: "BACK TO MAIN", path: "/", icon: Building2 },
-  { name: "GET IN TOUCH", path: "/institutional/institute-get-in-touch", icon: Phone },
+  { name: "BACK TO MAIN", path: "/", icon: Building2, primary: false },
+  { name: "GET IN TOUCH", path: "/institutional/institute-get-in-touch", icon: Phone, primary: true },
 ];
 
   return (
@@ -110,26 +110,28 @@ export default function InstitutionalHeader() {
           {/* Back to Main Website */}
           <Link href="/">
               <button
-                className={`hidden lg:flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
+                className={`hidden lg:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${
                   pathname === "/"
-                    ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-700 hover:bg-green-500 hover:text-white"
+                    ? "bg-green-600 text-white shadow-md"
+                    : "bg-white text-slate-700 border-slate-200 hover:border-white hover:text-white hover:bg-green-500 hover:scale-105"
                 }`}
               >
-                BACK TO MAIN
+                <Building2 size={16} />
+                <span>BACK TO MAIN</span>
               </button>
             </Link>
 
           {/* Primary CTA */}
           <Link href="/institutional/institute-get-in-touch">
               <button
-                className={`hidden lg:flex items-center justify-center px-6 h-10 rounded-lg text-lg font-bold transition-all duration-200 ${
+                className={`hidden lg:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${
                   pathname === "/institutional/institute-get-in-touch"
                     ? "bg-green-600 text-white shadow-md shadow-green-200/40"
-                    : "bg-white text-gray-700 hover:bg-green-500 hover:text-white"
+                    : "bg-white text-gray-700 border-slate-200 hover:border-white hover:text-white hover:bg-green-500 hover:scale-105"
                 }`}
               >
-                GET IN TOUCH
+                <Phone size={16} />
+                <span>GET IN TOUCH</span>
               </button>
             </Link>
 
