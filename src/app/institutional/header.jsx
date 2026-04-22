@@ -179,22 +179,61 @@ export default function InstitutionalHeader() {
                 <div className="h-px bg-gray-200 my-4" />
 
                 {/* Extra Items */}
-                {extraItems.map((item) => {
-                  const active = isActive(item.path);
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.path}
-                      onClick={toggleMobileMenu}
-                      className={`flex items-center justify-between text-lg font-medium ${
-                        active ? "text-green-600" : "text-gray-800"
-                      }`}
-                    >
-                      {item.name}
-                      {active && <ArrowRight size={20} />}
-                    </Link>
-                  );
-                })}
+                <div className="border-t border-slate-100">
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+                    Quick Access
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    {extraItems.map((item, index) => {
+                      const active = isActive(item.path);
+
+                      return (
+                        <motion.div
+                          key={item.name}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.4 + index * 0.1 }}
+                        >
+                          <Link
+                            href={item.path}
+                            onClick={toggleMobileMenu}
+                            className="block"
+                          >
+                            <div
+                              className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition-all group
+                              ${
+                                active
+                                  ? "bg-green-50 border-green-200"
+                                  : "bg-slate-50 border-slate-100 hover:border-green-200 hover:bg-green-50/50"
+                              }`}
+                            >
+                              {/* Optional Icon */}
+                              <ArrowRight
+                                size={22}
+                                className={`transition-colors ${
+                                  active
+                                    ? "text-green-600"
+                                    : "text-slate-400 group-hover:text-green-600"
+                                }`}
+                              />
+
+                              <span
+                                className={`text-xs font-semibold text-center ${
+                                  active
+                                    ? "text-green-700"
+                                    : "text-slate-600 group-hover:text-green-700"
+                                }`}
+                              >
+                                {item.name}
+                              </span>
+                            </div>
+                          </Link>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </motion.div>
           </>
