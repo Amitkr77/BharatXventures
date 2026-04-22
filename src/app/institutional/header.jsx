@@ -81,7 +81,7 @@ export default function InstitutionalHeader() {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`relative text-lg font-bold transition-colors duration-100 ${
+                  className={`relative text-2sm font-bold transition-colors duration-100 ${
                     active
                       ? "text-green-500"
                       : isSpecialPage && !scrolled
