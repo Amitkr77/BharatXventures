@@ -1,6 +1,6 @@
 "use client";
 
-import { React, useState }  from "react";
+import React, { useState, useEffect }  from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Building2, ArrowRight, Phone } from "lucide-react";
@@ -12,11 +12,25 @@ export default function InstitutionalHeader() {
   const pathname = usePathname(); 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const isSpecialPage =
+  pathname === "/institutional/institute-services" ||
+  pathname === "/institutional/institute-get-in-touch";
+
   const isActive = (path) =>
     pathname === path || (path !== "/" && pathname.startsWith(path));
 
   const toggleMobileMenu = () =>
     setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
   { name: "Home", path: "/institutional/institute-home" },
@@ -33,7 +47,13 @@ export default function InstitutionalHeader() {
 ];
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+   <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "h-[72px] bg-white/90 backdrop-blur-md shadow-md border-b border-slate-100"
+          : "h-[72px] bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-0 flex items-center justify-between">
         
         {/* 🔹 Logo */}
@@ -44,7 +64,11 @@ export default function InstitutionalHeader() {
                   alt="Logo"
                   width={80}
                   height={80}
-                  className="object-contain"
+                  className={`object-contain ${
+                     scrolled || !isSpecialPage
+                      ? ""
+                      : "brightness-0 invert"
+                  }`}
                 />
             </div>
         </Link>    
