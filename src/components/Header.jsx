@@ -148,7 +148,11 @@ export default function Header() {
               return (
                 <Link key={link.name} href={link.path}>
                   <button
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${getBtnBg()} ${active ? "shadow-md" : ""}`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold scale-100 hover:scale-105 transition-all duration-300 border ${
+                      active
+                        ? "bg-green-600 text-white border-green-600 shadow-md"
+                        : getBtnBg()
+                    }`}
                   >
                     <Icon size={16} />
                     <span>{link.name}</span>
@@ -161,7 +165,11 @@ export default function Header() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-lg ${getBtnBg(true)}`}
+                className={`flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 shadow-lg border ${
+                  pathname === "/contact-us"
+                    ? "bg-green-600 text-white shadow-md"
+                    : getBtnBg(false)
+                }`}
               >
                 Contact Us{" "}
                 <ArrowRight
