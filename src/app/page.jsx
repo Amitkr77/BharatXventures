@@ -139,10 +139,10 @@ export default function Home() {
 
               initial={
                 currentVideo === 1
-                  ? { x: "100%", opacity: 1 } // PUSH transition
+                  ? { x: "100%", opacity: 1 }
                   : currentVideo === 2
-                  ? { clipPath: "inset(0 100% 0 0)" } // WIPE transition
-                  : { opacity: 0, scale: 1.05 } // default
+                  ? { clipPath: "inset(100% 100% 0 0)" }
+                  : { opacity: 1, scale: 1.05 } // default
               }
 
               animate={
