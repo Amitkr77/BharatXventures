@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion , AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion  } from "framer-motion";
 import Link from "next/link";
 import {
   TrendingUp,
@@ -105,17 +105,17 @@ const StatCard = ({ icon, value, label }) => {
 };
 
 export default function Home() {
-  const videos = [
-    "/video1.mp4",
-    "/video2.mp4",
-    "/video3.mp4",
-  ];
+  // const videos = [
+  //   "/video1.mp4",
+  //   "/video2.mp4",
+  //   "/video3.mp4",
+  // ];
 
-  const [currentVideo, setCurrentVideo] = useState(0);
+  // const [currentVideo, setCurrentVideo] = useState(0);
 
-  const handleVideoEnd = () => {
-    setCurrentVideo((prev) => (prev + 1) % videos.length);
-  };
+  // const handleVideoEnd = () => {
+  //   setCurrentVideo((prev) => (prev + 1) % videos.length);
+  // };
   return (
     <main className="flex-1 bg-gray-50 text-gray-900 min-h-screen">
       {/* Hero Section */}
@@ -127,7 +127,7 @@ export default function Home() {
       >
         {/* 1. Video Background */}
         <div className="absolute inset-0 z-0 bg-black overflow-hidden">
-          <AnimatePresence mode="sync">
+          {/* <AnimatePresence mode="sync">
             <motion.video
               key={currentVideo}
               src={videos[currentVideo]}
@@ -168,7 +168,15 @@ export default function Home() {
 
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
-          </AnimatePresence>
+          </AnimatePresence> */}
+          <video
+            src="/video4.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover object-center"
+          />
           {/* Cinematic Overlays */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />{" "}
           {/* Darkens bottom for text contrast */}
