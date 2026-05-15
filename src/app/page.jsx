@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion , AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
   TrendingUp,
@@ -105,6 +105,17 @@ const StatCard = ({ icon, value, label }) => {
 };
 
 export default function Home() {
+  const videos = [
+    "/video1.mp4",
+    "/video2.mp4",
+    "/video3.mp4",
+  ];
+
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  const handleVideoEnd = () => {
+    setCurrentVideo((prev) => (prev + 1) % videos.length);
+  };
   return (
     <main className="flex-1 bg-gray-50 text-gray-900 min-h-screen">
       {/* Hero Section */}
@@ -115,17 +126,51 @@ export default function Home() {
         className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
       >
         {/* 1. Video Background */}
-        <div className="absolute inset-0 z-0">
-          <video
-            src="/bharatx hero.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover object-center"
-          />
+        <div className="absolute inset-0 z-0 bg-black overflow-hidden">
+          <AnimatePresence mode="sync">
+            <motion.video
+              key={currentVideo}
+              src={videos[currentVideo]}
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              onEnded={handleVideoEnd}
+
+              initial={
+                currentVideo === 1
+                  ? { x: "100%", opacity: 1 } // PUSH transition
+                  : currentVideo === 2
+                  ? { clipPath: "inset(0 100% 0 0)" } // WIPE transition
+                  : { opacity: 0, scale: 1.05 } // default
+              }
+
+              animate={
+                currentVideo === 1
+                  ? { x: "0%", opacity: 1 }
+                  : currentVideo === 2
+                  ? { clipPath: "inset(0 0% 0 0)" }
+                  : { opacity: 1, scale: 1 }
+              }
+
+              exit={
+                currentVideo === 1
+                  ? { x: "-100%", opacity: 1 }
+                  : currentVideo === 2
+                  ? { clipPath: "inset(0 0 0 100%)" }
+                  : { opacity: 0 }
+              }
+
+              transition={{
+                duration: 1.2,
+                ease: "easeInOut",
+              }}
+
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          </AnimatePresence>
           {/* Cinematic Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80" />{" "}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />{" "}
           {/* Darkens bottom for text contrast */}
           <div
             className="absolute inset-0 opacity-[0.03]"
@@ -146,7 +191,7 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
                 <span className="text-sm font-medium text-white/90 tracking-wide">
-                  India's Premier Venture Builder
+                  {`India's Premier Venture Builder`}
                 </span>
               </div>
             </motion.div>
